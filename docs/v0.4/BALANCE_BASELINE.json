@@ -1,0 +1,180 @@
+{
+  "version": "0.4",
+  "status": "provisional; not playtested or balanced",
+  "defaultBoardSize": 50,
+  "selectableBoardSizes": [
+    30,
+    50,
+    70
+  ],
+  "levelCap": 99,
+  "actionPointsPerTurn": 3,
+  "longRangeSliderMaximumSquares": 7,
+  "fogStates": [
+    "unexplored",
+    "remembered_mist",
+    "currently_visible"
+  ],
+  "kingXpMultiplier": 1.5,
+  "queenXpMultiplier": 0.75,
+  "queenXpRequirementMultiplier": 1.5,
+  "freshDiscoveryXpPerTile": 0.3,
+  "enemyFirstSightingXp": 1.5,
+  "objectiveCaptureXp": 5,
+  "baseCommandIncome": 3,
+  "shrineIncome": 2,
+  "pawnProfessionMinimumLevel": 2,
+  "ninjaSecondMoveProcChance": 0.3,
+  "ninjaSecondMoveCanChain": false,
+  "swimmerCanEnterWater": true,
+  "mountaineerCanEnterMountains": true,
+  "scoutVisionBonus": 2,
+  "scoutWatchPostUnlockLevel": 4,
+  "queenBranches": [
+    "war",
+    "phantom",
+    "choice"
+  ],
+  "warGlobalVisionBonus": 1,
+  "warLocalVisionBonus": 2,
+  "warLocalAuraRadius": 4,
+  "warLocalCommandUpkeep": 2,
+  "phantomCloakCommandCost": 7,
+  "phantomDecoyCommandCost": 5,
+  "choiceSacrificeEfficiencies": {
+    "ordinaryPawn": 0.7,
+    "veteranPawn": 0.4,
+    "devotedPawn": 1.0,
+    "knight": 0.6,
+    "bishop": 0.55,
+    "rook": 0.35
+  },
+  "summonCosts": {
+    "pawn": 6,
+    "knight": 15,
+    "bishop": 15,
+    "rook": 24,
+    "queen": 60
+  },
+  "summonKingLevelRequirements": {
+    "pawn": 1,
+    "knight": 5,
+    "bishop": 5,
+    "rook": 11,
+    "queen": 55
+  },
+  "recentSummonSacrificeCooldownRounds": 5,
+  "victory": "capture_enemy_king",
+  "stalemate": "none; unable to act means pass",
+  "tacticalHpDefault": true,
+  "tacticalHpCanDisable": true,
+  "baseHP": {
+    "pawn": 4,
+    "knight": 7,
+    "bishop": 7,
+    "rook": 9,
+    "queen": 14,
+    "king": 12
+  },
+  "baseDamage": {
+    "pawn": 2,
+    "knight": 4,
+    "bishop": 4,
+    "rook": 5,
+    "queen": 7,
+    "king": 3
+  },
+  "damageResolution": "non-lethal hit: attacker stays; lethal hit: attacker moves into vacated square",
+  "rest": "one action restores 2 HP, 4 HP on shrine",
+  "captureRule": "king defeated at zero HP; instant on one-hit mode",
+  "startingSupplyCap": 15,
+  "initialCombatCountBalanced": 11,
+  "initialCombatCountExpedition": 12,
+  "initialCombatCountFortress": 11,
+  "initialCivilianWorkersPerSide": 3,
+  "civilianJobs": {
+    "lumberjack": {
+      "adjacent": "forest",
+      "woodPerTurn": 3
+    },
+    "miner": {
+      "adjacent": "mountain",
+      "goldPerTurn": 2
+    },
+    "hunterDinosaur": {
+      "adjacent": "dinosaur",
+      "foodPerTurn": 3,
+      "injuryChance": 0.2,
+      "injuryHP": 2
+    },
+    "hunterGator": {
+      "adjacent": "gator",
+      "foodPerTurn": 2,
+      "injuryChance": 0.3,
+      "injuryHP": 1
+    }
+  },
+  "wildlifeStocks": {
+    "dinosaur": 6,
+    "gator": 5,
+    "regrowthPeriodRounds": 6
+  },
+  "villageWorkerRules": {
+    "civilianNonlethal": true,
+    "raidResourceLossMaximum": 3,
+    "raidUnspentXpPenalty": 0.1,
+    "raidInjuredRounds": 2,
+    "raidGivesCombatXp": false,
+    "queenCanSacrificeVillager": false,
+    "resourceProductionAPCost": 0,
+    "workReassignmentAPCost": 0,
+    "workReassignmentLimitPerTurn": 1,
+    "workerManualMovementAPCost": 1,
+    "workXpFirst4PerJobSite": 0.6,
+    "workXpFurtherPerJobSite": 0.15
+  },
+  "resourceStartingBalances": {
+    "gold": 18,
+    "food": 12,
+    "wood": 8
+  },
+  "summonFoodCosts": {
+    "pawn": 3,
+    "knight": 4,
+    "bishop": 4,
+    "rook": 5,
+    "queen": 9
+  },
+  "summonWoodCosts": {
+    "pawn": 0,
+    "knight": 1,
+    "bishop": 1,
+    "rook": 4,
+    "queen": 6
+  },
+  "startingSkillSlots": {
+    "king": 3,
+    "queen": 3,
+    "rook": 2,
+    "bishop": 2,
+    "knight": 2,
+    "pawn": 0,
+    "villager": 0
+  },
+  "pawnSlotUnlockLevels": [
+    4,
+    15,
+    35
+  ],
+  "otherUnitExtraSkillSlotLevel": 50,
+  "queenChoiceInitialEquippedSkills": [
+    "sacrifice",
+    "siphon",
+    "mercy"
+  ],
+  "queenChoiceLearnedButUnequipped": [
+    "surge"
+  ],
+  "equipRule": "Change near allied king (within 4 squares) or at shrine; costs 1 AP and consumes that unit action.",
+  "skillImplementationCaveat": "Skill capacities and Queen Choice loadouts work; complete 99-level skill inventories for all units not implemented yet."
+}
