@@ -1,0 +1,107 @@
+[
+  {
+    "original": "README.md",
+    "imported": "docs/v0.4/README.md",
+    "expected_sha256": "3da3b474637059529a44fb13d72b308f8dbcf122ec7bb8152f64c85ea6b4ce33",
+    "actual_sha256": "3da3b474637059529a44fb13d72b308f8dbcf122ec7bb8152f64c85ea6b4ce33",
+    "match": true
+  },
+  {
+    "original": "docs/BALANCE_BASELINE.json",
+    "imported": "docs/v0.4/BALANCE_BASELINE.json",
+    "expected_sha256": "e0eecc802e39f1f037c615609fa3d826066610081284ced47cf95ec2d1917f2b",
+    "actual_sha256": "e0eecc802e39f1f037c615609fa3d826066610081284ced47cf95ec2d1917f2b",
+    "match": true
+  },
+  {
+    "original": "docs/CODEX_HANDOFF.md",
+    "imported": "docs/v0.4/CODEX_HANDOFF.md",
+    "expected_sha256": "2788435a6505132901167864861da0853b9580082e45ebdc1189a16814a264a4",
+    "actual_sha256": "2788435a6505132901167864861da0853b9580082e45ebdc1189a16814a264a4",
+    "match": true
+  },
+  {
+    "original": "docs/DECISIONS.md",
+    "imported": "docs/v0.4/DECISIONS.md",
+    "expected_sha256": "e52f32bf2c49ca9b30738e9681a2df4c8259a20a51f8edc585b826b933617578",
+    "actual_sha256": "e52f32bf2c49ca9b30738e9681a2df4c8259a20a51f8edc585b826b933617578",
+    "match": true
+  },
+  {
+    "original": "docs/DESIGN_BIBLE.md",
+    "imported": "docs/v0.4/DESIGN_BIBLE.md",
+    "expected_sha256": "23b8ae90476adfe5485dffd18604d16d7d8b714d788150506a363c642f2aed40",
+    "actual_sha256": "23b8ae90476adfe5485dffd18604d16d7d8b714d788150506a363c642f2aed40",
+    "match": true
+  },
+  {
+    "original": "docs/ECONOMY_CREW.md",
+    "imported": "docs/v0.4/ECONOMY_CREW.md",
+    "expected_sha256": "77036d86908b977c1006d794d5f7345cec95d33bd55de7e596ba52514ece8ab4",
+    "actual_sha256": "77036d86908b977c1006d794d5f7345cec95d33bd55de7e596ba52514ece8ab4",
+    "match": true
+  },
+  {
+    "original": "docs/KNOWN_LIMITATIONS.md",
+    "imported": "docs/v0.4/KNOWN_LIMITATIONS.md",
+    "expected_sha256": "372d90f938c7d95d58d86844eef12ee1e3c955713a9731154bcad21eed832b89",
+    "actual_sha256": "372d90f938c7d95d58d86844eef12ee1e3c955713a9731154bcad21eed832b89",
+    "match": true
+  },
+  {
+    "original": "prototype/app.js",
+    "imported": "prototype/app.js",
+    "expected_sha256": "ff5da76bef9c8975147aba55e11b8f9b88c6975054ee532d8c4313fcad32ca36",
+    "actual_sha256": "ff5da76bef9c8975147aba55e11b8f9b88c6975054ee532d8c4313fcad32ca36",
+    "match": true
+  },
+  {
+    "original": "prototype/engine.js",
+    "imported": "prototype/engine.js",
+    "expected_sha256": "7546715a3b5a404e2def42d9352fc7248dedfc5580e87222b81a776c5c62cf9e",
+    "actual_sha256": "7546715a3b5a404e2def42d9352fc7248dedfc5580e87222b81a776c5c62cf9e",
+    "match": true
+  },
+  {
+    "original": "prototype/index.html",
+    "imported": "prototype/index.html",
+    "expected_sha256": "d3b26ef31da4c12e34aaca8fae6319060316fd885187353c28a9c93bb5462080",
+    "actual_sha256": "d3b26ef31da4c12e34aaca8fae6319060316fd885187353c28a9c93bb5462080",
+    "match": true
+  },
+  {
+    "original": "prototype/style.css",
+    "imported": "prototype/style.css",
+    "expected_sha256": "4ae78a6c52168595cf4fe517736eadfe5f29d01a4b06e964777ee86554b1d5a2",
+    "actual_sha256": "4ae78a6c52168595cf4fe517736eadfe5f29d01a4b06e964777ee86554b1d5a2",
+    "match": true
+  },
+  {
+    "original": "tools/build_standalone.py",
+    "imported": "tools/build_standalone.py",
+    "expected_sha256": "2a37a765034cd2b38e3fa3096324c78b5446f376f50357d40eed4755e722256e",
+    "actual_sha256": "2a37a765034cd2b38e3fa3096324c78b5446f376f50357d40eed4755e722256e",
+    "match": true
+  },
+  {
+    "original": "tests/engine.test.cjs",
+    "imported": "tests/engine.test.cjs",
+    "expected_sha256": "e3dab56429ab2dc048f555fe9ddcc525e8d96aa55c7e747df5feee704008b265",
+    "actual_sha256": "e3dab56429ab2dc048f555fe9ddcc525e8d96aa55c7e747df5feee704008b265",
+    "match": true
+  },
+  {
+    "original": "tests/browser_check.py",
+    "imported": "tests/browser_check.py",
+    "expected_sha256": "ce2836912bd4d6f58c41a802c78be1334ae7cd67eeed55ff501ad4c8c460b066",
+    "actual_sha256": "ce2836912bd4d6f58c41a802c78be1334ae7cd67eeed55ff501ad4c8c460b066",
+    "match": true
+  },
+  {
+    "original": "tests/interaction_check.py",
+    "imported": "tests/interaction_check.py",
+    "expected_sha256": "d446d3cd73365839aec14d84992fc8c5b27f8624cee5d3594e44512ded728e06",
+    "actual_sha256": "d446d3cd73365839aec14d84992fc8c5b27f8624cee5d3594e44512ded728e06",
+    "match": true
+  }
+]

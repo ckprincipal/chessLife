@@ -1,0 +1,21 @@
+{
+  "browser": "156.0.8078.4",
+  "config": {
+    "size": 50,
+    "seed": 43971,
+    "hpMode": true,
+    "armyW": "balanced",
+    "armyB": "expedition",
+    "routeW": "war",
+    "routeB": "phantom"
+  },
+  "move": {
+    "id": 7,
+    "from": 1623,
+    "to": 1573
+  },
+  "ap_before": 3,
+  "ap_after": 2,
+  "errors": [],
+  "source": "unmodified standalone directly opened via file URL; no fixture or game-state mutation"
+}

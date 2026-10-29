@@ -1,0 +1,42 @@
+{
+  "config": {
+    "board": 50,
+    "seed": 9234,
+    "hpMode": true,
+    "viewport": [
+      1536,
+      1050
+    ],
+    "fixture": "plain terrain; white rook (32,20), hidden black pawn (32,24), remembered destination (32,27); coordinates zero-based"
+  },
+  "checks": [
+    "50\u00d750 fixture loaded through #savefile with seed 9234 and numeric HP enabled",
+    "Three fog states verified in exported state and distinct rendered canvas pixels; blocker initially unseen",
+    "Real canvas click on unexplored black square rejected with Unknown territory; rook position and 3 AP unchanged",
+    "Real canvas speculative move (32,20)\u2192(32,27) stops at (32,23), spends exactly 1 AP, marks rook acted, leaves blocker alive at (32,24) with 4 HP",
+    "UI save\u2192reload\u2192save retains complete exported state exactly, including positions, AP, HP, fog, XP and interruption event",
+    "No JavaScript page errors or console errors"
+  ],
+  "browser": "156.0.8078.4",
+  "fog_pixels_rgba": {
+    "clear": [
+      117,
+      144,
+      123,
+      255
+    ],
+    "mist": [
+      160,
+      175,
+      181,
+      255
+    ],
+    "black": [
+      7,
+      12,
+      20,
+      255
+    ]
+  },
+  "errors": []
+}
