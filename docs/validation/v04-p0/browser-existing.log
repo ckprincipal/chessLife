@@ -1,0 +1,4 @@
+RUN browser_check.py: managed Chromium; screenshots/saves redirected outside repository.
+ChessLife v0.4 browser smoke PASSED: 70×70 setup, AI, resources, save/load, mobile. Errors: []
+RUN interaction_check.py: managed Chromium; screenshots/saves redirected outside repository.
+ChessLife v0.4 interactions PASSED: Queen Choice swapped a learned skill; villager hunting reassigned.

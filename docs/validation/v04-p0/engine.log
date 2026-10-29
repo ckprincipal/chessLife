@@ -1,0 +1,37 @@
+✓ 50×50 default, selectable 30 and 70, 99 rank cap
+✓ same seed and army give reproducible map and initial pieces
+✓ queen, bishop and rook line moves capped at seven squares
+✓ fog distinguishes unexplored, remembered mist, and currently visible
+✓ vision XP is paid once for new squares (king multiplier)
+✓ king receives 1.5× base XP, queen .75× and 1.5× experience requirement
+✓ no stalemate: player may pass with no legal piece moves
+✓ pawn at level 2 may train Scout, boosting vision
+✓ king can summon a pawn with command costs and supply rules
+✓ classic one-hit mode still wins immediately on king capture
+✓ Choice Queen sacrifice destroys ally, grants essence, but rejects fresh summons
+✓ War Queen global/local stances trade team-wide vision for local power
+✓ Phantom Queen hides from a distant observer, detectors defeat cloak
+✓ save and load roundtrip keeps piece IDs, XP, fog and state
+✓ AI generates legal actions against visible targets and turns progress
+✓ War Queen protects once locally; a coordinated second attacker can finish the job in one-hit mode
+✓ Choice Queen mercy prevents a real capture and spares the ally
+✓ Phantom decoy consumes enemy move without creating a genuine queen
+✓ Ninja bonus move never chains, and does not spend a second action point
+✓ initial armies are approximately half of the original forces, with room to summon
+✓ HP defaults ON but a match can opt into traditional one-hit captures
+✓ pawn damages level-99 queen, does not teleport onto a living unit, and cannot act again
+✓ lethal strike defeats unit and advances attacker, with king victory only at 0 HP
+✓ rest heals without exceeding max HP, consumes action and awards no XP
+✓ misted long move stops before first hidden blocker, consumes an action, no blind attack
+✓ black unexplored square cannot be targeted or crossed even if farther mist is explored
+✓ new/legacy saves retain appropriate HP mode; new ones roundtrip wounded units
+✓ each side starts with three protected civilian producers outside combat supply
+✓ villagers gather wood, gold and food automatically without spending command AP
+✓ work assignments are free once per turn, and switch to gator hunting next turn
+✓ a low-level soldier cannot kill civilians; raiding nonlethally injures and routs them
+✓ queen cannot sacrifice or siphon civilians; no free ritual fuel
+✓ skill capacities: king/queen 3, major 2, pawn none then learns slots
+✓ queen must deliberately swap one equipped choice skill for surge
+✓ king summons consume all three resources, preventing limitless free troops
+
+35 ChessLife engine checks passed.
