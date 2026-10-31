@@ -1,0 +1,24 @@
+{
+  "runner": "SM-C03",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "contract_sha": "NOT FROZEN",
+  "sdk": "5.0.408",
+  "reference_pack": "net5.0 / 5.0.0",
+  "command": "dotnet <SDK-5.0.408>/Roslyn/bincore/csc.dll /noconfig @compile.rsp",
+  "compiler_options": [
+    "/noconfig",
+    "/nologo",
+    "/nostdlib+",
+    "/target:library",
+    "/langversion:7.3",
+    "/checked+",
+    "/warnaserror+"
+  ],
+  "source_sha256": {
+    "unity/Assets/Scripts/Core/CandidateContracts.cs": "95fab04260bdef0c4653342678521906273bd28c980e9e8291c37e11e4df9360",
+    "unity/Assets/Scripts/Core/CandidateJson.cs": "ab11116a7543e846cd373c58b64815b022470e36f41bfed56ef2fe5efcbdfa21"
+  },
+  "exit_code": 0,
+  "dll_produced": true,
+  "scope": "Data-carrier C# compilation only; no UnityEngine reference, no rules/serializer/RNG implementation, no Unity or gameplay parity claim"
+}

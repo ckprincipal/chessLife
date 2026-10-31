@@ -1,0 +1,761 @@
+{
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "source_sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+  "scope": "C03 source-derived G0 probes; no C# parity, no frozen C02 replay schema, no BUG-001 reproduction",
+  "assertions": [
+    "JSON wire distinctions and key enumeration",
+    "create seed coercion is Number -> ToUint32 -> zero fallback",
+    "source-extracted uint32 RNG vectors and state increment",
+    "JS midpoint rounding must not use banker rounding",
+    "rejections can mutate lastEvent and maester can mutate while returning false",
+    "raw clone and fixed-action replay retain full state, including turn counters",
+    "synthetic supported-version matrix preserves armies, camps, queues and used actions",
+    "archived real engines preserve old rosters/camps and paid queue state",
+    "missing fog memory uses remembered floor, never unseen true terrain",
+    "load mutates object inputs and refreshes derived sight; raw clone is a separate operation",
+    "unsupported admission cases are rejected, not silently upgraded"
+  ],
+  "fixtures": {
+    "json": {
+      "wire": "{\"nil\":null,\"zero\":0,\"nan\":null,\"infinite\":null,\"list\":[null,null,0]}",
+      "property_enumeration": [
+        "2",
+        "10",
+        "01",
+        "x"
+      ]
+    },
+    "seed_coercion": [
+      {
+        "label": "missing",
+        "effective_seed": 43971,
+        "rng_after_creation": 1146740014,
+        "state_hash": "4ed41e3a13f99e2e197a997efe5a55e180fa10803ae7657a6727d310f2dd5c6f"
+      },
+      {
+        "label": "null",
+        "effective_seed": 43971,
+        "rng_after_creation": 1146740014,
+        "state_hash": "4ed41e3a13f99e2e197a997efe5a55e180fa10803ae7657a6727d310f2dd5c6f"
+      },
+      {
+        "label": "empty-string",
+        "effective_seed": 43971,
+        "rng_after_creation": 1146740014,
+        "state_hash": "4ed41e3a13f99e2e197a997efe5a55e180fa10803ae7657a6727d310f2dd5c6f"
+      },
+      {
+        "label": "string-zero",
+        "effective_seed": 43971,
+        "rng_after_creation": 1146740014,
+        "state_hash": "4ed41e3a13f99e2e197a997efe5a55e180fa10803ae7657a6727d310f2dd5c6f"
+      },
+      {
+        "label": "negative",
+        "effective_seed": 4294967295,
+        "rng_after_creation": 3674038722,
+        "state_hash": "97815e7804b6f7ac9b0045db8e1968d7de3abe815a64124d0131d1fe9d0b0654"
+      },
+      {
+        "label": "fraction",
+        "effective_seed": 1,
+        "rng_after_creation": 4177992000,
+        "state_hash": "378f69fee8fbbae01150b5a1aac8bd370ce51cb0b2e88f37234dbbdf48f984fa"
+      },
+      {
+        "label": "negative-fraction",
+        "effective_seed": 4294967295,
+        "rng_after_creation": 3674038722,
+        "state_hash": "97815e7804b6f7ac9b0045db8e1968d7de3abe815a64124d0131d1fe9d0b0654"
+      },
+      {
+        "label": "wrap",
+        "effective_seed": 7,
+        "rng_after_creation": 4177992006,
+        "state_hash": "3b114d4eef2a0e5e665a5b02db78894ada90030a89ea0dcfa60f5c10622acfd1"
+      },
+      {
+        "label": "nan",
+        "effective_seed": 43971,
+        "rng_after_creation": 1146740014,
+        "state_hash": "4ed41e3a13f99e2e197a997efe5a55e180fa10803ae7657a6727d310f2dd5c6f"
+      },
+      {
+        "label": "infinity",
+        "effective_seed": 43971,
+        "rng_after_creation": 1146740014,
+        "state_hash": "4ed41e3a13f99e2e197a997efe5a55e180fa10803ae7657a6727d310f2dd5c6f"
+      }
+    ],
+    "rng": [
+      {
+        "initial": 0,
+        "draws": [
+          {
+            "state": 1831565813,
+            "numerator_uint32": 1144304738,
+            "value": 0.26642920868471265
+          },
+          {
+            "state": 3663131626,
+            "numerator_uint32": 1416247,
+            "value": 0.0003297457005828619
+          },
+          {
+            "state": 1199730143,
+            "numerator_uint32": 958946056,
+            "value": 0.2232720274478197
+          },
+          {
+            "state": 3031295956,
+            "numerator_uint32": 627933444,
+            "value": 0.1462021479383111
+          },
+          {
+            "state": 567894473,
+            "numerator_uint32": 2007157716,
+            "value": 0.46732782293111086
+          }
+        ]
+      },
+      {
+        "initial": 1,
+        "draws": [
+          {
+            "state": 1831565814,
+            "numerator_uint32": 2693262067,
+            "value": 0.6270739405881613
+          },
+          {
+            "state": 3663131627,
+            "numerator_uint32": 11749833,
+            "value": 0.002735721180215478
+          },
+          {
+            "state": 1199730144,
+            "numerator_uint32": 2265367787,
+            "value": 0.5274470399599522
+          },
+          {
+            "state": 3031295957,
+            "numerator_uint32": 4213581821,
+            "value": 0.9810509674716741
+          },
+          {
+            "state": 567894474,
+            "numerator_uint32": 4159151403,
+            "value": 0.9683778982143849
+          }
+        ]
+      },
+      {
+        "initial": 2147483648,
+        "draws": [
+          {
+            "state": 3979049461,
+            "numerator_uint32": 3524353788,
+            "value": 0.8205775609239936
+          },
+          {
+            "state": 1515647978,
+            "numerator_uint32": 1924613307,
+            "value": 0.4481089550536126
+          },
+          {
+            "state": 3347213791,
+            "numerator_uint32": 3365584844,
+            "value": 0.7836112855002284
+          },
+          {
+            "state": 883812308,
+            "numerator_uint32": 2199219949,
+            "value": 0.5120457962621003
+          },
+          {
+            "state": 2715378121,
+            "numerator_uint32": 3602660773,
+            "value": 0.8388098266441375
+          }
+        ]
+      },
+      {
+        "initial": 4294967295,
+        "draws": [
+          {
+            "state": 1831565812,
+            "numerator_uint32": 3850105811,
+            "value": 0.8964226141106337
+          },
+          {
+            "state": 3663131625,
+            "numerator_uint32": 813802916,
+            "value": 0.189478256739676
+          },
+          {
+            "state": 1199730142,
+            "numerator_uint32": 3073704848,
+            "value": 0.7156526781618595
+          },
+          {
+            "state": 3031295955,
+            "numerator_uint32": 4054706436,
+            "value": 0.9440599093213677
+          },
+          {
+            "state": 567894472,
+            "numerator_uint32": 3630262831,
+            "value": 0.8452364315744489
+          }
+        ]
+      },
+      {
+        "initial": 43971,
+        "draws": [
+          {
+            "state": 1831609784,
+            "numerator_uint32": 371308778,
+            "value": 0.08645206177607179
+          },
+          {
+            "state": 3663175597,
+            "numerator_uint32": 4031716349,
+            "value": 0.9387071125674993
+          },
+          {
+            "state": 1199774114,
+            "numerator_uint32": 2872570341,
+            "value": 0.6688224014360458
+          },
+          {
+            "state": 3031339927,
+            "numerator_uint32": 3802888627,
+            "value": 0.8854290067683905
+          },
+          {
+            "state": 567938444,
+            "numerator_uint32": 2182709347,
+            "value": 0.5082016221713275
+          }
+        ]
+      }
+    ],
+    "rng_expression_sha256": "a900ac857c0fb31b2dadb1e88e119ffce1459d6cead172bf8c15157b0f698a3a",
+    "rounding": [
+      {
+        "value": -2.5,
+        "rounded": -2,
+        "negative_zero": false
+      },
+      {
+        "value": -1.5,
+        "rounded": -1,
+        "negative_zero": false
+      },
+      {
+        "value": -0.5,
+        "rounded": 0,
+        "negative_zero": true
+      },
+      {
+        "value": 0.5,
+        "rounded": 1,
+        "negative_zero": false
+      },
+      {
+        "value": 1.5,
+        "rounded": 2,
+        "negative_zero": false
+      },
+      {
+        "value": 2.5,
+        "rounded": 3,
+        "negative_zero": false
+      }
+    ],
+    "rejection": {
+      "invalid_unit": {
+        "ok": false,
+        "error": "Select a living unit from the active army."
+      },
+      "maester": {
+        "before": {
+          "ap": 9,
+          "acted": -1,
+          "job": null
+        },
+        "outcome": {
+          "ok": false,
+          "error": "Unknown action type."
+        },
+        "after": {
+          "ap": 8,
+          "acted": 1,
+          "job": "maester"
+        }
+      },
+      "policy": "Preserve oracle; report separately, do not repair during port"
+    },
+    "replay": [
+      {
+        "action": {
+          "type": "move",
+          "unitId": 1,
+          "to": 581
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "2e254a0e7e731a1583bbf8fafd512b901d8296dc6b99db46d10ed5bffefa9ac4",
+        "side": "w",
+        "ap": 1,
+        "serial": 1,
+        "round": 1,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "move",
+          "unitId": 2,
+          "to": 551
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "09bdb9317c5aa5120496398104105bdbe87c47e1850f43fa4754ef6316817b7a",
+        "side": "w",
+        "ap": 0,
+        "serial": 1,
+        "round": 1,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "end"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "33bc50626848a42f3477e738817c7041f84e5cc2756c27cf067677b57f3d8bb4",
+        "side": "b",
+        "ap": 3,
+        "serial": 2,
+        "round": 1,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "move",
+          "unitId": 11,
+          "to": 251
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "170d30c774d4a0e945d27c27540f50e530188f5c19dc989238534b461d5be77e",
+        "side": "b",
+        "ap": 1,
+        "serial": 2,
+        "round": 1,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "move",
+          "unitId": 12,
+          "to": 221
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "1e07f2530e025cdc100076e1ea0ed1901f519019fdd30c616f8dbe09d2238eb5",
+        "side": "b",
+        "ap": 0,
+        "serial": 2,
+        "round": 1,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "end"
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "fccab5b908c68dd85b6c94185c4532bef5b50141ff44046f1c943bddbb8184a8",
+        "side": "w",
+        "ap": 3,
+        "serial": 3,
+        "round": 2,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "move",
+          "unitId": 1,
+          "to": 611
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "23b0430b4b41df32d976e0d7bbb90ed649e427e3674d15286a0b920715cf1a15",
+        "side": "w",
+        "ap": 1,
+        "serial": 3,
+        "round": 2,
+        "rng": 1146740014
+      },
+      {
+        "action": {
+          "type": "move",
+          "unitId": 2,
+          "to": 490
+        },
+        "outcome": {
+          "ok": true
+        },
+        "state_hash": "f34f5e3d4bc3a5e6b8dbeb37f864b16939de4ef7d159ff2ee75c544d6d955f97",
+        "side": "w",
+        "ap": 0,
+        "serial": 3,
+        "round": 2,
+        "rng": 1146740014
+      }
+    ],
+    "version_matrix": [
+      {
+        "input_version": 5,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 6
+      },
+      {
+        "input_version": 6,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 6
+      },
+      {
+        "input_version": 7,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 6
+      },
+      {
+        "input_version": 8,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 6
+      },
+      {
+        "input_version": 9,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 6
+      },
+      {
+        "input_version": 10,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 5
+      },
+      {
+        "input_version": 11,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 4
+      },
+      {
+        "input_version": 12,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 3
+      },
+      {
+        "input_version": 13,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 2
+      },
+      {
+        "input_version": 14,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 1
+      },
+      {
+        "input_version": 15,
+        "provenance": "Synthetic version/normalization gate; not a historical v5-v14 archive",
+        "output_version": 15,
+        "remaining_queue_ticks": 0,
+        "unit_count": 20,
+        "camp_count": 2,
+        "ap": 1,
+        "serial": 1,
+        "log_entries_added": 0
+      }
+    ],
+    "archived_migrations": [
+      {
+        "engine": "engine_v056.cjs",
+        "fixture_sha256": "5248c4639599adf59672e2dd90fb09d0205b3c24ccc33576d9d0c71d5021421f",
+        "original_schema": 11,
+        "army": "balanced",
+        "units_per_side": 11,
+        "camps_before": 2,
+        "camps_after": 2,
+        "training_outcome": {
+          "ok": true
+        },
+        "queue_before": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 4,
+          "workerId": 23
+        },
+        "queue_after": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 4,
+          "workerId": null,
+          "migratedEngineerToRoyal": true
+        }
+      },
+      {
+        "engine": "engine_v058.cjs",
+        "fixture_sha256": "034267016e78bb14534f79225ded97d376190b089e5832e0b1584507b356dd2f",
+        "original_schema": 13,
+        "army": "traditional",
+        "units_per_side": 8,
+        "camps_before": 2,
+        "camps_after": 2,
+        "training_outcome": {
+          "ok": true
+        },
+        "queue_before": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 4,
+          "workerId": null
+        },
+        "queue_after": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 4,
+          "workerId": null
+        }
+      },
+      {
+        "engine": "engine_v058.cjs",
+        "fixture_sha256": "034267016e78bb14534f79225ded97d376190b089e5832e0b1584507b356dd2f",
+        "original_schema": 13,
+        "army": "middle",
+        "units_per_side": 7,
+        "camps_before": 2,
+        "camps_after": 2,
+        "training_outcome": {
+          "ok": true
+        },
+        "queue_before": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 2,
+          "workerId": null
+        },
+        "queue_after": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 2,
+          "workerId": null
+        }
+      },
+      {
+        "engine": "engine_v058.cjs",
+        "fixture_sha256": "034267016e78bb14534f79225ded97d376190b089e5832e0b1584507b356dd2f",
+        "original_schema": 13,
+        "army": "flat",
+        "units_per_side": 6,
+        "camps_before": 2,
+        "camps_after": 2,
+        "training_outcome": {
+          "ok": true
+        },
+        "queue_before": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 1,
+          "workerId": null
+        },
+        "queue_after": {
+          "kind": "legacy",
+          "mode": "xp",
+          "type": "P",
+          "count": 1,
+          "remaining": 2,
+          "total": 2,
+          "started": 1,
+          "kingId": 1,
+          "workerId": null
+        }
+      },
+      {
+        "engine": "engine_v059.cjs",
+        "fixture_sha256": "4330f3b8731ba7a6c5def5b5d891cd54228e75102a28dedd3478217bdbff878c",
+        "original_schema": 14,
+        "army": "traditional",
+        "units_per_side": 8,
+        "camps_before": 0,
+        "camps_after": 0,
+        "training_outcome": null,
+        "queue_before": null,
+        "queue_after": null
+      },
+      {
+        "engine": "engine_v059.cjs",
+        "fixture_sha256": "4330f3b8731ba7a6c5def5b5d891cd54228e75102a28dedd3478217bdbff878c",
+        "original_schema": 14,
+        "army": "middle",
+        "units_per_side": 7,
+        "camps_before": 0,
+        "camps_after": 0,
+        "training_outcome": null,
+        "queue_before": null,
+        "queue_after": null
+      },
+      {
+        "engine": "engine_v059.cjs",
+        "fixture_sha256": "4330f3b8731ba7a6c5def5b5d891cd54228e75102a28dedd3478217bdbff878c",
+        "original_schema": 14,
+        "army": "flat",
+        "units_per_side": 6,
+        "camps_before": 0,
+        "camps_after": 0,
+        "training_outcome": null,
+        "queue_before": null,
+        "queue_after": null
+      }
+    ],
+    "fog_migration": {
+      "hidden_true_terrain": 3,
+      "remembered": 0,
+      "sight": 0,
+      "migrated": true
+    },
+    "load_identity": {
+      "mutates_object_argument": true,
+      "refreshes_sight": true
+    },
+    "rejected_saves": [
+      {
+        "label": "version-4",
+        "error": "Stale-Mate v0.5.10 loads v0.5.1–v0.5.10 command-camp saves. Use the archived v0.4 build for older saves."
+      },
+      {
+        "label": "version-16",
+        "error": "Stale-Mate v0.5.10 loads v0.5.1–v0.5.10 command-camp saves. Use the archived v0.4 build for older saves."
+      },
+      {
+        "label": "wrong-ruleset",
+        "error": "Stale-Mate v0.5.10 loads v0.5.1–v0.5.10 command-camp saves. Use the archived v0.4 build for older saves."
+      },
+      {
+        "label": "string-board-size",
+        "error": "Stale-Mate v0.5.10 loads v0.5.1–v0.5.10 command-camp saves. Use the archived v0.4 build for older saves."
+      },
+      {
+        "label": "wrong-terrain-length",
+        "error": "Stale-Mate v0.5.10 loads v0.5.1–v0.5.10 command-camp saves. Use the archived v0.4 build for older saves."
+      },
+      {
+        "label": "missing-seen",
+        "error": "Missing player fog state."
+      }
+    ]
+  },
+  "result": "PASS FOR SOURCE PROBES",
+  "probe_count": 11
+}

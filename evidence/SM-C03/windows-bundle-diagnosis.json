@@ -1,0 +1,18 @@
+{
+  "runner": "SM-C03",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "command": [
+    "python",
+    "tools/build_standalone.py"
+  ],
+  "exit_code": 0,
+  "source": "Six files copied byte-for-byte from git show INTAKE:path; original script unmodified",
+  "original_bytes": 150856,
+  "rebuilt_bytes": 152378,
+  "original_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+  "rebuilt_sha256": "f63998403057a8bd8ab4e70969d41fc26f0204de76ad381e0a0c37a93974bdf8",
+  "rebuilt_crlf_count": 1522,
+  "diagnostic_lf_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+  "diagnostic_lf_equals_original": true,
+  "scope": "Only diagnoses text-mode newline expansion; original wrapper remains FAIL, no oracle/verifier edit"
+}

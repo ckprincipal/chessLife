@@ -1,0 +1,30 @@
+{
+  "runner": "SM-C03 / 01a191e1-3413-7c52-927d-715ec7c628fb",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "role_head_at_export": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "export_command": [
+    "git",
+    "-c",
+    "core.autocrlf=false",
+    "-c",
+    "core.eol=lf",
+    "archive",
+    "--format=tar",
+    "83a0baa8a4486562c5c67144324cede402f29cf7"
+  ],
+  "export_sha256": "5bfb9bd580242f085408ef942df2c7c77ec9c539ff39a42102b9d7aea8cdcbb2",
+  "method": "Canonical pinned Git archive; no checkout conversion, no new Git worktree, no oracle edits",
+  "note": "The unmodified wrapper runs outside Git, so its git_context is null; this export records the exact source pin.",
+  "production_authorized": false,
+  "contract_sha": "NOT FROZEN",
+  "engine_sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+  "verification_command": [
+    "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+    "C:\\Users\\mino\\AppData\\Local\\Temp\\sm-c03-canonical-2yyfotgt\\tools\\verify_baseline.py",
+    "--test",
+    "--starter",
+    "--log-dir",
+    "D:\\Projects\\Stale-Mate\\worktrees\\SM-C03\\evidence\\SM-C03\\canonical-lf-intake-20261031-6543631079"
+  ],
+  "exit_code": 1
+}
