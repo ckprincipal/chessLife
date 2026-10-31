@@ -1,0 +1,56 @@
+PASS skill 1: starting slot counts P/N/B/R/Q/K are exactly 0/1/1/2/3/2
+PASS skill 2: pawn capacity grows at 3,6,...,99; default non-pawn level-50 bonus preserved
+PASS skill 3: catalogue has 36 distinct, described skills split into three 12-skill draft families
+PASS skill 4: no premature skill choice at levels 1 and 2; first offers are exact three
+PASS skill 5: level crossing queues milestones once, including multi-level XP gains
+PASS skill 6: learning consumes neither CP nor activation, but never resets already-used action
+PASS skill 7: duplicate picks, unoffered skills, enemy picks and post-victory picks are rejected
+PASS skill 8: all 33 milestones retain exactly three offers even with an extreme single-route draft
+PASS skill 9: route derives from chosen skills, not a separate irreversible profession or equipment
+PASS skill 10: route ties stay Mixed; early identity remains Developing; labels give no bonus
+PASS skill 11: route disclosure defaults to effects-only and is saved independently of gameplay
+PASS skill 12: save/load retains exact choice history, cooldowns and loadout without reroll/re-equip
+PASS skill 13: v10 migration preserves XP, projects, activations, old profession; excess equipment stays learned
+PASS skill 14: legacy-full slot learns without deleting skills or silently changing equipment
+PASS skill 15: new direct profession purchase is disabled, leaving ordinary worker ladder intact
+PASS skill 16: waiting alone never grants King XP, including no stationary royal farming
+PASS skill 17: King gains 0.30 per allied base XP; direct royal 1.5x; engineers excluded; no recursion
+PASS skill 18: learning vision does not itself mint XP or royal credit
+PASS skill 19: w Trailcraft, flank and rear sight are directional, not extra base moves
+PASS skill 20: w skill Sidestep/Withdraw/March/Diagonal March never capture and pay activation
+PASS skill 21: b Trailcraft, flank and rear sight are directional, not extra base moves
+PASS skill 22: b skill Sidestep/Withdraw/March/Diagonal March never capture and pay activation
+PASS skill 23: Forest Lore penetrates forest but not mountain; Long Sight stacks, cap six
+PASS skill 24: River Walker and Mountaineer alter passability only while equipped
+PASS skill 25: Summit Watch adds range only on mountain; Sentry Platform sight expires when vacated
+PASS skill 26: signal_post creates real beacon with stated range/lifetime, costs CP, cooldown persists
+PASS skill 27: far_signal creates real beacon with stated range/lifetime, costs CP, cooldown persists
+PASS skill 28: lasting_signal creates real beacon with stated range/lifetime, costs CP, cooldown persists
+PASS skill 29: woodsman changes actual clear_forest duration to 1, not just text
+PASS skill 30: bridgewright changes actual bridge duration to 1, not just text
+PASS skill 31: masonry changes actual excavate duration to 2, not just text
+PASS skill 32: campwright changes actual camp duration to 2, not just text
+PASS skill 33: towerwright changes actual tower duration to 1, not just text
+PASS skill 34: quarry_master changes actual excavate duration to 1, not just text
+PASS skill 35: land_reclamation unlocks adjacent safe-shore work without unrestricted terrain entry
+PASS skill 36: tunnelcraft unlocks adjacent safe-shore work without unrestricted terrain entry
+PASS skill 37: roadcrew allows exactly adjacent visible work, not unseen or remote jobs
+PASS skill 38: field_survey allows exactly adjacent visible work, not unseen or remote jobs
+PASS skill 39: site_planner allows exactly adjacent visible work, not unseen or remote jobs
+PASS skill 40: Instructor reduces stationary batch to four, never sacrifice or newborn level
+PASS skill 41: Cover protects an ally exactly once, never captures attacker, and costs a full activation
+PASS skill 42: Cover cannot protect kings, queens, self, enemies, distant allies, or already warded allies
+PASS skill 43: Distant Cover permits range two with fully observed clear sight, never reads hidden terrain
+PASS skill 44: Entrench, Ready Guard and Lasting Guard have exact expiry and cooldown without extra hits
+PASS skill 45: Support Training awards only on real absorption and once per ally, with normal royal share
+PASS skill 46: Relief swaps two nonroyal idle pieces and pays BOTH costs and activations
+PASS skill 47: Relief cannot bypass insufficient CP, worked units, activated allies or royal restrictions
+PASS skill 48: Maneuver previews do not leak hidden blockers; execution stops without blind capture
+PASS skill 49: Maneuver does not jump hidden terrain, black cells, visible enemies or allies
+PASS skill 50: March Drill reduces cooldown, not per-turn activation, and no free attack via bonus flag
+PASS skill 51: skill replacement cannot strand a pawn in water/mountain and does not erase learned skill
+PASS skill 52: Fission resets source AND child skill choices, equipment, cooldowns and support history
+PASS skill 53: AI takes pending skill choices through the same deterministic three-offer action
+PASS skill 54: Fission cannot strand reset Lv1 source or daughter on skill-only water/mountains
+PASS skill 55: optional Fission is learned at Lv60 but does not steal a default draft slot
+SKILLS v0.5.10: 55/55 checks passed.

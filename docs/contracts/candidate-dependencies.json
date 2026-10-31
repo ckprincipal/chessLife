@@ -1,0 +1,41 @@
+{
+  "candidate_status": "INCOMPLETE / NOT FREEZE-READY",
+  "contract_sha": "NOT FROZEN",
+  "production_status": "HOLD",
+  "activation_comment": "https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543631079",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "definition": "The containing C01 commit plus these exact proposal pins. Pins are review inputs, not accepted code compositions or peer ACKs.",
+  "inputs": {
+    "C03": {
+      "sha": "c2806a2bdf3a888567a694cdd3d05a5e62f7bb35",
+      "pr": "https://github.com/ckprincipal/chessLife/pull/8",
+      "receipt": "https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543984967",
+      "paths": [
+        "unity/Assets/Scripts/Core/CandidateContracts.cs",
+        "unity/Assets/Scripts/Core/CandidateJson.cs",
+        "evidence/SM-C03/g0-contract/proposal.md",
+        "evidence/SM-C03/g0-contract/save-candidate.schema.json",
+        "evidence/SM-C03/g0-contract/compile-receipt.json"
+      ],
+      "state": "READ / PROPOSAL INPUT / NO ACCEPTANCE"
+    },
+    "C02": {
+      "sha": null,
+      "state": "REPLAY SCHEMA AND CANONICALIZATION INPUT PENDING"
+    },
+    "C04": {
+      "sha": "3daf13b4347aad8d64d0310a66dd50b3b464a145",
+      "path": "evidence/SM-C04/G0_TACTICAL_REVIEW.md",
+      "state": "READ / PROPOSAL INPUT / EXACT-CANDIDATE REVIEW PENDING"
+    },
+    "C05": {
+      "sha": null,
+      "state": "WORLD/QUEUE/PROGRESSION HOOK PROPOSAL PENDING"
+    },
+    "C06": {
+      "sha": "d292b03fb23e6f0f5b913fe15755faf427dc4134",
+      "path": "evidence/SM-C06/2026-10-31-g0-presentation-review.md",
+      "state": "READ / PROPOSAL INPUT / EXACT-CANDIDATE REVIEW PENDING / EDITOR BLOCKED"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+diff --git a/tools/verify_baseline.py b/tools/verify_baseline.py
+--- a/tools/verify_baseline.py
++++ b/tools/verify_baseline.py
+@@ -103,6 +103,11 @@ def main() -> int:
+                 for name in ["organization_v0510", "regression_v0510", "pawn_workers_v0510",
+                              "skills_v0510", "randomized_smoke_v0510", "randomized_skills_v0510"]:
+                     commands.append(([node, f"tests/{name}.cjs"], js))
+                 commands.append(([sys.executable, "tools/build_standalone.py"], js))
++                commands.append(([sys.executable,
++                    str(ROOT / "tools/integration/normalize_generated_html.py"),
++                    "--artifact", str(js / "Stale-Mate_v0.5.10_Play.html"),
++                    "--expected-sha256",
++                    receipt["source_identities"]["Stale-Mate_v0.5.10_Play.html"]], js))
+                 if args.browser:
+                     receipt["browser_status"] = "REQUESTED / PENDING"
+                     for name in ["organization", "workers", "skills"]:
