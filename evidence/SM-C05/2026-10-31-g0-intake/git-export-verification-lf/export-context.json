@@ -1,0 +1,31 @@
+{
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "export_command": [
+    "git",
+    "-c",
+    "core.autocrlf=false",
+    "-c",
+    "core.eol=lf",
+    "archive",
+    "--format=tar",
+    "83a0baa8a4486562c5c67144324cede402f29cf7"
+  ],
+  "method": "Disposable exact Git export with command-scoped autocrlf=false and eol=lf; no Git configuration files or working reference files changed",
+  "archive_sha256": "5bfb9bd580242f085408ef942df2c7c77ec9c539ff39a42102b9d7aea8cdcbb2",
+  "command": [
+    "python",
+    "tools/verify_baseline.py",
+    "--test",
+    "--starter",
+    "--log-dir",
+    "D:\\projects\\Stale-Mate\\worktrees\\SM-C05\\evidence\\SM-C05\\2026-10-31-g0-intake\\git-export-verification-lf"
+  ],
+  "exit_code": 1,
+  "working_tree": "disposable LF Git export",
+  "failed_attempts_preserved": [
+    "../receipt.json",
+    "../git-export-verification/receipt.json"
+  ],
+  "python_utf8": "1",
+  "note": "The original wrapper git_context is null outside a checkout; this envelope pins the export to its exact source commit."
+}
