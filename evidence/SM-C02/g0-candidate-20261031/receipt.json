@@ -38,6 +38,13 @@
     "notes": "evidence/SM-C02/g0-candidate-20261031/c03-review.json",
     "acceptance": "No shared contract freeze or runtime acceptance"
   },
+  "c01_review": {
+    "revision": "8ec67237d3132869c5fb6602e88fd9b990cd2785",
+    "scope": "Disposable Windows portability proposal and bounded combined-contract review",
+    "proposal_result": "PASS: 14 children including actual browser checks; exact final HTML pin; three negative/idempotence guards",
+    "notes": "evidence/SM-C02/g0-candidate-20261031/c01-review.json",
+    "limitations": "Original live root remains unchanged/FAIL; C00 application/ownership decision and shared-contract completion remain pending"
+  },
   "bug001": {
     "status": "OPEN / UNREPRODUCED",
     "trace": "tests/triage/ordinary-v0510.json",

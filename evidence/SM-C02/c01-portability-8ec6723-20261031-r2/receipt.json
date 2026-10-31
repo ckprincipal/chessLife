@@ -1,0 +1,55 @@
+{
+  "reviewer": "SM-C02",
+  "reviewed_c01_revision": "8ec67237d3132869c5fb6602e88fd9b990cd2785",
+  "authorized_intake": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "c02_head_at_execution": "56eecba62f86cd7198c84942575fc739c0b26d43",
+  "scope": "Disposable C01 proposal only; no live verifier patch, integration or contract acceptance",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\uv\\cache\\builds-v0\\.tmpxaUNXO\\Scripts\\python.exe",
+        "tools/verify_baseline.py",
+        "--test",
+        "--starter",
+        "--browser",
+        "--log-dir",
+        "D:\\Projects\\Stale-Mate\\worktrees\\SM-C02\\evidence\\SM-C02\\c01-portability-8ec6723-20261031-r2\\proposed-wrapper"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "guards": [
+    {
+      "name": "changed content rejected",
+      "exit_code": 1,
+      "bytes_unchanged": true
+    },
+    {
+      "name": "protected reference rejected",
+      "exit_code": 1,
+      "bytes_unchanged": true
+    },
+    {
+      "name": "already LF unchanged",
+      "exit_code": 0,
+      "bytes_unchanged": true
+    }
+  ],
+  "native_export_input_hashes_verified": 39,
+  "root_wrapper_export_crlf_only": true,
+  "script_pins": {
+    "original_verifier": "a5a6f71d180341f6400580859949ad0610ae47ae3dfdc6fd1791fb2ff3c48454",
+    "proposal_patch": "9c67bffeef3c8f8ed66c423be742c86981ba3e889aed56d297bb3079d4367d3b",
+    "proposed_verifier": "8349fdc83f7684a702b54ce9a1617610c535e78d63ee14461b0d71744e21beed",
+    "normalizer": "ee15a60d55695c849e09e11bd8e93fe7622a0ee2b7212d265bf0751a21b2da2c"
+  },
+  "rebuilt_html_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+  "child_commands": 14,
+  "browser_status": "PASS (three original browser scripts)",
+  "export_git_context": {
+    "head_at_execution": null,
+    "worktree_clean_at_start": null
+  },
+  "live_wrapper_and_c02_head_unchanged": true,
+  "result": "PASS exact disposable C01 proposal with original browser checks; C00 application/ownership decision remains pending"
+}
