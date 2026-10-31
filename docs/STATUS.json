@@ -15,7 +15,7 @@
   "launch_report_verified_utc": "2026-10-31T12:15:04.475505+00:00",
   "launch_evidence": "User-relayed first-deputy handover; local windows were not directly inspected by C00.",
   "observed_pre_import_campaign_sha": "7c0b113807b154902de284c6650c61d9e047a583",
-  "source_publication": "Recovered candidate, exact archives/manifests verified; use the later C00 publication receipt to resolve the accepted intake SHA.",
+  "source_publication": "COMPLETE source recovery; clean source candidate verified. C00 exact-SHA mailbox activation governs intake work.",
   "intake_sha": null,
   "contract_sha": null,
   "contract_frozen": false,
@@ -71,16 +71,17 @@
       "session": "01a191e1-3413-7c52-927d-715ec7c628fb",
       "branch": "sm/c03-r2-state",
       "ownership": "Core state / RNG / saves",
-      "status": "LAUNCHED_REPORTED / AWAITING_EXACT_C00_ACK",
+      "status": "LOCAL_INTAKE_REPORTED / AWAITING_NEW_INTAKE_ACK",
       "reported_base_sha": "7c0b113807b154902de284c6650c61d9e047a583",
       "contract_sha": null,
-      "head_sha": null,
+      "head_sha": "7c0b113807b154902de284c6650c61d9e047a583",
       "pr": null,
-      "latest_receipt_url": null,
-      "tested_scope": "No individual role receipt observed",
+      "latest_receipt_url": "https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543497125",
+      "tested_scope": "Read-only local/remote checkout and toolchain inventory; no game/source execution",
       "next_bounded_task": "Shared state/action/observation/RNG/save contract proposal",
       "model_reported": "gpt-6.1-sol",
-      "reasoning_effort_reported": "max"
+      "reasoning_effort_reported": "max",
+      "previous_blocker": "Missing canonical source at launch base; source recovery now supplied, new intake must be fetched and ACKed"
     },
     {
       "role": "SM-C04",
@@ -131,5 +132,9 @@
       "reasoning_effort_reported": "max"
     }
   ],
-  "background_supervision": "Not scheduled or established"
+  "background_supervision": "Not scheduled or established",
+  "tested_source_sha": "3e478dbcd918a198747910a692823e4cb4b83b82",
+  "clean_checkout_evidence": "evidence/intake/c00-clean-checkout/receipt.json",
+  "g0_intake_status": "AWAITING_EXACT_C00_ACTIVATION; contract and production gates remain closed",
+  "latest_role_receipt_url": "https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543497125"
 }

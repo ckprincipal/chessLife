@@ -60,3 +60,16 @@ These are inherited results, not S2 or future C02 executions.
 
 BUG-001 remains **OPEN / UNREPRODUCED**. No test here establishes human balance,
 fun, resolved King/facility delta semantics, C# gameplay parity or platform support.
+
+## Exact clean-checkout follow-up
+
+The published source candidate `3e478dbcd918a198747910a692823e4cb4b83b82`
+was fetched into a new detached worktree. `git status --porcelain` was empty
+before and after verification. The same ten commands ran successfully using
+`--test --starter`; standalone bytes and all source hashes matched.
+
+`c00-clean-checkout/receipt.json` and its adjacent logs preserve this exact run.
+Its receipt records `worktree_clean_at_start: true` and the tested source SHA.
+The follow-up publication adds only these receipts, this evidence note and the
+status update (including C03's actual launch-base receipt); game, viewer and
+verification-tool bytes are identical to the tested source candidate.
