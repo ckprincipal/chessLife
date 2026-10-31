@@ -1,0 +1,12 @@
+✔ canonicalization preserves numeric bits, nullability, array order and holes (2.5311ms)
+✔ observer witness cannot reveal a current change to unseen terrain (55.4228ms)
+✔ rejected action clears a prior event in an explicitly staged witness state (15.3492ms)
+✔ golden replay detects an altered outcome rather than accepting it (70.4057ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 249.3151

@@ -5,6 +5,7 @@
   "commands": {
     "check": "node tools/parity/replay.cjs check",
     "tests": "node --test tests/parity/oracle.test.cjs",
+    "schema_validation": "uv run --with jsonschema==4.26.0 python tests/parity/validate_schema.py",
     "ordinary_trace": "node tools/parity/ordinary-path.cjs check",
     "ordinary_ui": "uv run --with playwright==1.64.1 python tests/triage/ordinary_ui.py",
     "browser_environment": "CHROMIUM_PATH selects an installed Chrome/Chromium; PYTHONUTF8=1 on Windows",

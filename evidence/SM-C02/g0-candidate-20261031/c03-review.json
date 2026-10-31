@@ -1,0 +1,30 @@
+{
+  "reviewer": "SM-C02 / 01a191e1-337c-7ff0-a7e7-b4a960d78cf9",
+  "reviewed_revision": "c2806a2bdf3a888567a694cdd3d05a5e62f7bb35",
+  "reviewed_scope": ["C03 proposal.md", "CandidateJson.cs", "CandidateContracts.cs", "source-probes.json numeric and historical provenance"],
+  "result": "Source vectors corroborated for the executed scope; proposal suitable for combination/review, NOT a shared-contract freeze or runtime acceptance",
+  "independently_executed": {
+    "rng": "25 exact draws: cursor, uint32 numerator and binary64 value",
+    "rounding": "Six Math.round cases including negative zero, reconstructing the explicit negative_zero tag rather than trusting JSON 0 to retain sign",
+    "historical": "Seven actual archived engine roster/camp preservation samples; genuine source versions are 11/13/14",
+    "maester": "With only an explicit staged level-15 Bishop and the original 3-CP budget, action returns ok=false/Unknown action type while setting job=maester, spending 1 CP, consuming activation and adding a log. Independent corroboration of C04/C03, not BUG-001, no fix."
+  },
+  "alignment": [
+    "Binary64 identities/positions/XP and uint32 RNG draw coercion, preserved unit/array order, no invented draw counter",
+    "Missing/null/undefined and JSON stringify loss separated from live-state semantics",
+    "Unknown fields retained and flat legacy wire names preserved rather than silently nesting settings",
+    "Raw cloning separated from load/normalization/refresh; invalid action does not imply state rollback",
+    "Hidden truth is separate from observer data and ordered ghost/memory behavior is preserved"
+  ],
+  "before_c00_freeze": [
+    "C01/C03 must map the ordered JsonData carriers to C02's tagged-binary64-utf16-v1 witness explicitly. C03 sorted-JSON probe hashes are a different diagnostic and cannot substitute for C02 goldens.",
+    "Canonical object-key sorting ignores serialization key order; runtime carriers must still preserve source-relevant Object.keys enumeration. Compare emitted order/ghost arrays as ordered sequences.",
+    "Define the invalid-action boundary, including a null request (covered by C02), absent fields, null fields and unknown action names. Do not let a C# null-reference exception replace the reference outcome.",
+    "Define the accepted malformed-save/input domain. Current C02 replay goldens cover finite, ordinary states and provided archived fixtures; they do not certify arbitrary nonfinite graphs, fractional positions or every permissive JS load(object) shape.",
+    "Finalize observer field whitelist, apparent decoys, remembered facilities/queues, legal geometry versus affordability/activation, and event observer eligibility with C04/C05/C06. C02's four visible-unit fields are a narrow witness, not a complete presentation DTO.",
+    "C00 decides any separately versioned Maester repair/parity exception; preserve frozen baseline outcome until then. Keep BUG-001 and King/facility delta semantics separate."
+  ],
+  "not_run": ["C03 schema admission validation against all malformed legacy saves", "independent C# compilation or RNG implementation", "combined C01 contract candidate review", "Unity tests/builds"],
+  "contract_sha": "NOT FROZEN",
+  "evidence": "evidence/SM-C02/g0-candidate-20261031/c03-review-results.json"
+}

@@ -30,6 +30,14 @@
     "json_schema": "PASS Draft 2020-12 schema and golden validation using jsonschema 4.26.0",
     "csharp_parity": "NOT IMPLEMENTED / NOT RUN"
   },
+  "c03_review": {
+    "revision": "c2806a2bdf3a888567a694cdd3d05a5e62f7bb35",
+    "command": "node tests/triage/review_c03_vectors.cjs",
+    "exit": 0,
+    "scope": "25 RNG draws, six rounding cases, seven real archived roster/camp preservation samples and independently corroborated Maester mutation-on-error",
+    "notes": "evidence/SM-C02/g0-candidate-20261031/c03-review.json",
+    "acceptance": "No shared contract freeze or runtime acceptance"
+  },
   "bug001": {
     "status": "OPEN / UNREPRODUCED",
     "trace": "tests/triage/ordinary-v0510.json",
@@ -52,7 +60,7 @@
     {"command": "node tools/parity/ordinary-path.cjs", "exit": 0},
     {"command": "node tools/parity/ordinary-path.cjs check", "exit": 0},
     {"command": "PYTHONUTF8=1 CHROMIUM_PATH=<installed Chrome> uv run --with playwright==1.64.1 python tests/triage/ordinary_ui.py", "exit": 0},
-    {"command": "uv run --with jsonschema python -c <Draft202012 schema/golden validation>", "exit": 0}
+    {"command": "uv run --with jsonschema==4.26.0 python tests/parity/validate_schema.py", "exit": 0}
   ],
   "environment": {"node": "24.20.0", "python": "3.14.8", "playwright_ephemeral": "1.64.1", "chrome": "155.0.8059.85", "jsonschema_ephemeral": "4.26.0"},
   "checkout_correction": "Restored only verified provenance-pinned Git-blob bytes after proving original differences were solely CRLF. No reference/viewer Git delta and no shared Git config change; exact source pins remain immutable.",

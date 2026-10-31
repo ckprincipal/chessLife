@@ -1,0 +1,1 @@
+{"result": "PASS replay JSON schema", "cases": 20, "validator": "4.26.0", "contract": "NOT FROZEN"}
