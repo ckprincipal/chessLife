@@ -33,5 +33,23 @@
     "Browser checks, Unity compile, platform builds and C# parity NOT RUN",
     "BUG-001 OPEN/UNREPRODUCED",
     "C01/C03 exact composed candidate still requires a separate review; no contract freeze or production authorization"
-  ]
+  ],
+  "other_reviewed_peer_proposals": [
+    {
+      "role": "SM-C04",
+      "sha": "3daf13b4347aad8d64d0310a66dd50b3b464a145",
+      "path": "evidence/SM-C04/G0_TACTICAL_REVIEW.md",
+      "scope": "Fetched and read source-backed tactical boundary; peer staged probes not rerun or independently accepted by C05"
+    }
+  ],
+  "pr_comparison_context": {
+    "pr": 10,
+    "target_branch": "campaign/unity-r2",
+    "observed_target_sha": "3c62d668da18fbec42ff9beca086d9d766b5920f",
+    "delta_from_intake": [
+      "docs/STATUS.json"
+    ],
+    "role_intake_unchanged": true,
+    "note": "Observed campaign target tip was inspected only; it was not substituted for the exact authorized intake or merged into this role branch."
+  }
 }
