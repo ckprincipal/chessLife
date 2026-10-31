@@ -1,0 +1,41 @@
+FROM: SM-C04 / 01a191e1-34fe-77e0-84fd-0a2b9a6328bb
+TO: ChatGPT SM-C00 / 000-S2
+CC: SM-C01, SM-C02, SM-C03, codex-maya (first deputy)
+KIND: BLOCKED
+CAMPAIGN: SM-UNITY-R2
+WORKSTREAM: Tactical rules, action budgets, King behavior and AI
+TASK / GATE: Exact-intake G0 verification; first intake receipt before larger candidate work
+ACK OF: https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543631079
+DECISION ACKNOWLEDGED: STLM-C00-S2-G0-INTAKE-2026-10-31-01
+PERSISTED SESSION: 01a191e1-34fe-77e0-84fd-0a2b9a6328bb (confirmed against CODEX_THREAD_ID)
+INTAKE SHA: 83a0baa8a4486562c5c67144324cede402f29cf7
+CONTRACT SHA: NOT FROZEN
+BRANCH / HEAD SHA / PR: sm/c04-r2-tactics / 83a0baa8a4486562c5c67144324cede402f29cf7 / none
+WORKTREE: D:/projects/Stale-Mate/worktrees/SM-C04; existing session, branch and worktree retained
+LOCAL CHANGES: Clean at launch HEAD 7c0b113807b154902de284c6650c61d9e047a583 and immediately after fast-forward. Only new evidence/SM-C04/g0-intake-20261031-01/ files are now untracked; no prior work discarded, no reset and no replacement session.
+
+INPUT / AUTHORITY CHECKS:
+- Read the live mailbox including the exact activation above, and read AGENTS.md, README.md, docs/COMMAND_CENTER.md, docs/RULES_AND_CHANGES.md, docs/ACCEPTANCE.md, docs/agents/SM-C04.md and tools/verify_baseline.py at the exact intake.
+- reference/js-v0.5.10/, unity/ and tools/verify_baseline.py are now present. The old partial staging is superseded by the authorized fast-forward; no importer was triggered.
+- CONTRACT SHA is NOT FROZEN. Production implementation remains on HOLD.
+
+EXECUTED COMMANDS / RESULTS:
+- git fetch origin campaign/unity-r2: exit 0.
+- git merge-base --is-ancestor HEAD 83a0baa8a4486562c5c67144324cede402f29cf7: exit 0 before incorporation.
+- git merge --ff-only 83a0baa8a4486562c5c67144324cede402f29cf7: exit 0; actual role HEAD equals the exact intake, not an assumed latest tip.
+- python tools/verify_baseline.py --test --starter --log-dir evidence/SM-C04/g0-intake-20261031-01: exit 1, FAIL at Baseline mismatch: reference/js-v0.5.10/CURRENT_HANDOFF.md. commands[] is empty: no Node suite, standalone build, or starter validation ran.
+- git config --show-origin --get core.autocrlf: exit 0, system C:/Program Files/Git/etc/gitconfig sets true.
+- git ls-files --eol -- reference/js-v0.5.10/CURRENT_HANDOFF.md reference/js-v0.5.10/prototype/engine.js unity/Assets/Scripts/StaleMateBootstrap.cs: exit 0, all sampled paths show i/lf w/crlf with no explicit attribute.
+- CURRENT_HANDOFF.md expected size/hash: 4691 bytes / 74ed19013e595e848fa3ffd8addb506c4d4678e0331e942ccfdca0f494626704. Working copy: 4725 bytes / 11b10325af54260c9dbefbad4afebc7ee3215d95c4455c169bb4b83d9c9b4722.
+- Version/PATH inventory: exit 0. Git 2.45.2.windows.1, Node v24.20.0, Python 3.14.8; dotnet SDKs 3.1.426 and 5.0.408. Unity and gh are not on PATH (bounded observation). Git Credential Manager is available for this authorized mailbox post; no credential is included in evidence.
+
+EVIDENCE:
+Local verifier receipt: evidence/SM-C04/g0-intake-20261031-01/receipt.json. It records the exact intake HEAD, worktree_clean_at_start=true, the manifest mismatch and zero executed test commands. Evidence is currently local/uncommitted; no committed-evidence claim is made in this first receipt.
+
+BLOCKER / NEXT OWNED G0 DELIVERABLE:
+The Windows checkout is not byte-identical to the frozen manifest because of checkout newline conversion. C04 will preserve this failed receipt and check an exact Git archive in a disposable copy; no reference file, shared config or expected hash will be edited. C01/C00 should assess the repository newline policy through the existing shared-config ownership.
+After verified source access, C04 will trace movement/orders/CP/activation/end-turn/capture/King victory/AI, submit source-backed tactical hooks, exact effect ordering and adversarial scenarios under evidence/SM-C04/, and review C01/C03's exact candidate with C02's oracle. This analysis is authorized G0 work, not production runtime implementation.
+CR-001 movement-versus-command activation and capture price remain unresolved; CR-002 facility eligibility/cost/occupation/queue policies remain unresolved. C05 owns world/queue/vision/progression effects, C01 facade composition, C03 shared state and C02 independent verification.
+
+LIMITATIONS / NOT RUN:
+No gameplay test pass, browser run, C# compilation, Unity Editor result, platform build, BUG-001 closure, contract ACK/freeze, production implementation, merge or release is claimed. No source or viewer files were edited. The session remains available for the user and continues only authorized G0 work.
