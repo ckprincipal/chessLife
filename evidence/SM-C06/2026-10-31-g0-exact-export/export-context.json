@@ -1,0 +1,41 @@
+{
+  "executing_role": "SM-C06",
+  "session_id": "01a191e1-3785-74b0-9230-c98605e5e1eb",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "contract_sha": "NOT FROZEN",
+  "source": "git archive of exact intake with per-process autocrlf=false/eol=lf; no Git configuration file changed",
+  "archive_command": [
+    "git",
+    "-c",
+    "core.autocrlf=false",
+    "-c",
+    "core.eol=lf",
+    "archive",
+    "--format=tar",
+    "83a0baa8a4486562c5c67144324cede402f29cf7",
+    "AGENTS.md",
+    "README.md",
+    "docs/PROVENANCE.json",
+    "tools/verify_baseline.py",
+    "reference/js-v0.5.10",
+    "unity"
+  ],
+  "archive_sha256": "6e07a3b3ca57f063136ee3e8a7cc37b73663ddaac52ee8525c16eacb2af5813f",
+  "export_manifest_entries_verified": {
+    "reference/js-v0.5.10": 29,
+    "unity": 10
+  },
+  "command": [
+    "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+    "tools/verify_baseline.py",
+    "--test",
+    "--starter",
+    "--log-dir",
+    "D:\\Projects\\Stale-Mate\\worktrees\\SM-C06\\evidence\\SM-C06\\2026-10-31-g0-exact-export"
+  ],
+  "exit_code": 1,
+  "wrapper_result": "FAIL",
+  "wrapper_error": "Command failed: C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe Tools/validate_fixture.py",
+  "child_commands": 10,
+  "note": "Export has no .git; wrapper git_context is null. Intake pin is established by archive and manifests. Initial working-checkout failure is not superseded."
+}

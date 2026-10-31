@@ -1,0 +1,127 @@
+OS
+
+
+Caption        : Microsoft Windows 11 家用版
+Version        : 10.0.26200
+OSArchitecture : 64-bit
+
+
+
+UNITY INSTALLATIONS
+C:\Program Files\Unity\Hub\Editor exists=False
+C:\Program Files\Unity\Editor\Unity.exe exists=False
+C:\Program Files\Unity Hub\Unity Hub.exe exists=False
+C:\Program Files (x86)\Unity\Editor\Unity.exe exists=False
+D:\Unity\Hub\Editor exists=False
+D:\Unity\Editor\Unity.exe exists=False
+F:\Unity\Hub\Editor exists=False
+editors-v2.json exists=False
+editors.json exists=False
+secondaryInstallPath.json exists=False
+DOTNET
+.NET SDK (反映任何 global.json):
+ Version:   5.0.408
+ Commit:    da985e2a23
+
+執行階段環境:
+ OS Name:     Windows
+ OS Version:  10.0.26200
+ OS Platform: Windows
+ RID:         win10-x64
+ Base Path:   C:\Program Files\dotnet\sdk\5.0.408\
+
+Host:
+  Version:      8.0.8
+  Architecture: x64
+  Commit:       08338fcaa5
+
+.NET SDKs installed:
+  3.1.426 [C:\Program Files\dotnet\sdk]
+  5.0.408 [C:\Program Files\dotnet\sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 3.1.32 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 5.0.17 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 3.1.32 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 5.0.17 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.8 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 3.1.32 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 5.0.17 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 8.0.8 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  Not set
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+NODE
+v24.20.0
+PYTHON
+Python 3.14.8
+WINDOWS SDK
+10.0.10240.0
+10.0.18362.0
+10.0.19041.0
+10.0.20348.0
+10.0.22000.0
+10.0.22621.0
+VS DESKTOP C++ TOOLCHAIN
+[
+  {
+    "instanceId": "d1d73c3b",
+    "installDate": "2023-10-12T14:27:38Z",
+    "installationName": "VisualStudio/17.7.5+34202.233",
+    "installationPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+    "installationVersion": "17.7.34202.233",
+    "productId": "Microsoft.VisualStudio.Product.BuildTools",
+    "productPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\LaunchDevCmd.bat",
+    "state": 4294967295,
+    "isComplete": true,
+    "isLaunchable": true,
+    "isPrerelease": false,
+    "isRebootRequired": false,
+    "displayName": "Visual Studio Build Tools 2022",
+    "description": "Visual Studio Build Tools ���?���u�����y��T MSBuild �^�H��C���s���v Visual Studio IDE�B�I������� Visual C++ ��桊��o�����ɁAMFC�AATL �y C++/CLI �x���B",
+    "channelId": "VisualStudio.17.Release",
+    "channelUri": "https://aka.ms/vs/17/release/channel",
+    "enginePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\resources\\app\\ServiceHub\\Services\\Microsoft.VisualStudio.Setup.Service",
+    "installedChannelId": "VisualStudio.17.Release",
+    "installedChannelUri": "https://aka.ms/vs/17/release/channel",
+    "releaseNotes": "https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.7#17.7.5",
+    "thirdPartyNotices": "https://go.microsoft.com/fwlink/?LinkId=661288",
+    "updateDate": "2023-10-12T14:27:38.2215772Z",
+    "catalog": {
+      "buildBranch": "d17.7",
+      "buildVersion": "17.7.34202.233",
+      "id": "VisualStudio/17.7.5+34202.233",
+      "localBuild": "build-lab",
+      "manifestName": "VisualStudio",
+      "manifestType": "installer",
+      "productDisplayVersion": "17.7.5",
+      "productLine": "Dev17",
+      "productLineVersion": "2022",
+      "productMilestone": "RTW",
+      "productMilestoneIsPreRelease": "False",
+      "productName": "Visual Studio",
+      "productPatchVersion": "5",
+      "productPreReleaseMilestoneSuffix": "1.0",
+      "productSemanticVersion": "17.7.5+34202.233",
+      "requiredEngineVersion": "3.7.2181.36443"
+    },
+    "properties": {
+      "campaignId": "2030:717d8493-251d-4a3e-9cfd-297c754aacda",
+      "channelManifestId": "VisualStudio.17.Release/17.7.5+34202.233",
+      "nickname": "",
+      "setupEngineFilePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe"
+    }
+  }
+]

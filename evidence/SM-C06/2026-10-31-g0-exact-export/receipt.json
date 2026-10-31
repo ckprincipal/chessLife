@@ -1,0 +1,138 @@
+{
+  "generated_utc": "2026-10-31T13:09:33.128390+00:00",
+  "verifier": "SM-C00 / 000-S2 publication verification wrapper",
+  "source_version": "v0.5.10",
+  "git_context": {
+    "head_at_execution": null,
+    "worktree_clean_at_start": null
+  },
+  "environment": {
+    "python": "3.14.8",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "node": "v24.20.0"
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "--check",
+        "prototype/engine.js"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "01-engine.js.txt",
+      "last_line": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "--check",
+        "prototype/app.js"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "02-app.js.txt",
+      "last_line": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "tests/organization_v0510.cjs"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "03-organization_v0510.cjs.txt",
+      "last_line": "ORGANIZATION v0.5.10: 41/41 checks passed"
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "tests/regression_v0510.cjs"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "04-regression_v0510.cjs.txt",
+      "last_line": "Stale-Mate v0.5.10 tests: 23/23 passed."
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "tests/pawn_workers_v0510.cjs"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "05-pawn_workers_v0510.cjs.txt",
+      "last_line": "WORKERS v0.5.10: 54/54 passed"
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "tests/skills_v0510.cjs"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "06-skills_v0510.cjs.txt",
+      "last_line": "SKILLS v0.5.10: 55/55 checks passed."
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "tests/randomized_smoke_v0510.cjs"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "07-randomized_smoke_v0510.cjs.txt",
+      "last_line": "RANDOMIZED v0.5.10: 36 seeded maps (12 with staged pawn levels), 5495 actions, 326 projects, 31 queues, 8260 state invariant checks PASSED."
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Local\\Programs\\nodejs\\node.EXE",
+        "tests/randomized_skills_v0510.cjs"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "08-randomized_skills_v0510.cjs.txt",
+      "last_line": "RANDOMIZED SKILLS v0.5.10: 24 staged-level maps, 1794 skill picks, 2917 actions (1115 active skills; 289 builds), 6319 invariant checks PASSED."
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "tools/build_standalone.py"
+      ],
+      "working_copy": "reference",
+      "exit_code": 0,
+      "log": "09-build_standalone.py.txt",
+      "last_line": "Built C:\\Users\\mino\\AppData\\Local\\Temp\\stale-mate-verify-ocd7slpa\\reference\\Stale-Mate_v0.5.10_Play.html (152,378 bytes)"
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "Tools/validate_fixture.py"
+      ],
+      "working_copy": "unity",
+      "exit_code": 1,
+      "log": "10-validate_fixture.py.txt",
+      "last_line": "UnicodeDecodeError: 'cp932' codec can't decode byte 0x92 in position 105: illegal multibyte sequence"
+    }
+  ],
+  "browser_status": "NOT RUN (not requested)",
+  "unity_editor_status": "NOT RUN",
+  "unity_build_status": "NOT RUN",
+  "scope": "Source integrity and executed mechanical checks; not balance, human validation, BUG-001 closure, or Unity gameplay parity.",
+  "reference_files_verified": 29,
+  "omitted_generated_screenshots": [
+    "tests/browser_org_v0510_screenshot.png",
+    "tests/browser_skills_v0510_screenshot.png",
+    "tests/browser_traditional_default_v0510.png",
+    "tests/browser_workers_v0510_screenshot.png",
+    "tests/skills_choice_panel.png"
+  ],
+  "source_identities": {
+    "prototype/engine.js": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+    "prototype/app.js": "e5743a2d72455f9ade7d3786ce99c2c7f3864ddfb91810a18747a26a44e3bf53",
+    "Stale-Mate_v0.5.10_Play.html": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297"
+  },
+  "starter_files_verified": 10,
+  "result": "FAIL",
+  "error": "Command failed: C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe Tools/validate_fixture.py"
+}

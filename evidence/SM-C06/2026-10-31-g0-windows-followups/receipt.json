@@ -1,0 +1,47 @@
+{
+  "executing_role": "SM-C06",
+  "session_id": "01a191e1-3785-74b0-9230-c98605e5e1eb",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "contract_sha": "NOT FROZEN",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "Tools/validate_fixture.py"
+      ],
+      "cwd": "unity",
+      "environment_override": {
+        "PYTHONUTF8": "1"
+      },
+      "exit_code": 0,
+      "last_line": "Unity fixture/schema and source inventory validated; UNITY EDITOR NOT RUN",
+      "log": "fixture-utf8.txt"
+    },
+    {
+      "command": [
+        "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+        "tools/build_standalone.py"
+      ],
+      "cwd": "reference/js-v0.5.10",
+      "environment_override": {
+        "PYTHONUTF8": "1"
+      },
+      "exit_code": 0,
+      "last_line": "Built C:\\Users\\mino\\AppData\\Local\\Temp\\sm-c06-windows-followup-tkdked0x\\reference\\js-v0.5.10\\Stale-Mate_v0.5.10_Play.html (152,378 bytes)",
+      "log": "builder-utf8.txt"
+    }
+  ],
+  "unity_editor": "NOT RUN",
+  "platform_build": "NOT RUN",
+  "standalone": {
+    "original_bytes": 150856,
+    "rebuilt_bytes": 152378,
+    "original_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+    "rebuilt_sha256": "f63998403057a8bd8ab4e70969d41fc26f0204de76ad381e0a0c37a93974bdf8",
+    "byte_identical": false,
+    "rebuilt_crlf_count": 1522,
+    "original_crlf_count": 0,
+    "equal_after_crlf_to_lf": true
+  },
+  "result": "Fixture passes with process UTF-8; Windows standalone byte identity FAILS; no complete wrapper PASS"
+}
