@@ -1,0 +1,42 @@
+PASS org 1: three organizational modes and exact original user-selected piece counts
+PASS org 2: new default is Traditional + 2 Rooks, no engineer, no camp
+PASS org 3: 30x30 traditional vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 4: 30x30 traditional vs middle: exact units, fog, no camp and save roundtrip
+PASS org 5: 30x30 traditional vs flat: exact units, fog, no camp and save roundtrip
+PASS org 6: 30x30 middle vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 7: 30x30 middle vs middle: exact units, fog, no camp and save roundtrip
+PASS org 8: 30x30 middle vs flat: exact units, fog, no camp and save roundtrip
+PASS org 9: 30x30 flat vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 10: 30x30 flat vs middle: exact units, fog, no camp and save roundtrip
+PASS org 11: 30x30 flat vs flat: exact units, fog, no camp and save roundtrip
+PASS org 12: 50x50 traditional vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 13: 50x50 traditional vs middle: exact units, fog, no camp and save roundtrip
+PASS org 14: 50x50 traditional vs flat: exact units, fog, no camp and save roundtrip
+PASS org 15: 50x50 middle vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 16: 50x50 middle vs middle: exact units, fog, no camp and save roundtrip
+PASS org 17: 50x50 middle vs flat: exact units, fog, no camp and save roundtrip
+PASS org 18: 50x50 flat vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 19: 50x50 flat vs middle: exact units, fog, no camp and save roundtrip
+PASS org 20: 50x50 flat vs flat: exact units, fog, no camp and save roundtrip
+PASS org 21: 70x70 traditional vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 22: 70x70 traditional vs middle: exact units, fog, no camp and save roundtrip
+PASS org 23: 70x70 traditional vs flat: exact units, fog, no camp and save roundtrip
+PASS org 24: 70x70 middle vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 25: 70x70 middle vs middle: exact units, fog, no camp and save roundtrip
+PASS org 26: 70x70 middle vs flat: exact units, fog, no camp and save roundtrip
+PASS org 27: 70x70 flat vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 28: 70x70 flat vs middle: exact units, fog, no camp and save roundtrip
+PASS org 29: 70x70 flat vs flat: exact units, fog, no camp and save roundtrip
+PASS org 30: standard opening cannot use King XP for recruitment before camp construction
+PASS org 31: a level-4 Pawn can construct the first camp; King can then recruit
+PASS org 32: Quick Start optional camp remains reachable on all board sizes and modes
+PASS org 33: Quick Start King XP recruiting still works, including Flatten
+PASS org 34: rook2, bishop1, queen3, knight1 and pawn1 have no organizational discount
+PASS org 35: a pawn can make a legal initial move from each organizational structure
+PASS org 36: historical Balanced/Explorers/Fortress remain supported without a camp by default
+PASS org 37: real saved v0.5.8 games retain old rosters, starting camp, levels and skill selections
+PASS org 38: real v0.5.9 saves retain the old 8/7/6 rosters and any optional camp
+PASS org 39: new save from no-camp game roundtrips without inventing structures
+PASS org 40: random seed determinism, all 30/50/70 opening variants, no overlap or invisible camp
+PASS org 41: the AI makes valid commands without a starting camp in every organization
+ORGANIZATION v0.5.10: 41/41 checks passed

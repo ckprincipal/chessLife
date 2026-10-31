@@ -1,0 +1,61 @@
+STALE-MATE SM-C00 SUCCESSOR HANDOFF — FRESH VERIFICATION RECEIPT
+Handoff ID: STLM-C00-HO-2026-10-31-R2
+Date: 2026-10-31
+Reference runner timestamp UTC: 2026-10-31T11:19:08.549173+00:00
+Commander handoff commit: 4077ad17fb6ebdaa85bf2277e7812c71e8728977
+Commander handoff path: docs/SM-C00_SUCCESSOR_HANDOFF_2026-10-31.md
+Commander handoff Git blob: 946e1ecb129dfd591e2a541028da4605411d06e4
+Commander handoff SHA256: f286a82467eff096282dd78c33b0286a4f47cd23b62ed47d07c6c74bbf636033
+
+STATUS: DOCUMENTATION / EVIDENCE ONLY. Campaign source import remains HOLD.
+No READY trigger, six-agent activation, gameplay modification, main merge, Unity compile or platform build was performed by this handoff.
+
+INPUT INTEGRITY
+Original JS source ZIP: Stale-Mate_v0.5.10_Source.zip
+Bytes: 2248680
+SHA256: fde6227f2524576381968c44fd7fa838e2a94986d5036f391154515f2ab40355
+ZIP CRC: PASS
+Original source SHA256SUMS: 33/33 entries PASS before test execution.
+Engine SHA256: 7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776
+App SHA256: e5743a2d72455f9ade7d3786ce99c2c7f3864ddfb91810a18747a26a44e3bf53
+Original Unity starter ZIP SHA256: 46148d5906a869ce5673cf7004a47d98ed5308f1f8e7b8dd0944ec3f7806e091; 13139 bytes; ZIP CRC PASS.
+Historical R1.1 dispatch ZIP SHA256: b72a89784c502c98a8f95e04df3f42248c59a17a924d6c025cd59271655518d9; 2282309 bytes; ZIP CRC PASS.
+
+ENVIRONMENT / COMMAND
+Node v22.16.0; Python 3.13.5; /usr/bin/chromium with Python Playwright.
+Disposable original-source extraction: /mnt/data/sm_c00_handoff_work/reference-check/
+Executed: python tools/run_release_tests.py
+All 12 child commands returned exit 0:
+node --check prototype/engine.js EXIT 0 LAST (no output)
+node --check prototype/app.js EXIT 0 LAST (no output)
+node tests/organization_v0510.cjs EXIT 0 LAST ORGANIZATION v0.5.10: 41/41 checks passed
+node tests/regression_v0510.cjs EXIT 0 LAST Stale-Mate v0.5.10 tests: 23/23 passed.
+node tests/pawn_workers_v0510.cjs EXIT 0 LAST WORKERS v0.5.10: 54/54 passed
+node tests/skills_v0510.cjs EXIT 0 LAST SKILLS v0.5.10: 55/55 checks passed.
+node tests/randomized_smoke_v0510.cjs EXIT 0 LAST RANDOMIZED v0.5.10: 36 seeded maps (12 with staged pawn levels), 5495 actions, 326 projects, 31 queues, 8260 state invariant checks PASSED.
+node tests/randomized_skills_v0510.cjs EXIT 0 LAST RANDOMIZED SKILLS v0.5.10: 24 staged-level maps, 1794 skill picks, 2917 actions (1115 active skills; 289 builds), 6319 invariant checks PASSED.
+python tools/build_standalone.py EXIT 0 LAST Built /mnt/data/sm_c00_handoff_work/reference-check/Stale-Mate_v0.5.10_Play.html (150,856 bytes)
+python tests/browser_organization_v0510.py EXIT 0 LAST ORG BROWSER v0.5.10: 38 checks passed
+python tests/browser_workers_v0510.py EXIT 0 LAST WORKER BROWSER v0.5.10: 46/46 passed
+python tests/browser_skills_v0510.py EXIT 0 LAST SKILL BROWSER v0.5.10: 48/48 checks passed.
+Rebuilt HTML SHA256: f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297; 150856 bytes; matches original.
+
+TOTALS / SCOPE
+Focused Node: 173 = 41 + 23 + 54 + 55.
+Chromium: 132 = 38 + 46 + 48.
+Randomized actions: 8412 = 5495 + 2917 on 60 maps, including staged-level cases.
+Additional exact R1.1 sacrifice positive-control script: 9/9 PASS (traditional/middle/flat x seeds 43971/112233/88001).
+These controls grant level 4 directly; they do not reproduce the user's actual UI failure.
+BUG-001 stays OPEN / UNREPRODUCED. These are C00 reruns, not an independent C02 acceptance.
+Unity / .NET / platform builds: NOT RUN. Mechanical passes do not establish balance or enjoyment.
+Staged .import payload: NOT decoded/decompressed; direct container Git download failed DNS. Tree was inspected through GitHub connector. No integrity verdict on the staged stream.
+
+FULL LOGS IN THE COMPANION HANDOFF BUNDLE
+Filename: Stale-Mate_SM-C00_Handoff_2026-10-31.zip
+Evidence path: evidence/reference_rerun_full.txt
+Bytes: 26007; SHA256: 4125d2bbae155ab2f1a6441305e4435bf8707457838e2b8ca036ee259556b7bf
+Evidence path: evidence/reference_rerun_console.txt
+Bytes: 1332; SHA256: 4fe1bb29873f7043c564bf672f2ba29032f71a605ca0d2c32b85a61b022eab5c
+Evidence path: evidence/sacrifice_positive_controls.txt
+Bytes: 573; SHA256: 33481460eddb5fc7c4d6e0c377846a76d013eceee63cc7d060baebec9b558fbb
+The companion ZIP is a conversation attachment, not asserted uploaded to Git. This compact receipt is Git-backed; original reference source and Unity publication remain unfinished.
