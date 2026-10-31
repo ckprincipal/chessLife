@@ -1,0 +1,11 @@
+{
+    "session":  "01a191e1-34fe-77e0-84fd-0a2b9a6328bb",
+    "intake_sha":  "83a0baa8a4486562c5c67144324cede402f29cf7",
+    "role_branch":  "sm/c04-r2-tactics",
+    "role_head":  "83a0baa8a4486562c5c67144324cede402f29cf7",
+    "archive_command":  "git archive --format=zip --output=\u003ctemporary ZIP\u003e 83a0baa8a4486562c5c67144324cede402f29cf7",
+    "archive_sha256":  "f354db49a20da02bd48d4079416dbac49dd9a67dec89d65cf76a37fd3de8f203",
+    "disposable_tree":  "C:\\Users\\mino\\AppData\\Local\\Temp\\sm-c04-g0-intake-8ad904b5842147ef85664a69d0f78f3e\\tree",
+    "original_worktree":  "Unmodified; sampled reference/viewer text checked out with CRLF",
+    "purpose":  "Verify exact Git bytes without editing immutable reference or shared checkout settings"
+}

@@ -1,0 +1,723 @@
+{
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "source_sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+  "scope": "G0 staged source observations; not independent C02 acceptance, C# parity, browser verification, normal-play BUG-001 reproduction or defect repairs",
+  "cases": 22,
+  "passed": 22,
+  "failed": 0,
+  "results": [
+    {
+      "id": "T01",
+      "name": "orders ignores an unseen enemy; moves reads true occupancy",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "to": 460,
+        "ordersWithEnemy": [
+          424,
+          394,
+          364,
+          334,
+          304,
+          274,
+          244,
+          214,
+          184,
+          154,
+          124,
+          94,
+          64,
+          34,
+          4,
+          484,
+          514,
+          544,
+          574,
+          604,
+          634,
+          664,
+          694,
+          724,
+          754,
+          784,
+          814,
+          844,
+          874,
+          453,
+          452,
+          451,
+          450,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479
+        ],
+        "movesWithEnemy": [
+          424,
+          394,
+          364,
+          334,
+          304,
+          274,
+          244,
+          214,
+          184,
+          154,
+          124,
+          94,
+          64,
+          34,
+          4,
+          484,
+          514,
+          544,
+          574,
+          604,
+          634,
+          664,
+          694,
+          724,
+          754,
+          784,
+          814,
+          844,
+          874,
+          453,
+          452,
+          451,
+          450,
+          455,
+          456,
+          457
+        ],
+        "previewUnchangedWhenHiddenEnemyRemoved": true
+      }
+    },
+    {
+      "id": "T02",
+      "name": "adjacent unseen enemy consumes activation without moving or capturing",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": {
+          "type": "interrupted",
+          "side": "w",
+          "unitId": 1,
+          "from": 454,
+          "to": 454,
+          "attempted": 459
+        }
+      }
+    },
+    {
+      "id": "T03",
+      "name": "distant unseen enemy stops a slider on the last safe square",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "history": [
+          {
+            "from": 454,
+            "to": 456,
+            "round": 10,
+            "interrupted": true
+          }
+        ],
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 456,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": {
+          "type": "interrupted",
+          "side": "w",
+          "unitId": 1,
+          "from": 454,
+          "to": 456,
+          "attempted": 460
+        }
+      }
+    },
+    {
+      "id": "T04",
+      "name": "remembered plain/live water is accepted then interrupted before water",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 455,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": {
+          "type": "interrupted",
+          "side": "w",
+          "unitId": 1,
+          "from": 454,
+          "to": 455,
+          "attempted": 460
+        }
+      }
+    },
+    {
+      "id": "T05",
+      "name": "a newly grown forest is entered and soft-stops a slider",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 456,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": {
+          "type": "forest-stop",
+          "side": "w",
+          "unitId": 1,
+          "from": 454,
+          "to": 456,
+          "attempted": 460
+        }
+      }
+    },
+    {
+      "id": "T06",
+      "name": "an unseen soldier in forest takes precedence over entering forest",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 455,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": {
+          "type": "interrupted",
+          "side": "w",
+          "unitId": 1,
+          "from": 454,
+          "to": 455,
+          "attempted": 460
+        }
+      }
+    },
+    {
+      "id": "T07",
+      "name": "a malformed request preserves lastEvent but an invalid living-unit request clears it",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "malformed": {
+          "ok": false,
+          "error": "Unknown action."
+        },
+        "invalidUnit": {
+          "ok": false,
+          "error": "Select a living unit from the active army."
+        },
+        "side": "w",
+        "ap": 3,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T08",
+      "name": "finished-game actions and direct endTurn leave the whole state unchanged",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": false,
+          "error": "The game is finished."
+        },
+        "unchanged": true
+      }
+    },
+    {
+      "id": "T09",
+      "name": "maester mutates job/CP/activation yet returns Unknown action type",
+      "classification": "BASELINE_ANOMALY_REPRODUCED_NOT_FIXED",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": false,
+          "error": "Unknown action type."
+        },
+        "job": "maester",
+        "commandPowerAfter": 4,
+        "side": "w",
+        "ap": 2,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 3,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T10",
+      "name": "canAct/orders do not establish affordability or terminal legality",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": false,
+          "error": "Requires 1 CP; only 0 available."
+        },
+        "canActAtZeroCP": true,
+        "canActAfterWinner": true,
+        "ordersAtZeroCP": 8
+      }
+    },
+    {
+      "id": "T11",
+      "name": "only movement can consume a saved bonus activation at zero CP",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "denied": {
+          "ok": false,
+          "error": "This unit has already acted. Each unit gets one activation per turn unless an extra-action skill applies."
+        },
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 0,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 9,
+          "pos": 423,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": 19,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T12",
+      "name": "an interrupted Ninja first move rolls once; its bonus never rerolls",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "first": {
+          "ok": true
+        },
+        "second": {
+          "ok": true
+        },
+        "rngAfterFirst": 1831565813,
+        "side": "w",
+        "ap": 0,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1831565813,
+        "actor": {
+          "id": 9,
+          "pos": 423,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": 19,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T13",
+      "name": "pawn skill protection precedes mercy ward; neither unit moves",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "mercyWardStillPresent": 19,
+        "battleEcho": [
+          {
+            "side": "b",
+            "unitId": 1,
+            "pos": 454,
+            "until": 20
+          }
+        ],
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T14",
+      "name": "mercy ward spends the move and writes battleEcho without refreshing sight",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "unchangedSight": true,
+        "battleEcho": [
+          {
+            "side": "b",
+            "unitId": 1,
+            "pos": 454,
+            "until": 20
+          }
+        ],
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T15",
+      "name": "classic King capture completes movement/history before rejecting later turns",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "later": {
+          "ok": false,
+          "error": "The game is finished."
+        },
+        "history": [
+          {
+            "from": 454,
+            "to": 456,
+            "round": 10
+          }
+        ],
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": "w",
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 456,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T16",
+      "name": "capturing a Queen is not a royal victory",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 456,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T17",
+      "name": "nonlethal shield-pip contact spends CP while both pieces remain",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 1,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 1,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": {
+          "type": "shield-hit",
+          "side": "w",
+          "unitId": 1,
+          "targetId": 19,
+          "remaining": 1
+        }
+      }
+    },
+    {
+      "id": "T18",
+      "name": "pass advances serial/side/round, expires bonuses and uses incoming CP",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "side": "w",
+        "ap": 4,
+        "serial": 21,
+        "round": 11,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 19,
+          "pos": 454,
+          "acted": -1,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T19",
+      "name": "AI choice consumes RNG before execution and repeats from the identical full state",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "choice": {
+          "type": "move",
+          "unitId": 12,
+          "to": 426
+        },
+        "outcome": {
+          "ok": true
+        },
+        "beforeRng": 112233,
+        "rngAfterChoice": 504065509,
+        "side": "b",
+        "ap": 2,
+        "serial": 20,
+        "round": 10,
+        "winner": null,
+        "rng": 504065509,
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T20",
+      "name": "AI returns end at zero CP, null outside Black or after game end",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "zeroCPChoice": {
+          "type": "end"
+        },
+        "inactiveAndTerminalChoice": null
+      }
+    },
+    {
+      "id": "T21",
+      "name": "a Pawn draft bypasses CP/busy/activation gates without resetting those fields",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "skill": "trailcraft",
+        "project": {
+          "kind": "bridge",
+          "pos": 424,
+          "workerPos": 454,
+          "remaining": 2,
+          "total": 2
+        },
+        "side": "w",
+        "ap": 0,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 9,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    },
+    {
+      "id": "T22",
+      "name": "Fission charges pre-reset CP and persists one lineage use for both level-1 results",
+      "classification": "BASELINE_OBSERVATION",
+      "result": "PASS",
+      "observed": {
+        "outcome": {
+          "ok": true
+        },
+        "costBefore": 3,
+        "parent": 9,
+        "child": 21,
+        "lineage": 9,
+        "side": "w",
+        "ap": 0,
+        "serial": 19,
+        "round": 10,
+        "winner": null,
+        "rng": 1146740014,
+        "actor": {
+          "id": 9,
+          "pos": 454,
+          "acted": 19,
+          "bonus": 0,
+          "ninjaRolled": -1,
+          "alive": true
+        },
+        "lastEvent": null
+      }
+    }
+  ]
+}
