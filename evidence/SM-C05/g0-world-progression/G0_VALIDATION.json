@@ -1,0 +1,37 @@
+{
+  "generated_utc": "2026-10-31T13:26:18.309165+00:00",
+  "role": "SM-C05",
+  "session_id": "01a191e1-345e-7ad0-9375-46c22a1e0d02",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "contract_sha": "NOT FROZEN",
+  "initial_evidence_revision": "e4536315759624528ac3c404a6f1071789c5bb70",
+  "reviewed_peer_proposal": {
+    "role": "SM-C06",
+    "sha": "d292b03fb23e6f0f5b913fe15755faf427dc4134",
+    "path": "evidence/SM-C06/2026-10-31-g0-presentation-review.md",
+    "composed_shared_candidate_review": false
+  },
+  "commands": [
+    {
+      "command": "python evidence/SM-C05/g0-world-progression/inspect_reference.py",
+      "exit_code": 0,
+      "result": "11 exact source pins; 36 metadata entries; 12 in each source family"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "artifact_checks": {
+    "json_files_parsed_before_this_envelope": 10,
+    "unique_scenario_ids": 36,
+    "skill_ids_mapped": 36
+  },
+  "scope": "G0 source analysis and proposal evidence only; no runtime/contract implementation",
+  "limitations": [
+    "Three original-wrapper attempts each failed; LF-export child commands all passed but final HTML byte comparison failed",
+    "Browser checks, Unity compile, platform builds and C# parity NOT RUN",
+    "BUG-001 OPEN/UNREPRODUCED",
+    "C01/C03 exact composed candidate still requires a separate review; no contract freeze or production authorization"
+  ]
+}

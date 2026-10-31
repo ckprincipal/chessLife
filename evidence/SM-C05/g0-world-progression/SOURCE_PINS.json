@@ -1,0 +1,72 @@
+{
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "sources": [
+    {
+      "path": "reference/js-v0.5.10/prototype/engine.js",
+      "sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+      "bytes": 91892,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/prototype/app.js",
+      "sha256": "e5743a2d72455f9ade7d3786ce99c2c7f3864ddfb91810a18747a26a44e3bf53",
+      "bytes": 43327,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/SKILL_CATALOGUE.md",
+      "sha256": "b6da4a93e2f1d9a72eba2a8d8a57088eb6b9db5f5f5a63005873fe1f948fbc04",
+      "bytes": 7841,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/pawn_workers_v0510.cjs",
+      "sha256": "6d330955ed1f828573c4d1c0df71241daf6197d29f48a308e6e5e295c5d3a1d4",
+      "bytes": 21808,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/skills_v0510.cjs",
+      "sha256": "212248db0c32ffdcf6c78a997bd3130a5b6f459bf2b69bcac60cd8d30459bd84",
+      "bytes": 21151,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/regression_v0510.cjs",
+      "sha256": "227847d52be541c5b773c816475ab2960ef9f616c4ad34162e3768ffd3f3454e",
+      "bytes": 11145,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/organization_v0510.cjs",
+      "sha256": "08af93f4e3088486df506c63eb8271a226115791ace24bc6d4a5b50f518a3a81",
+      "bytes": 9251,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/fixtures/engine_v056.cjs",
+      "sha256": "5248c4639599adf59672e2dd90fb09d0205b3c24ccc33576d9d0c71d5021421f",
+      "bytes": 88378,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/fixtures/engine_v058.cjs",
+      "sha256": "034267016e78bb14534f79225ded97d376190b089e5832e0b1584507b356dd2f",
+      "bytes": 91069,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tests/fixtures/engine_v059.cjs",
+      "sha256": "4330f3b8731ba7a6c5def5b5d891cd54228e75102a28dedd3478217bdbff878c",
+      "bytes": 91596,
+      "matches_provenance": true
+    },
+    {
+      "path": "reference/js-v0.5.10/tools/build_standalone.py",
+      "sha256": "d9d11c46ccbf1801bc8aaf42ab0b10381ff714e9acc561fdc1143790186d21a0",
+      "bytes": 654,
+      "matches_provenance": true
+    }
+  ],
+  "method": "Read exact Git blobs; no working files modified"
+}
