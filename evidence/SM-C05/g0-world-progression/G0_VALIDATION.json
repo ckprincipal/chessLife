@@ -32,7 +32,7 @@
     "Three original-wrapper attempts each failed; LF-export child commands all passed but final HTML byte comparison failed",
     "Browser checks, Unity compile, platform builds and C# parity NOT RUN",
     "BUG-001 OPEN/UNREPRODUCED",
-    "C01/C03 exact composed candidate still requires a separate review; no contract freeze or production authorization"
+    "C03 component reviewed; the exact C01 combined candidate still requires a separate review; no contract freeze or production authorization"
   ],
   "other_reviewed_peer_proposals": [
     {
@@ -40,6 +40,17 @@
       "sha": "3daf13b4347aad8d64d0310a66dd50b3b464a145",
       "path": "evidence/SM-C04/G0_TACTICAL_REVIEW.md",
       "scope": "Fetched and read source-backed tactical boundary; peer staged probes not rerun or independently accepted by C05"
+    },
+    {
+      "role": "SM-C03",
+      "sha": "c2806a2bdf3a888567a694cdd3d05a5e62f7bb35",
+      "files": [
+        "unity/Assets/Scripts/Core/CandidateContracts.cs",
+        "unity/Assets/Scripts/Core/CandidateJson.cs",
+        "evidence/SM-C03/g0-contract/proposal.md",
+        "evidence/SM-C03/g0-contract/save-candidate.schema.json"
+      ],
+      "scope": "Static component review with eight requests; peer compile/probes not rerun or independently certified by C05; no merge or contract ACK"
     }
   ],
   "pr_comparison_context": {
@@ -51,5 +62,6 @@
     ],
     "role_intake_unchanged": true,
     "note": "Observed campaign target tip was inspected only; it was not substituted for the exact authorized intake or merged into this role branch."
-  }
+  },
+  "component_review_updated_utc": "2026-10-31T13:35:01.656036+00:00"
 }

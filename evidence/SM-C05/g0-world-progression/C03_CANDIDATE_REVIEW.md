@@ -1,0 +1,42 @@
+# C05 review of C03 candidate c2806a2
+
+Reviewed exact C03 revision: `c2806a2bdf3a888567a694cdd3d05a5e62f7bb35`, [delivery 6543984967](https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543984967), draft PR #8. Source intake remains `83a0baa8a4486562c5c67144324cede402f29cf7`.
+
+Read without merging: `CandidateContracts.cs`, `CandidateJson.cs`, `evidence/SM-C03/g0-contract/proposal.md` and `save-candidate.schema.json`. C03's compilation and staged probes are peer evidence; C05 did not rerun or independently certify them. This is C05 interface review for C01's single composed candidate, not a contract ACK/freeze or acceptance of a runtime implementation. CONTRACT SHA: **NOT FROZEN**.
+
+Review recommendation: the lossless carriers are a usable basis for composition. Complete the payload/access/ordering agreements below before C00 freezes a production-facing boundary. No C03-owned file is edited by this review.
+
+## Agreements with the exact source
+
+- Terrain values 0-8 and observer unknown terrain -1 match. Authority keeps both observers' seen/sight/memory separate; observed units, apparent decoys and memory ghosts are distinct from full authoritative units.
+- Double-valued authority IDs/positions/XP/serials, ordered arrays and JSON presence carriers avoid premature narrowing and default omission. The source distinguishes missing/null/zero/empty and uses JS numeric and enumeration semantics.
+- The flat legacy wire mapping, raw deep clone versus migration/load distinction, source-specific failed-action effects and ordered friendly-end-turn phases agree with C05's traced boundaries. No general rollback or unconditional observation refresh should be added by the facade.
+- Projects and queues retained as `JsonField`, and non-modeled fields retained in `AdditionalFields`, can represent the complete world/progression state. These fields must be preserved and accessed deliberately; their not being individually typed is not permission to ignore them.
+- No free-King/burn action fields or invented gameplay defaults were introduced. Synthetic migration cases are separately labeled from authentic fixture schemas 11,13,14. The proposed schema is descriptive rather than a replacement for source loader admission/error behavior.
+
+## Required agreements for C01's combined candidate
+
+| ID | Candidate location | C05 review request and source reason |
+|---|---|---|
+| C05-R01 | `PlayerObservation.VisibleStructures`, `UnitObservation.VisibleFields`, `Orders`, `Ghosts` | Freeze concrete field lists and payload shapes, even if represented by `ObjectData`/`ArrayData`. Current generic carriers intentionally leave these open. Owners must not guess keys or copy authority objects into them. Tie every terrain cell to its known/remembered/current state and use `canObserveUnit`, not sight alone. |
+| C05-R02 | Structure observation and queue feedback | Source player memory stores terrain, **not a separate remembered facility-owner/queue map**. For a mist cell, use its remembered terrain; never infer remembered ownership from the current global `camp.side`. Define own-queue visibility explicitly and omit enemy private queue internals. Safe status/disabled reasons cannot name an unseen exit blocker. Future unseen burn/status disclosure is a CR-002 decision; do not fabricate new persistent owner-memory state in baseline. |
+| C05-R03 | Generic mutable observation payloads | A returned `ObjectData`/list must not alias mutable authority/project/queue/skill state. Freeze detached projection or read-only ownership semantics. C06 is authorized to own selection/confirmation/camera state, not to mutate a shared `VisibleFields` reference that points into GameState. This is a composition requirement; the minimal carriers are not themselves a read-only API. |
+| C05-R04 | `StructureState.Queue` and `UnitState.Project` | Specify exact read/write accessors and no-default-mutation behavior. A tower normally has **no** queue member; preserve `Present=false` rather than manufacturing queue:null. Camps carry nullable queue, and a sacrificed pawn's queue has workerId:null and founderId set. Preserve absent count versus source fallback1, zero remaining, workerPos versus project pos, trained counters and stable camp/exit order. Queries must not normalize missing fields or mutate clocks. |
+| C05-R05 | Unit/structure/player `AdditionalFields` | Before the first implemented slice, agree paths/accessors for workAwards; trained; project anchor; skillWard/supportAwards; pendingChoices/choiceHistory; cpDiscount/visionGrowth; lineage/Fission reset; legacy professions; fatigue/grief/cloak; beacon forestPierce/source/until and battleEcho. Do not drop any of these during clone/save or expose enemy values through the observation payload. The generic fallback is adequate storage, but C04/C05 need one access convention. |
+| C05-R06 | Action descriptors / outcome / GameEvent | `Orders` must distinguish eligible project/skill targets from fully available commands and carry the agreed action-specific CP/activation/disabled information for C06. Preserve free draft/milestone/build dispatch exceptions, move-only bonuses, Relief's two costs and mutation-on-error outcomes. New events must have a defined audience; an empty ObserverSides list must not silently mean broadcast. Preserve raw source lastEvent/log in authority while filtering any UI projection. |
+| C05-R07 | Observation accessor and effect hooks | Freeze separate read-only observation and explicit `RefreshKnowledge(actorSide,actorId,initial)` responsibilities, with exactly the source call sites. Freshly reading state after a rejection must not award XP, mark contact, refresh stale sight or draw RNG. Builder completion refresh with actor, actorless training refresh, outgoing builder-before-training order, and branch-specific movement/guard calls are mandatory. |
+| C05-R08 | `UnitObservation.Pos` / `CellObservation` integer fields | For normal generated states integer board coordinates are appropriate. Clarify the normalized-state preconditions and malformed-save boundary: authority positions remain doubles and the JS loader does not validate every unit position. An adapter must not silently truncate an admitted fractional/out-of-range source value while claiming universal legacy equivalence. C02/C03 should define rejection/unsupported behavior before broad save coverage is claimed. |
+
+## Suggested minimum projection discussion
+
+These are data requirements for the owners to reconcile, not a frozen alternative DTO:
+
+- Own selected units need the permitted level/XP, activation/bonus, work lock and progress, draft/learned/equipped/cooldown/route state needed for current UI commands. A whitelist can be broad for own units but must still be explicit and copied; future AdditionalFields should not become public automatically.
+- Visible opponents need the fields justified by the source inspection/UI contract. Do not return their full learned/private counters, hidden future actions or AdditionalFields merely because the unit's square is visible. C06/C02 should reconcile the precise source-visible inspection fields before freezing that whitelist.
+- Facility projection needs a known kind/position and appropriately known owner plus the explicitly permitted own queue/worker status. A remembered terrain tile is not proof of current facility existence or current owner. Ready/waiting status is distinct from successful deployment; the camp center counts in placements.
+- A known action's target set and enabled state are different: `eligibleBuilderTargets`, `skillTargets`, `orders` and `canAct` each omit some global cost/terminal/activation gates. The composed facade must supply one consistent action view without UI recomputing hidden legality.
+- Every projection must remain independent from raw save/clone/envelope serialization. The save schema's `additionalProperties:true` preserves authority compatibility; it does not authorize public observation passthrough.
+
+## Review disposition and next request
+
+C01 should incorporate these eight items and the C04/C06 exact proposal reviews into one candidate. C03 should clarify the mapping/access/presence and observation payload questions in its lane; C02 independently fixes the canonical comparison and observer evidence. C00 can then review/freeze an exact combined revision and name the next scope. No production implementation, contract ACK, merge or baseline exception is requested by this component review.
