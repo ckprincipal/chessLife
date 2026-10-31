@@ -5,8 +5,8 @@ This G0 candidate adds byte-preserving checkout attributes, a strict generated-o
 The hook is applied only in a disposable proposal test; the branch's root verifier, reference and viewer remain at the accepted intake bytes.
 The build step writes only when LF output matches the exact original SHA-256 and rejects changed content or a protected reference destination.
 
-The PR also publishes C01's assembly/CI/ownership plan and one explicitly incomplete shared-contract working draft, incorporating C06's
-exact presentation/environment proposal. C03 data types, C02 replay schema and the relevant exact-candidate reviews remain dependencies.
+The PR also publishes C01's assembly/CI/ownership plan and one explicitly incomplete shared-contract working draft, combining exact
+C03 data-carrier, C04 tactical and C06 presentation proposal pins. C02's replay schema, C05's hooks and the relevant exact-candidate reviews remain dependencies.
 CONTRACT SHA is NOT FROZEN and production remains on HOLD.
 
 Validation:

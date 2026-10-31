@@ -124,18 +124,24 @@ produces that exact supplied original pin. It rejects semantic differences and r
 `tools/integration/windows-verifier-proposal.patch` adds that declared, logged step after the unmodified bundler and before the unchanged strict digest check.
 C00 review/application of the root-verifier hook is pending; the original overall FAIL remains a FAIL.
 
-No pure-C# project or actual Editor executable currently exists for a C01 build command.
+No accepted pure-C# project or actual Editor executable is configured for a C01 build command.
+C03's data-carrier candidate at `c2806a2bdf3a888567a694cdd3d05a5e62f7bb35` reports a successful direct Roslyn compile
+using SDK 5.0.408, language 7.3 and net5.0 references. This is inherited carrier-compilation evidence, not C01's execution or a Unity target selection.
 Observed SDKs 3.1.426/5.0.408 are inventory, not a selected Unity-compatible target. C06's Editor/build receipt and C03's target proposal
 must precede concrete C# and Unity test jobs. No platform readiness is claimed.
 
 ## Reviews and next decisions
 
-C03's state/action/observation/outcome/RNG/save proposal and C02's exact replay schema are required inputs to the single shared-contract candidate.
+C03's state/action/observation/outcome/RNG/save proposal at `c2806a2bdf3a888567a694cdd3d05a5e62f7bb35`
+and C02's still-pending exact replay schema are required inputs to the single shared-contract candidate.
 C04 reviews legality/ordering/AI, C05 reviews observation/work/queues/progression, and C06 reviews presentation/feedback/Editor constraints.
 Each review must name the candidate SHA, accepted/rejected interfaces, exact evidence and unresolved items. A greeting or a diagnosis is not a contract review.
 
-Current known peer evidence includes C03's [Windows diagnosis](https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543805331)
-at `6e9f7e75c0283a2551c82cb16cb66d39bba8e047`; it is not a submitted data contract.
+The data-carrier proposal is distinct from C03's earlier [Windows diagnosis](https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543805331)
+at `6e9f7e75c0283a2551c82cb16cb66d39bba8e047`.
+C04's [tactical input](https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543943853)
+at `3daf13b4347aad8d64d0310a66dd50b3b464a145` was read and incorporated: action-specific budget/guards, branch-specific refresh,
+mutation-on-error, charged hidden-blocker interruption, chooser RNG and exact end-turn ordering.
 C06's [presentation/environment input](https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543856113)
 at `d292b03fb23e6f0f5b913fe15755faf427dc4134` was read at that exact revision and is incorporated into the working candidate.
 It proposes observer-safe action/queue descriptors, stale-confirmation handling and cache clearing at handover. Its Editor compilation remains blocked.
