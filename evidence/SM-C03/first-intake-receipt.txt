@@ -1,0 +1,39 @@
+FROM: SM-C03 / 01a191e1-3413-7c52-927d-715ec7c628fb
+TO: SM-C00 / 000-S2
+CC: SM-C01, codex-maya
+KIND: BLOCKED
+CAMPAIGN: SM-UNITY-R2
+WORKSTREAM: Exact intake / state-RNG-save G0
+TASK / GATE: First intake receipt, before larger G0 candidate work
+ACK OF: https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543631079
+DECISION ACKED: STLM-C00-S2-G0-INTAKE-2026-10-31-01
+SESSION ID: 01a191e1-3413-7c52-927d-715ec7c628fb (CODEX_SESSION_ID and CODEX_THREAD_ID both verified).
+INTAKE SHA: 83a0baa8a4486562c5c67144324cede402f29cf7
+CONTRACT SHA: NOT FROZEN
+BRANCH / HEAD: sm/c03-r2-state / 83a0baa8a4486562c5c67144324cede402f29cf7
+WORKTREE: D:/Projects/Stale-Mate/worktrees/SM-C03 (same persisted session and prepared worktree).
+LOCAL CHANGES: Clean before incorporation; no divergent work. Clean fast-forward from 7c0b113807b154902de284c6650c61d9e047a583 to the exact authorized intake. Only new untracked C03 verification evidence exists afterward; no reference/runtime/config edits.
+RECEIPT ID: SM-C03-G0-INTAKE-6543631079-01
+
+READ: Live activation; exact-intake AGENTS.md, README.md, docs/COMMAND_CENTER.md, docs/RULES_AND_CHANGES.md, docs/ACCEPTANCE.md and docs/agents/SM-C03.md. Canonical source, archived engine fixtures, Unity viewer and verifier are now present.
+
+COMMANDS / RESULTS:
+- git fetch --no-write-fetch-head origin refs/heads/campaign/unity-r2: exit 0.
+- git merge-base --is-ancestor HEAD 83a0baa8a4486562c5c67144324cede402f29cf7: exit 0 before incorporation.
+- git merge --ff-only 83a0baa8a4486562c5c67144324cede402f29cf7: exit 0, exact intake HEAD verified.
+- python tools/verify_baseline.py --test --starter --log-dir evidence/SM-C03/intake-20261031-6543631079: exit 1 BEFORE any child command; FAIL: Baseline mismatch: reference/js-v0.5.10/CURRENT_HANDOFF.md.
+- git ls-files --eol reference/js-v0.5.10/CURRENT_HANDOFF.md reference/js-v0.5.10/prototype/engine.js unity/Assets/Scripts/StaleMateBootstrap.cs: exit 0; all three show i/lf and w/crlf, no attributes.
+- git config --get core.autocrlf: true. CURRENT_HANDOFF.md expected 4691 bytes / SHA256 74ed19013e595e848fa3ffd8addb506c4d4678e0331e942ccfdca0f494626704; local checkout is 4725 bytes / 11b10325af54260c9dbefbad4afebc7ee3215d95c4455c169bb4b83d9c9b4722.
+- dotnet --list-sdks, node --version, python --version and git --version: each exit 0.
+
+ENVIRONMENT / MISSING EXECUTION:
+Windows, PowerShell 5.1; .NET SDKs 3.1.426 / 5.0.408; Node v24.20.0; Python 3.14.8; Git 2.45.2.windows.1.
+No tool is missing for the failed hash check. Node suites, starter validation, C# compilation, browser checks, Unity Editor and platform builds have NOT RUN in this intake. Prior Editor observations remain bounded; C06 owns the current Editor result. Historical C00 passes are not C03 passes.
+
+EVIDENCE: Local evidence/SM-C03/intake-20261031-6543631079/receipt.json preserves the failed run and clean-at-start flag. It is currently uncommitted; no public evidence link is claimed yet.
+
+OWNED NEXT G0 DELIVERABLE:
+Resolve canonical-byte verification without editing the immutable oracle, then trace exact JS/old fixtures and propose minimal pure C# state/config/action/observation/outcome/event/RNG/save types plus numeric, ordering, nullable/transient and v15/v5-v14 migration semantics. Submit one candidate through C01. No whole-engine port, unilateral freeze or production implementation.
+
+NEXT / DECISION REQUESTED:
+C01 to address the Windows byte-preserving checkout/config policy in its shared lane and advise C00. I will preserve this failed receipt and can independently verify raw pinned Git bytes in a disposable copy while keeping reference/ unchanged. CONTRACT SHA remains NOT FROZEN; production remains HOLD.
