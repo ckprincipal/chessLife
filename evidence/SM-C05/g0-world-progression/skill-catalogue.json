@@ -1,0 +1,313 @@
+{
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "source_engine_sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+  "scope": "Metadata inventory only; no new skill authority or runtime implementation",
+  "counts": {
+    "scout": 12,
+    "pioneer": 12,
+    "guardian": 12
+  },
+  "routes": {
+    "scout": "Pathfinder",
+    "pioneer": "Pioneer",
+    "guardian": "Companion"
+  },
+  "skills": [
+    {
+      "id": "trailcraft",
+      "name": "Trailcraft",
+      "family": "scout",
+      "description": "Passive: +1 sight layer along the three forward rays; terrain still blocks sight.",
+      "active": null
+    },
+    {
+      "id": "flank_watch",
+      "name": "Flank Watch",
+      "family": "scout",
+      "description": "Passive: see the two immediately sideways squares. This does not change movement or attacks.",
+      "active": null
+    },
+    {
+      "id": "rear_watch",
+      "name": "Rear Watch",
+      "family": "scout",
+      "description": "Passive: see the three immediately rearward squares. This does not change movement or attacks.",
+      "active": null
+    },
+    {
+      "id": "forest_lore",
+      "name": "Forest Lore",
+      "family": "scout",
+      "description": "Passive: your sight rays penetrate forests, but never mountains.",
+      "active": null
+    },
+    {
+      "id": "swimming",
+      "name": "River Walker",
+      "family": "scout",
+      "description": "Passive: your normal pawn moves may enter water. Attacks remain forward-diagonal only.",
+      "active": null
+    },
+    {
+      "id": "climbing",
+      "name": "Mountaineer",
+      "family": "scout",
+      "description": "Passive: your normal pawn moves may enter mountains. Mountains still block sight beyond them.",
+      "active": null
+    },
+    {
+      "id": "signal_post",
+      "name": "Signal Post",
+      "family": "scout",
+      "description": "Action: place a temporary radius-2 sight beacon at your square for four opposing response turns. Costs normal CP; 3-friendly-turn cooldown.",
+      "active": "signal"
+    },
+    {
+      "id": "summit_watch",
+      "name": "Summit Watch",
+      "family": "scout",
+      "description": "Passive: +1 forward sight layer while standing on a mountain; the normal sight cap remains six.",
+      "active": null
+    },
+    {
+      "id": "long_sight",
+      "name": "Long Sight",
+      "family": "scout",
+      "description": "Passive: +1 forward sight layer, stacking with Trailcraft up to the normal cap of six.",
+      "active": null
+    },
+    {
+      "id": "sentry_platform",
+      "name": "Sentry Platform",
+      "family": "scout",
+      "description": "Passive: a friendly watchtower gains one outer sight ring only while you are standing on it. Terrain blocks extended sight.",
+      "active": null
+    },
+    {
+      "id": "far_signal",
+      "name": "Far Signal",
+      "family": "scout",
+      "description": "Action: place a radius-3 sight beacon for four opposing response turns. Shares the Signal Post cooldown.",
+      "active": "signal"
+    },
+    {
+      "id": "lasting_signal",
+      "name": "Lasting Signal",
+      "family": "scout",
+      "description": "Action: place a radius-2 sight beacon for six opposing response turns. Shares the Signal Post cooldown.",
+      "active": "signal"
+    },
+    {
+      "id": "woodsman",
+      "name": "Woodsman",
+      "family": "pioneer",
+      "description": "Passive: forest clearing takes one friendly work turn instead of two.",
+      "active": null
+    },
+    {
+      "id": "bridgewright",
+      "name": "Bridgewright",
+      "family": "pioneer",
+      "description": "Passive: bridge construction takes one friendly work turn instead of two. Level-2 work gate remains.",
+      "active": null
+    },
+    {
+      "id": "masonry",
+      "name": "Masonry",
+      "family": "pioneer",
+      "description": "Passive: mountain excavation takes two friendly work turns instead of three. Level-3 gate remains.",
+      "active": null
+    },
+    {
+      "id": "campwright",
+      "name": "Campwright",
+      "family": "pioneer",
+      "description": "Passive: camp construction takes two friendly work turns instead of three. Level-4 gate remains; recruitment clocks are separate.",
+      "active": null
+    },
+    {
+      "id": "towerwright",
+      "name": "Towerwright",
+      "family": "pioneer",
+      "description": "Passive: watchtower construction takes one friendly work turn instead of two. Level-2 gate remains.",
+      "active": null
+    },
+    {
+      "id": "land_reclamation",
+      "name": "Land Reclamation",
+      "family": "pioneer",
+      "description": "Passive: at level 2+, unlock the engineer-style water-fill project (one work turn), from an adjacent visible shore.",
+      "active": null
+    },
+    {
+      "id": "tunnelcraft",
+      "name": "Tunnelcraft",
+      "family": "pioneer",
+      "description": "Passive: at level 3+, unlock tunnel construction through an adjacent visible mountain (three work turns).",
+      "active": null
+    },
+    {
+      "id": "quarry_master",
+      "name": "Quarry Master",
+      "family": "pioneer",
+      "description": "Passive: mountain excavation takes one friendly work turn. Replaces, rather than stacks below, the Masonry reduction.",
+      "active": null
+    },
+    {
+      "id": "roadcrew",
+      "name": "Road Crew",
+      "family": "pioneer",
+      "description": "Passive: forest clearing may target an adjacent visible square instead of only the square underfoot.",
+      "active": null
+    },
+    {
+      "id": "field_survey",
+      "name": "Field Survey",
+      "family": "pioneer",
+      "description": "Passive: build watchtowers on an adjacent visible, vacant plain square. You remain at the work position.",
+      "active": null
+    },
+    {
+      "id": "site_planner",
+      "name": "Site Planner",
+      "family": "pioneer",
+      "description": "Passive: build camps on an adjacent visible, vacant plain square. Level-4 gate remains; you must enter the completed camp to operate it.",
+      "active": null
+    },
+    {
+      "id": "instructor",
+      "name": "Instructor",
+      "family": "pioneer",
+      "description": "Passive: keeping this pawn stationed for a training batch takes four friendly turns instead of five. Sacrifice stays two; recruits stay level 1.",
+      "active": null
+    },
+    {
+      "id": "cover",
+      "name": "Cover",
+      "family": "guardian",
+      "description": "Action: protect one adjacent friendly pawn, knight, bishop or rook from one attack through the next enemy turn. No king/queen targets, no stacking. Normal CP; 3-friendly-turn shared guard cooldown.",
+      "active": "guard"
+    },
+    {
+      "id": "sidestep",
+      "name": "Sidestep",
+      "family": "guardian",
+      "description": "Action: move one square sideways without capturing, only through explored passable terrain. Normal CP; 2-friendly-turn shared maneuver cooldown.",
+      "active": "maneuver"
+    },
+    {
+      "id": "withdraw",
+      "name": "Withdraw",
+      "family": "guardian",
+      "description": "Action: move one square straight backward without capturing. Known passable route required. Normal CP; shared maneuver cooldown.",
+      "active": "maneuver"
+    },
+    {
+      "id": "forced_march",
+      "name": "Forced March",
+      "family": "guardian",
+      "description": "Action: move two squares straight forward without capturing or jumping blockers. Both squares must be explored. Normal CP; shared maneuver cooldown.",
+      "active": "maneuver"
+    },
+    {
+      "id": "diagonal_march",
+      "name": "Diagonal March",
+      "family": "guardian",
+      "description": "Action: move two squares along one forward diagonal without capturing or jumping blockers. Known passable route required. Normal CP; shared maneuver cooldown.",
+      "active": "maneuver"
+    },
+    {
+      "id": "entrench",
+      "name": "Entrench",
+      "family": "guardian",
+      "description": "Action: protect yourself from one attack through the next enemy turn. Normal CP; shared guard cooldown. No stacking.",
+      "active": "self_guard"
+    },
+    {
+      "id": "relief",
+      "name": "Relief",
+      "family": "guardian",
+      "description": "Action: swap with an adjacent, unacted friendly pawn/knight/bishop/rook. Both must be idle and able to enter the other square. Pays BOTH activation costs and uses BOTH activations. Shared maneuver cooldown.",
+      "active": "relief"
+    },
+    {
+      "id": "distant_cover",
+      "name": "Distant Cover",
+      "family": "guardian",
+      "description": "Action: Cover a friendly pawn/knight/bishop/rook up to two squares away along clear line of sight. Same one-hit protection, CP and shared guard cooldown.",
+      "active": "guard"
+    },
+    {
+      "id": "ready_guard",
+      "name": "Ready Guard",
+      "family": "guardian",
+      "description": "Passive: guard actions recover after two friendly turns instead of three. Requires an equipped Cover, Distant Cover or Entrench action.",
+      "active": null
+    },
+    {
+      "id": "lasting_guard",
+      "name": "Lasting Guard",
+      "family": "guardian",
+      "description": "Passive: protection you grant lasts through two opposing response turns instead of one, but still absorbs only ONE attack.",
+      "active": null
+    },
+    {
+      "id": "march_drill",
+      "name": "March Drill",
+      "family": "guardian",
+      "description": "Passive: equipped maneuver skills may be used on consecutive friendly turns. Never grants a second activation in the same turn.",
+      "active": null
+    },
+    {
+      "id": "support_training",
+      "name": "Support Training",
+      "family": "guardian",
+      "description": "Passive: when your granted protection actually absorbs an attack, earn 1 base XP once per protected ally per match. No XP for merely casting protection.",
+      "active": null
+    }
+  ],
+  "workProjects": {
+    "fill": 1,
+    "clear_forest": 2,
+    "bridge": 2,
+    "excavate": 3,
+    "tunnel": 3,
+    "camp": 3,
+    "tower": 2
+  },
+  "pawnWorkLevels": {
+    "clear_forest": 1,
+    "bridge": 2,
+    "tower": 2,
+    "excavate": 3,
+    "camp": 4,
+    "train": 4
+  },
+  "workXp": {
+    "clear_forest": 2,
+    "bridge": 2,
+    "tower": 2,
+    "excavate": 3,
+    "camp": 3
+  },
+  "trainingXp": {
+    "P": 3,
+    "N": 8,
+    "B": 10
+  },
+  "trainingTurns": {
+    "P": 2,
+    "N": 3,
+    "B": 4
+  },
+  "skillSlots": {
+    "P": 0,
+    "N": 1,
+    "B": 1,
+    "R": 2,
+    "Q": 3,
+    "K": 2,
+    "V": 0
+  },
+  "militaryCap": 20
+}

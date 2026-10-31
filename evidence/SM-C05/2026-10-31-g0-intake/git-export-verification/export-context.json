@@ -1,0 +1,18 @@
+{
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "method": "git archive with inherited core.autocrlf=true; this also performed line-ending conversion, so the preserved attempt failed before child tests. No working-reference edits.",
+  "archive_sha256": "91d19436078a114bd3c6451cd01a4dc8417da368fc7996ac932f191c517537f5",
+  "command": [
+    "python",
+    "tools/verify_baseline.py",
+    "--test",
+    "--starter",
+    "--log-dir",
+    "D:\\projects\\Stale-Mate\\worktrees\\SM-C05\\evidence\\SM-C05\\2026-10-31-g0-intake\\git-export-verification"
+  ],
+  "exit_code": 1,
+  "working_tree": "disposable exact Git export",
+  "local_worktree_manifest_attempt": "../receipt.json (FAIL preserved)",
+  "python_utf8": "1",
+  "note": "The original wrapper git_context is null outside a checkout; this envelope pins the export to its exact source commit."
+}
