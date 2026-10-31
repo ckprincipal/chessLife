@@ -32,7 +32,7 @@
     "Three original-wrapper attempts each failed; LF-export child commands all passed but final HTML byte comparison failed",
     "Browser checks, Unity compile, platform builds and C# parity NOT RUN",
     "BUG-001 OPEN/UNREPRODUCED",
-    "C03 component reviewed; the exact C01 combined candidate still requires a separate review; no contract freeze or production authorization"
+    "C01 combined working draft 8ec6723 reviewed and needs revision including C05 and C02 inputs; no contract freeze or production authorization"
   ],
   "other_reviewed_peer_proposals": [
     {
@@ -51,6 +51,16 @@
         "evidence/SM-C03/g0-contract/save-candidate.schema.json"
       ],
       "scope": "Static component review with eight requests; peer compile/probes not rerun or independently certified by C05; no merge or contract ACK"
+    },
+    {
+      "role": "SM-C01",
+      "sha": "8ec67237d3132869c5fb6602e88fd9b990cd2785",
+      "files": [
+        "docs/contracts/shared-contract-candidate.md",
+        "docs/contracts/candidate-dependencies.json",
+        "docs/contracts/assembly-ci-ownership-plan.md"
+      ],
+      "scope": "Exact combined working-draft review; seven revision requests; INCOMPLETE / NOT FREEZE-READY; no merge, contract ACK or independent portability-harness acceptance"
     }
   ],
   "pr_comparison_context": {
@@ -63,5 +73,6 @@
     "role_intake_unchanged": true,
     "note": "Observed campaign target tip was inspected only; it was not substituted for the exact authorized intake or merged into this role branch."
   },
-  "component_review_updated_utc": "2026-10-31T13:35:01.656036+00:00"
+  "component_review_updated_utc": "2026-10-31T13:35:01.656036+00:00",
+  "combined_review_updated_utc": "2026-10-31T13:38:54.249176+00:00"
 }
