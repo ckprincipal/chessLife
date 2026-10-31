@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\mino\AppData\Local\Temp\stale-mate-verify-ocd7slpa\unity\Tools\validate_fixture.py", line 5, in <module>
+    scenes=json.loads((root/'Assets/Resources/openings_v058.json').read_text())['openings']
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mino\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\pathlib\__init__.py", line 788, in read_text
+    return f.read()
+           ~~~~~~^^
+UnicodeDecodeError: 'cp932' codec can't decode byte 0x92 in position 105: illegal multibyte sequence

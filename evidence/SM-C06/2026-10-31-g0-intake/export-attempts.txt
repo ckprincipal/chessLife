@@ -1,0 +1,8 @@
+The first invocation of verify_exact_export.py used git archive without per-process newline overrides.
+Command: python evidence/SM-C06/2026-10-31-g0-intake/verify_exact_export.py
+Exit code: 1 before invoking the upstream verifier.
+Failure: ValueError: Exact export integrity failure: reference/js-v0.5.10/CURRENT_HANDOFF.md
+No successful export/test receipt was written by that attempt. The temporary export was discarded.
+The helper was corrected to invoke git -c core.autocrlf=false -c core.eol=lf archive.
+These options apply only to that process; no system, global or repository Git configuration was changed.
+Manifest verification remains mandatory before any child test command.
