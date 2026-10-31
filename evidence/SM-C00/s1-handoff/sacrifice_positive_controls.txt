@@ -1,0 +1,10 @@
+PASS staged positive control 1 (traditional, seed=43971)
+PASS staged positive control 2 (traditional, seed=112233)
+PASS staged positive control 3 (traditional, seed=88001)
+PASS staged positive control 4 (middle, seed=43971)
+PASS staged positive control 5 (middle, seed=112233)
+PASS staged positive control 6 (middle, seed=88001)
+PASS staged positive control 7 (flat, seed=43971)
+PASS staged positive control 8 (flat, seed=112233)
+PASS staged positive control 9 (flat, seed=88001)
+9/9 PASS. User's live UI symptom is UNREPRODUCED; investigate independent browser/save path.

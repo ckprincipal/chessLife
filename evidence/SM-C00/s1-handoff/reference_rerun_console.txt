@@ -1,0 +1,13 @@
+node --check prototype/engine.js EXIT 0 LAST (no output)
+node --check prototype/app.js EXIT 0 LAST (no output)
+node tests/organization_v0510.cjs EXIT 0 LAST ORGANIZATION v0.5.10: 41/41 checks passed
+node tests/regression_v0510.cjs EXIT 0 LAST Stale-Mate v0.5.10 tests: 23/23 passed.
+node tests/pawn_workers_v0510.cjs EXIT 0 LAST WORKERS v0.5.10: 54/54 passed
+node tests/skills_v0510.cjs EXIT 0 LAST SKILLS v0.5.10: 55/55 checks passed.
+node tests/randomized_smoke_v0510.cjs EXIT 0 LAST RANDOMIZED v0.5.10: 36 seeded maps (12 with staged pawn levels), 5495 actions, 326 projects, 31 queues, 8260 state invariant checks PASSED.
+node tests/randomized_skills_v0510.cjs EXIT 0 LAST RANDOMIZED SKILLS v0.5.10: 24 staged-level maps, 1794 skill picks, 2917 actions (1115 active skills; 289 builds), 6319 invariant checks PASSED.
+python tools/build_standalone.py EXIT 0 LAST Built /mnt/data/sm_c00_handoff_work/reference-check/Stale-Mate_v0.5.10_Play.html (150,856 bytes)
+python tests/browser_organization_v0510.py EXIT 0 LAST ORG BROWSER v0.5.10: 38 checks passed
+python tests/browser_workers_v0510.py EXIT 0 LAST WORKER BROWSER v0.5.10: 46/46 passed
+python tests/browser_skills_v0510.py EXIT 0 LAST SKILL BROWSER v0.5.10: 48/48 checks passed.
+Built HTML SHA256 f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297 bytes 150856

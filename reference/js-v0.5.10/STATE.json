@@ -1,0 +1,55 @@
+{
+  "id": "STLM-HO-2026-10-31-R10",
+  "project": "Stale-Mate",
+  "version": "0.5.10",
+  "save_schema": 15,
+  "playable_html": "Stale-Mate_v0.5.10_Play.html",
+  "engine_source": "prototype/engine.js",
+  "starting_camp_default": "none",
+  "starting_camp_quick_start": "ready",
+  "organizations": {
+    "traditional": {
+      "K": 1,
+      "Q": 1,
+      "R": 2,
+      "N": 2,
+      "B": 2,
+      "P": 2
+    },
+    "middle": {
+      "K": 1,
+      "N": 2,
+      "P": 6
+    },
+    "flat": {
+      "K": 1,
+      "P": 9
+    }
+  },
+  "default_organization": "traditional",
+  "opponent_mirrors_by_default": true,
+  "command_power_initial": 3,
+  "rook_cost": 2,
+  "bishop_cost": 1,
+  "pawn_skill_catalogue_count": 36,
+  "skill_slots": {
+    "P": 0,
+    "N": 1,
+    "B": 1,
+    "R": 2,
+    "Q": 3,
+    "K": 2
+  },
+  "pawn_skill_milestones": "3,6,9,...,99",
+  "independent_engineer": false,
+  "camp_count_limit_added": false,
+  "old_saves_preserve_armies_and_camps": true,
+  "unity_status": "v0.5.8 C# viewer only; not v0.5.9 parity",
+  "github_pushed": false,
+  "tests": {
+    "engine": 173,
+    "chromium": 132,
+    "random_actions": 8412
+  },
+  "previous_release": "0.5.9 (no starter camps; 8/7/6 old organizational rosters)"
+}

@@ -1,0 +1,370 @@
+STALE-MATE v0.5.10 TEST EVIDENCE
+Generated UTC 2026-10-31T11:19:08.549173+00:00
+Engine v0.5.10, save schema 15; default zero camps; Quick Start one per side
+Browser: actual local Chromium via Python Playwright
+Known limitation: mechanical checks do not measure balance, fun or Unity parity.
+
+===========================================================================
+$ node --check prototype/engine.js
+exit_code=0
+
+===========================================================================
+$ node --check prototype/app.js
+exit_code=0
+
+===========================================================================
+$ node tests/organization_v0510.cjs
+exit_code=0
+PASS org 1: three organizational modes and exact original user-selected piece counts
+PASS org 2: new default is Traditional + 2 Rooks, no engineer, no camp
+PASS org 3: 30x30 traditional vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 4: 30x30 traditional vs middle: exact units, fog, no camp and save roundtrip
+PASS org 5: 30x30 traditional vs flat: exact units, fog, no camp and save roundtrip
+PASS org 6: 30x30 middle vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 7: 30x30 middle vs middle: exact units, fog, no camp and save roundtrip
+PASS org 8: 30x30 middle vs flat: exact units, fog, no camp and save roundtrip
+PASS org 9: 30x30 flat vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 10: 30x30 flat vs middle: exact units, fog, no camp and save roundtrip
+PASS org 11: 30x30 flat vs flat: exact units, fog, no camp and save roundtrip
+PASS org 12: 50x50 traditional vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 13: 50x50 traditional vs middle: exact units, fog, no camp and save roundtrip
+PASS org 14: 50x50 traditional vs flat: exact units, fog, no camp and save roundtrip
+PASS org 15: 50x50 middle vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 16: 50x50 middle vs middle: exact units, fog, no camp and save roundtrip
+PASS org 17: 50x50 middle vs flat: exact units, fog, no camp and save roundtrip
+PASS org 18: 50x50 flat vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 19: 50x50 flat vs middle: exact units, fog, no camp and save roundtrip
+PASS org 20: 50x50 flat vs flat: exact units, fog, no camp and save roundtrip
+PASS org 21: 70x70 traditional vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 22: 70x70 traditional vs middle: exact units, fog, no camp and save roundtrip
+PASS org 23: 70x70 traditional vs flat: exact units, fog, no camp and save roundtrip
+PASS org 24: 70x70 middle vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 25: 70x70 middle vs middle: exact units, fog, no camp and save roundtrip
+PASS org 26: 70x70 middle vs flat: exact units, fog, no camp and save roundtrip
+PASS org 27: 70x70 flat vs traditional: exact units, fog, no camp and save roundtrip
+PASS org 28: 70x70 flat vs middle: exact units, fog, no camp and save roundtrip
+PASS org 29: 70x70 flat vs flat: exact units, fog, no camp and save roundtrip
+PASS org 30: standard opening cannot use King XP for recruitment before camp construction
+PASS org 31: a level-4 Pawn can construct the first camp; King can then recruit
+PASS org 32: Quick Start optional camp remains reachable on all board sizes and modes
+PASS org 33: Quick Start King XP recruiting still works, including Flatten
+PASS org 34: rook2, bishop1, queen3, knight1 and pawn1 have no organizational discount
+PASS org 35: a pawn can make a legal initial move from each organizational structure
+PASS org 36: historical Balanced/Explorers/Fortress remain supported without a camp by default
+PASS org 37: real saved v0.5.8 games retain old rosters, starting camp, levels and skill selections
+PASS org 38: real v0.5.9 saves retain the old 8/7/6 rosters and any optional camp
+PASS org 39: new save from no-camp game roundtrips without inventing structures
+PASS org 40: random seed determinism, all 30/50/70 opening variants, no overlap or invisible camp
+PASS org 41: the AI makes valid commands without a starting camp in every organization
+ORGANIZATION v0.5.10: 41/41 checks passed
+
+===========================================================================
+$ node tests/regression_v0510.cjs
+exit_code=0
+PASS 1: v0.5.10 Quick Start comparison: all three presets start with three worker pawns and no engineer, on 30/50/70 maps
+PASS 2: original CP option preserves two-command budget and original rook/queen costs
+PASS 3: roomier opening: rook 2 CP, bishop 1, queen 3 and king 1
+PASS 4: bishop+pawn+knight use three distinct one-CP military commands
+PASS 5: queen exhausts opening three-command budget, no additional normal activation
+PASS 6: bishop gets a REAL extra diagonal sight layer at level 2
+PASS 7: rook/queen initially see two directional tiles, pawn sees all three forward squares
+PASS 8: the King can immediately train one pawn at the ready camp for 1 CP and 3 XP
+PASS 9: starting camp keeps its vision and a pawn immediately adds the outer ring
+PASS 10: level-1 pawns cannot create camps and level-3 pawns can excavate mountains
+PASS 11: pawn-workers remain capturable military units, not invulnerable engineers
+PASS 12: king earns a fraction of nonroyal XP without needing to move
+PASS 13: XP shared to king is not recursive and passing turns awards no XP
+PASS 14: pawn confronted with water uses a forward-diagonal move, never a sideways detour
+PASS 15: pawn cannot detour sideways with no water or mountain in front
+PASS 16: knight taking a pawn exposes attacker long enough for the other pawn to recapture
+PASS 17: attacks against shield-pip defenders also reveal attack origin for retaliation
+PASS 18: battle contact does not permanently reveal enemy after it moves or the response turn expires
+PASS 19: the AI can recruit using its King without an engineer, spending real CP
+PASS 20: optional camp capture costs exactly 1 CP after surviving a turn, not an immediate win
+PASS 21: optional camp capture cannot happen on arrival turn or in off mode
+PASS 22: version12 roundtrip and original v7 migration
+PASS 23: no-stalemate remains king capture/turn pass even if no legal military action
+Stale-Mate v0.5.10 tests: 23/23 passed.
+
+===========================================================================
+$ node tests/pawn_workers_v0510.cjs
+exit_code=0
+PASS worker 1: w: three empty forward moves and matching three-square sight
+PASS worker 2: w: empty diagonal move costs one CP and one activation
+PASS worker 3: w: straight-ahead enemy cannot be captured
+PASS worker 4: w: both forward-diagonal captures work
+PASS worker 5: w: friendly blockers, backwards, sideways and double steps forbidden
+PASS worker 6: b: three empty forward moves and matching three-square sight
+PASS worker 7: b: empty diagonal move costs one CP and one activation
+PASS worker 8: b: straight-ahead enemy cannot be captured
+PASS worker 9: b: both forward-diagonal captures work
+PASS worker 10: b: friendly blockers, backwards, sideways and double steps forbidden
+PASS worker 11: old lateral detour removed even when forward square is water
+PASS worker 12: water and mountains still block diagonal pawn movement
+PASS worker 13: pawn orders do not expose a hidden diagonal blocker; execution cannot blind-capture
+PASS worker 14: pawn cannot be ordered onto an unexplored forward square
+PASS worker 15: rook 2 / bishop 1 costs are actually deducted in both budgets
+PASS worker 16: one camp alone reveals its center plus exactly eight neighbors
+PASS worker 17: friendly pawn garrison adds exactly one outer ring and loses it on leaving
+PASS worker 18: only pawns garrison camps in new games; enemy pawns never extend our vision
+PASS worker 19: forest/mountain block camp outer sight but not the adjacent obstacle tile
+PASS worker 20: camp sight at map edge remains inside board bounds
+PASS worker 21: terrain outside remaining camp sight stays remembered, not live
+PASS worker 22: L1 forest clearing: normal CP, work lock, two own ticks, meaningful XP
+PASS worker 23: L1 cannot bridge, build tower, excavate or build camps
+PASS worker 24: L2 bridge works from shore and does not grant free water travel
+PASS worker 25: shore worker cannot bridge remote or unseen water
+PASS worker 26: L2 builds permanent watchtower in two work ticks with eight-neighbor sight
+PASS worker 27: L2 mountain work locked; L3 clears mountain from adjacent safe square
+PASS worker 28: camp unlock is L4 (not L3 or old provisional L5); construction remains three ticks
+PASS worker 29: pawn workers cannot perform engineer-only fill/tunnel tasks
+PASS worker 30: insufficient CP rejects construction without mutating terrain, project or activation
+PASS worker 31: two friendly workers cannot reserve the same bridge site
+PASS worker 32: capture of working pawn cancels construction, without making it invulnerable/nonblocking
+PASS worker 33: changed worksite cancels project rather than overwriting unrelated terrain
+PASS worker 34: work XP is once per project/site/side, not repeatable by resetting a tile
+PASS worker 35: sacrifice: exact 2 level-1 Pawn batch in 2 own ticks
+PASS worker 36: sacrifice: exact 1 level-1 Knight batch in 2 own ticks
+PASS worker 37: sacrifice: exact 1 level-1 Bishop batch in 2 own ticks
+PASS worker 38: stay: exact 2 level-1 Pawn batch in 5 own ticks
+PASS worker 39: stay: exact 1 level-1 Knight batch in 5 own ticks
+PASS worker 40: stay: exact 1 level-1 Bishop batch in 5 own ticks
+PASS worker 41: enemy turns do not tick pawn production; 2 and 5 are friendly-turn counts
+PASS worker 42: level-3 pawn cannot operate an existing camp, and omitted mode is rejected
+PASS worker 43: camp output rejects queen/rook; the King cannot sacrifice himself
+PASS worker 44: capture of stationed pawn cancels its five-turn queue immediately
+PASS worker 45: completed batch waits atomically for enough exits, never loses/duplicates its second pawn
+PASS worker 46: army capacity reserves whole batches and accounts for sacrificed operator
+PASS worker 47: parallel queues cannot overbook the army cap; fresh replacements cannot immediately operate camps
+PASS worker 48: pawn-mode durations remain 2/5 even in a heavily used camp
+PASS worker 49: save/load preserves towers, shore projects, pawn queues, work XP ledger and exact remaining CP
+PASS worker 50: old v0.5.6 engineer training migrates to royal order without recharging XP
+PASS worker 51: no separate camp-count cap: a level-4 pawn can build a third camp
+PASS worker 52: older engineer terrain projects are canceled without deleting the starting camp
+PASS worker 53: captured camp changes vision ownership and cancels the old production queue
+PASS worker 54: king capture still ends the game; pending recruitment cannot continue after victory
+WORKERS v0.5.10: 54/54 passed
+
+===========================================================================
+$ node tests/skills_v0510.cjs
+exit_code=0
+PASS skill 1: starting slot counts P/N/B/R/Q/K are exactly 0/1/1/2/3/2
+PASS skill 2: pawn capacity grows at 3,6,...,99; default non-pawn level-50 bonus preserved
+PASS skill 3: catalogue has 36 distinct, described skills split into three 12-skill draft families
+PASS skill 4: no premature skill choice at levels 1 and 2; first offers are exact three
+PASS skill 5: level crossing queues milestones once, including multi-level XP gains
+PASS skill 6: learning consumes neither CP nor activation, but never resets already-used action
+PASS skill 7: duplicate picks, unoffered skills, enemy picks and post-victory picks are rejected
+PASS skill 8: all 33 milestones retain exactly three offers even with an extreme single-route draft
+PASS skill 9: route derives from chosen skills, not a separate irreversible profession or equipment
+PASS skill 10: route ties stay Mixed; early identity remains Developing; labels give no bonus
+PASS skill 11: route disclosure defaults to effects-only and is saved independently of gameplay
+PASS skill 12: save/load retains exact choice history, cooldowns and loadout without reroll/re-equip
+PASS skill 13: v10 migration preserves XP, projects, activations, old profession; excess equipment stays learned
+PASS skill 14: legacy-full slot learns without deleting skills or silently changing equipment
+PASS skill 15: new direct profession purchase is disabled, leaving ordinary worker ladder intact
+PASS skill 16: waiting alone never grants King XP, including no stationary royal farming
+PASS skill 17: King gains 0.30 per allied base XP; direct royal 1.5x; engineers excluded; no recursion
+PASS skill 18: learning vision does not itself mint XP or royal credit
+PASS skill 19: w Trailcraft, flank and rear sight are directional, not extra base moves
+PASS skill 20: w skill Sidestep/Withdraw/March/Diagonal March never capture and pay activation
+PASS skill 21: b Trailcraft, flank and rear sight are directional, not extra base moves
+PASS skill 22: b skill Sidestep/Withdraw/March/Diagonal March never capture and pay activation
+PASS skill 23: Forest Lore penetrates forest but not mountain; Long Sight stacks, cap six
+PASS skill 24: River Walker and Mountaineer alter passability only while equipped
+PASS skill 25: Summit Watch adds range only on mountain; Sentry Platform sight expires when vacated
+PASS skill 26: signal_post creates real beacon with stated range/lifetime, costs CP, cooldown persists
+PASS skill 27: far_signal creates real beacon with stated range/lifetime, costs CP, cooldown persists
+PASS skill 28: lasting_signal creates real beacon with stated range/lifetime, costs CP, cooldown persists
+PASS skill 29: woodsman changes actual clear_forest duration to 1, not just text
+PASS skill 30: bridgewright changes actual bridge duration to 1, not just text
+PASS skill 31: masonry changes actual excavate duration to 2, not just text
+PASS skill 32: campwright changes actual camp duration to 2, not just text
+PASS skill 33: towerwright changes actual tower duration to 1, not just text
+PASS skill 34: quarry_master changes actual excavate duration to 1, not just text
+PASS skill 35: land_reclamation unlocks adjacent safe-shore work without unrestricted terrain entry
+PASS skill 36: tunnelcraft unlocks adjacent safe-shore work without unrestricted terrain entry
+PASS skill 37: roadcrew allows exactly adjacent visible work, not unseen or remote jobs
+PASS skill 38: field_survey allows exactly adjacent visible work, not unseen or remote jobs
+PASS skill 39: site_planner allows exactly adjacent visible work, not unseen or remote jobs
+PASS skill 40: Instructor reduces stationary batch to four, never sacrifice or newborn level
+PASS skill 41: Cover protects an ally exactly once, never captures attacker, and costs a full activation
+PASS skill 42: Cover cannot protect kings, queens, self, enemies, distant allies, or already warded allies
+PASS skill 43: Distant Cover permits range two with fully observed clear sight, never reads hidden terrain
+PASS skill 44: Entrench, Ready Guard and Lasting Guard have exact expiry and cooldown without extra hits
+PASS skill 45: Support Training awards only on real absorption and once per ally, with normal royal share
+PASS skill 46: Relief swaps two nonroyal idle pieces and pays BOTH costs and activations
+PASS skill 47: Relief cannot bypass insufficient CP, worked units, activated allies or royal restrictions
+PASS skill 48: Maneuver previews do not leak hidden blockers; execution stops without blind capture
+PASS skill 49: Maneuver does not jump hidden terrain, black cells, visible enemies or allies
+PASS skill 50: March Drill reduces cooldown, not per-turn activation, and no free attack via bonus flag
+PASS skill 51: skill replacement cannot strand a pawn in water/mountain and does not erase learned skill
+PASS skill 52: Fission resets source AND child skill choices, equipment, cooldowns and support history
+PASS skill 53: AI takes pending skill choices through the same deterministic three-offer action
+PASS skill 54: Fission cannot strand reset Lv1 source or daughter on skill-only water/mountains
+PASS skill 55: optional Fission is learned at Lv60 but does not steal a default draft slot
+SKILLS v0.5.10: 55/55 checks passed.
+
+===========================================================================
+$ node tests/randomized_smoke_v0510.cjs
+exit_code=0
+RANDOMIZED v0.5.10: 36 seeded maps (12 with staged pawn levels), 5495 actions, 326 projects, 31 queues, 8260 state invariant checks PASSED.
+
+===========================================================================
+$ node tests/randomized_skills_v0510.cjs
+exit_code=0
+RANDOMIZED SKILLS v0.5.10: 24 staged-level maps, 1794 skill picks, 2917 actions (1115 active skills; 289 builds), 6319 invariant checks PASSED.
+
+===========================================================================
+$ python tools/build_standalone.py
+exit_code=0
+Built /mnt/data/sm_c00_handoff_work/reference-check/Stale-Mate_v0.5.10_Play.html (150,856 bytes)
+
+===========================================================================
+$ python tests/browser_organization_v0510.py
+exit_code=0
+PASS org browser 1 standalone loads v0.5.10 without server
+PASS org browser 2 Traditional default selected
+PASS org browser 3 opponent mirrored by default
+PASS org browser 4 traditional explanation visible
+PASS org browser 5 actual default game shows 8 vs 8
+PASS org browser 6 Queen route enabled when there is a Queen
+PASS org browser 7 selector has exactly one organizational explanation
+PASS org browser 8 old separate engineer is absent from game rules
+PASS org browser 9 royal-plans theme embedded
+PASS org browser 10 saved default mode persists both sides
+PASS org browser 11 Traditional exact opening unit counts
+PASS org browser 12 default match starts WITHOUT camps
+PASS org browser 13 no engineer in actual saved state
+PASS org browser 14 no camp is the setup default
+PASS org browser 15 optional Quick Start creates exactly one camp per side
+PASS org browser 16 Quick Start preserves Traditional rooks
+PASS org browser 17 returning to default removes prebuilt camps on a NEW match
+PASS org browser 18 Middle explanations update without starting match
+PASS org browser 19 Queen route disabled for no-Queen starting lineup
+PASS org browser 20 Middle actually used by both sides with mirror
+PASS org browser 21 Middle exact K+2N+6P
+PASS org browser 22 Middle opponent exact roster
+PASS org browser 23 Flatten description updates
+PASS org browser 24 opponent override is reflected in preview
+PASS org browser 25 asymmetric Flat vs Traditional matchup saved
+PASS org browser 26 Flatten starts King and nine Pawn-workers
+PASS org browser 27 opponent independent Traditional roster
+PASS org browser 28 flat management does not grant free CP
+PASS org browser 29 actual scoreboard reflects asymmetric rosters
+PASS org browser 30 loading save restores player organizational selection
+PASS org browser 31 loading save restores opponent override
+PASS org browser 32 loaded no-Queen structure disables route control
+PASS org browser 33 loaded game remains playable
+PASS org browser 34 legacy Balanced army restored from v0.5.7 save
+PASS org browser 35 legacy Fortress enemy restored
+PASS org browser 36 preserves saved remaining CP instead of resetting
+PASS org browser 37 does not overwrite old pieces with new structures
+PASS org browser 38 no Chromium JavaScript errors: []
+ORG BROWSER v0.5.10: 38 checks passed
+
+===========================================================================
+$ python tests/browser_workers_v0510.py
+exit_code=0
+PASS worker browser 1: fixture loads without error
+PASS worker browser 2: movement versus capture distinction is visible
+PASS worker browser 3: correct level 1–4 ladder shown
+PASS worker browser 4: L1 forest button available
+PASS worker browser 5: L1 tower button locked
+PASS worker browser 6: L1 camp button locked
+PASS worker browser 7: UI forest action spends one CP and records work
+PASS worker browser 8: busy pawn has visible lock status
+PASS worker browser 9: fixture loads without error
+PASS worker browser 10: actual board click moves pawn to an empty forward diagonal
+PASS worker browser 11: fixture loads without error
+PASS worker browser 12: board cannot capture an enemy directly forward
+PASS worker browser 13: fixture loads without error
+PASS worker browser 14: bridge uses visible worksite targeting
+PASS worker browser 15: bridge order leaves pawn safely on shore
+PASS worker browser 16: fixture loads without error
+PASS worker browser 17: watchtower is a real two-turn construction order
+PASS worker browser 18: fixture loads without error
+PASS worker browser 19: L3 mountain clearing available from adjacent land
+PASS worker browser 20: L3 camp remains locked
+PASS worker browser 21: fixture loads without error
+PASS worker browser 22: L4 builds a camp, not before that level
+PASS worker browser 23: fixture loads without error
+PASS worker browser 24: new pawn production price is explicit
+PASS worker browser 25: Keep pawn → 2 Pawns · 5 turns available
+PASS worker browser 26: Sacrifice pawn → 2 Pawns · 2 turns available
+PASS worker browser 27: Keep pawn → 1 Knight · 5 turns available
+PASS worker browser 28: Sacrifice pawn → 1 Knight · 2 turns available
+PASS worker browser 29: Keep pawn → 1 Bishop · 5 turns available
+PASS worker browser 30: Sacrifice pawn → 1 Bishop · 2 turns available
+PASS worker browser 31: declining sacrifice confirmation leaves state unchanged
+PASS worker browser 32: confirmed sacrifice consumes pawn and creates the exact fast batch
+PASS worker browser 33: pawn batch costs one activation but no King XP
+PASS worker browser 34: fast queue stays visible after its pawn disappears
+PASS worker browser 35: sacrifice removes camp outer-ring sight
+PASS worker browser 36: fixture loads without error
+PASS worker browser 37: keep mode locks the living pawn for the five-turn knight queue
+PASS worker browser 38: stationed pawn retains outer camp sight
+PASS worker browser 39: busy pawn cannot move for a free activation
+PASS worker browser 40: fixture loads without error
+PASS worker browser 41: bishop production is one bishop, not a pawn pair
+PASS worker browser 42: fixture loads without error
+PASS worker browser 43: R actual UI move deducts 2 CP
+PASS worker browser 44: fixture loads without error
+PASS worker browser 45: B actual UI move deducts 1 CP
+PASS worker browser 46: no JavaScript page errors: []
+WORKER BROWSER v0.5.10: 46/46 passed
+
+===========================================================================
+$ python tests/browser_skills_v0510.py
+exit_code=0
+PASS skill browser 1: correct release loaded
+PASS skill browser 2: new slot contract visible in setup
+PASS skill browser 3: fresh level-1 army has no unearned choices
+PASS skill browser 4: browser engine has exact six base capacities
+PASS skill browser 5: level-1 pawn has zero skill slots
+PASS skill browser 6: first skill milestone announced
+PASS skill browser 7: no fake level-1 skills
+PASS skill browser 8: old separate profession menu removed for new pawns
+PASS skill browser 9: skill-ready navigation activates at the correct milestone
+PASS skill browser 10: exactly three choices shown at level 3
+PASS skill browser 11: first draft uses the actual three candidate skills
+PASS skill browser 12: exact construction and protection effects are disclosed before selection
+PASS skill browser 13: effects-only default hides route labels and scores
+PASS skill browser 14: actual click records permanent level-3 skill selection
+PASS skill browser 15: chosen skill is equipped into its free slot
+PASS skill browser 16: learning spends no CP or activation
+PASS skill browser 17: single choice consumes the milestone rather than allowing all three
+PASS skill browser 18: next milestone is level 6
+PASS skill browser 19: catch-up second milestone has three choices
+PASS skill browser 20: selected family advances to its next skill, not a repeated offer
+PASS skill browser 21: two crossed milestones become two distinct choices and slots
+PASS skill browser 22: third milestone is level 9
+PASS skill browser 23: choice may be made after the pawn already acted at zero CP
+PASS skill browser 24: learning cannot reset an exhausted activation
+PASS skill browser 25: newly learned active skill cannot bypass exhaustion
+PASS skill browser 26: hints preview exposes only its specified route information
+PASS skill browser 27: hints changes presentation, not offered mechanics
+PASS skill browser 28: hints presentation setting survives export
+PASS skill browser 29: full preview exposes only its specified route information
+PASS skill browser 30: full changes presentation, not offered mechanics
+PASS skill browser 31: full presentation setting survives export
+PASS skill browser 32: skill-adjusted work duration is visible on the real action button
+PASS skill browser 33: real work action uses one-turn project and costs one CP
+PASS skill browser 34: actual turn cycle completes the improved forest project
+PASS skill browser 35: equipped Cover can target an adjacent military ally
+PASS skill browser 36: Cover enters map-targeting mode
+PASS skill browser 37: actual board click grants one-response protection to the chosen ally
+PASS skill browser 38: Cover consumes CP and activation
+PASS skill browser 39: Cover shared cooldown is saved
+PASS skill browser 40: skill-specific side move is executed through the real board UI
+PASS skill browser 41: maneuver cooldown is saved and shared
+PASS skill browser 42: legacy full slot does not silently delete or replace a skill
+PASS skill browser 43: explicit legacy skill replacement uses normal equip cost
+PASS skill browser 44: older save migrates to the new schema with conservative disclosure
+PASS skill browser 45: King panel explicitly distinguishes idle time from achievement XP
+PASS skill browser 46: King panel displays the actual leadership multiplier
+PASS skill browser 47: Skills ready button locates, centers and selects the pending pawn
+PASS skill browser 48: no JavaScript page errors: []
+SKILL BROWSER v0.5.10: 48/48 checks passed.
+
+ALL EXECUTED CHECKS PASSED

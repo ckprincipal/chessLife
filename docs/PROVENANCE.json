@@ -1,0 +1,275 @@
+{
+  "schema": "stale-mate-publication-provenance-v1",
+  "campaign": "SM-UNITY-R2",
+  "prepared_by": "SM-C00 / 000-S2",
+  "date": "2026-10-31",
+  "origin_commit": "7c0b113807b154902de284c6650c61d9e047a583",
+  "source_version": "v0.5.10",
+  "save_schema": 15,
+  "recovery": "Original handoff bundle and input archives; partial staged payload was not used.",
+  "bundle_sha256": "33b20ce61b7db2d0a133075de64679485572151550520db4bc84a838b6d3b340",
+  "bundle_manifest_entries_verified": 32,
+  "original_source_manifest_entries_verified": 33,
+  "original_unity_manifest_entries_verified": 9,
+  "inputs": [
+    {
+      "name": "Stale-Mate_Unity_Starter_v0.1.zip",
+      "size_bytes": 13139,
+      "sha256": "46148d5906a869ce5673cf7004a47d98ed5308f1f8e7b8dd0944ec3f7806e091"
+    },
+    {
+      "name": "Stale-Mate_v0.5.10_Play.html",
+      "size_bytes": 150856,
+      "sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297"
+    },
+    {
+      "name": "Stale-Mate_v0.5.10_Source.zip",
+      "size_bytes": 2248680,
+      "sha256": "fde6227f2524576381968c44fd7fa838e2a94986d5036f391154515f2ab40355"
+    }
+  ],
+  "reference_root": "reference/js-v0.5.10",
+  "reference_included": [
+    {
+      "path": "CURRENT_HANDOFF.md",
+      "sha256": "74ed19013e595e848fa3ffd8addb506c4d4678e0331e942ccfdca0f494626704",
+      "size_bytes": 4691
+    },
+    {
+      "path": "DECISIONS_AND_OPEN_QUESTIONS.md",
+      "sha256": "9f3bc6665de6d2130161c21040c63e48acdfa66b5ce1a70616307770c2bc3b74",
+      "size_bytes": 2448
+    },
+    {
+      "path": "NEXT_SESSION_PROMPT.txt",
+      "sha256": "aea799a7ec079f6bc32fbeba2d2f906a7231480336a08462cd8baa25bd237bfd",
+      "size_bytes": 1274
+    },
+    {
+      "path": "README_FIRST.md",
+      "sha256": "393fae1a44288def80c4bec17e427fb587418909a642b0606790779a1793c579",
+      "size_bytes": 5474
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "sha256": "17c68393f811394dc42b06215397b7c6820868668aa71e6d06fffb53bb430a79",
+      "size_bytes": 2879
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "ed80697128f64b4e540f9b884cc0e7c4abd5991f392466061df6d9e086b9ac64",
+      "size_bytes": 3079
+    },
+    {
+      "path": "SKILL_CATALOGUE.md",
+      "sha256": "b6da4a93e2f1d9a72eba2a8d8a57088eb6b9db5f5f5a63005873fe1f948fbc04",
+      "size_bytes": 7841
+    },
+    {
+      "path": "STATE.json",
+      "sha256": "82948609ed4d5a6e36fe7497c27fa2141275d04da4f073381a5fa5448d6276ba",
+      "size_bytes": 1218
+    },
+    {
+      "path": "Stale-Mate_v0.5.10_Play.html",
+      "sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+      "size_bytes": 150856
+    },
+    {
+      "path": "TEST_RESULTS.txt",
+      "sha256": "87dc2adf72d4beccd1cde4e7ec4480a5c6836346c2ca367bc724f051a9e304b5",
+      "size_bytes": 25994
+    },
+    {
+      "path": "prototype/app.js",
+      "sha256": "e5743a2d72455f9ade7d3786ce99c2c7f3864ddfb91810a18747a26a44e3bf53",
+      "size_bytes": 43327
+    },
+    {
+      "path": "prototype/engine.js",
+      "sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+      "size_bytes": 91892
+    },
+    {
+      "path": "prototype/index.html",
+      "sha256": "7e4e5d219dd756fdecc82f817eba71c37e247f1090b8f06ec2c1dacbb90223ce",
+      "size_bytes": 8213
+    },
+    {
+      "path": "prototype/style.css",
+      "sha256": "9fe579a4f2f73c68cc8b9b8aa134a2fd887f3d3dc7baaedf88e2c1bfead8cbe8",
+      "size_bytes": 7472
+    },
+    {
+      "path": "tests/browser_organization_v0510.py",
+      "sha256": "505fc2080169a1307499dc07a83345c56c4fde321f0047aa469b33e424bc57ff",
+      "size_bytes": 6856
+    },
+    {
+      "path": "tests/browser_skills_v0510.py",
+      "sha256": "c4cd3a73f029c676c36407c40c4e84db8a1673ee0990a59fa84992aca911c594",
+      "size_bytes": 11486
+    },
+    {
+      "path": "tests/browser_workers_v0510.py",
+      "sha256": "49fdef3ae6169a315a7ee569ebbac7b5ddafdf12ef9ca020827af1e9d598c305",
+      "size_bytes": 9191
+    },
+    {
+      "path": "tests/fixtures/engine_v056.cjs",
+      "sha256": "5248c4639599adf59672e2dd90fb09d0205b3c24ccc33576d9d0c71d5021421f",
+      "size_bytes": 88378
+    },
+    {
+      "path": "tests/fixtures/engine_v058.cjs",
+      "sha256": "034267016e78bb14534f79225ded97d376190b089e5832e0b1584507b356dd2f",
+      "size_bytes": 91069
+    },
+    {
+      "path": "tests/fixtures/engine_v059.cjs",
+      "sha256": "4330f3b8731ba7a6c5def5b5d891cd54228e75102a28dedd3478217bdbff878c",
+      "size_bytes": 91596
+    },
+    {
+      "path": "tests/organization_v0510.cjs",
+      "sha256": "08af93f4e3088486df506c63eb8271a226115791ace24bc6d4a5b50f518a3a81",
+      "size_bytes": 9251
+    },
+    {
+      "path": "tests/pawn_workers_v0510.cjs",
+      "sha256": "6d330955ed1f828573c4d1c0df71241daf6197d29f48a308e6e5e295c5d3a1d4",
+      "size_bytes": 21808
+    },
+    {
+      "path": "tests/randomized_skills_v0510.cjs",
+      "sha256": "8ebf4ec40c7cef510e5778ed952ff3bd31a5f241648f08fe35656fdef9683c1e",
+      "size_bytes": 4492
+    },
+    {
+      "path": "tests/randomized_smoke_v0510.cjs",
+      "sha256": "745e5e26f0bd78b4650753b8bcdb6c096d37db89a532a5bd7108b1bab552996e",
+      "size_bytes": 3557
+    },
+    {
+      "path": "tests/regression_v0510.cjs",
+      "sha256": "227847d52be541c5b773c816475ab2960ef9f616c4ad34162e3768ffd3f3454e",
+      "size_bytes": 11145
+    },
+    {
+      "path": "tests/skills_v0510.cjs",
+      "sha256": "212248db0c32ffdcf6c78a997bd3130a5b6f459bf2b69bcac60cd8d30459bd84",
+      "size_bytes": 21151
+    },
+    {
+      "path": "tools/build_standalone.py",
+      "sha256": "d9d11c46ccbf1801bc8aaf42ab0b10381ff714e9acc561fdc1143790186d21a0",
+      "size_bytes": 654
+    },
+    {
+      "path": "tools/run_release_tests.py",
+      "sha256": "7777283634c2f6ba6f63b16fb718bbb104125681ee07e7ad1c2ea99381b133df",
+      "size_bytes": 1864
+    },
+    {
+      "path": "tools/verify_sha256.py",
+      "sha256": "b1c7be452b2f2f8f894acc215188c3a8a182b04c54192dc875e6c3a6e81e8a05",
+      "size_bytes": 449
+    }
+  ],
+  "reference_omitted_generated_screenshots": [
+    {
+      "path": "tests/browser_org_v0510_screenshot.png",
+      "sha256": "9c128761b4efaa9ea7d28882ee6efc59812445f72e5ba1063a2d4044d5b4fad8",
+      "size_bytes": 411091
+    },
+    {
+      "path": "tests/browser_skills_v0510_screenshot.png",
+      "sha256": "0830ea186f40cc90dc4bed77e142879577df57719e145560cd2b499c6f68da70",
+      "size_bytes": 552197
+    },
+    {
+      "path": "tests/browser_traditional_default_v0510.png",
+      "sha256": "fe9ac2345bbe3d868c238b121fbe1f5ac41fd564c49d033225b020ee0cf0a8e3",
+      "size_bytes": 424123
+    },
+    {
+      "path": "tests/browser_workers_v0510_screenshot.png",
+      "sha256": "654506d4d03a0f2d37d6c616de87671194c1d8ab8dfa5a3c343e44c8fc8a0f38",
+      "size_bytes": 592203
+    },
+    {
+      "path": "tests/skills_choice_panel.png",
+      "sha256": "dace256d1d20ae95ced126dfd2b5996508479f6d8bfaf2d2ff5affec5fd36569",
+      "size_bytes": 123801
+    }
+  ],
+  "unity_root": "unity",
+  "unity_included": [
+    {
+      "path": "Assets/Editor/StaleMateSceneMenu.cs",
+      "sha256": "f29307e7850fbae081a008ed5494c36ce8617557c5b1d42a90f623deebc20815",
+      "size_bytes": 931
+    },
+    {
+      "path": "Assets/Resources/openings_v058.json",
+      "sha256": "6693fb137e4ea1f7e07e62fa86ab0014fcc3c4d4379b8811886861c7fd006b16",
+      "size_bytes": 69966
+    },
+    {
+      "path": "Assets/Scripts/StaleMateBootstrap.cs",
+      "sha256": "82aa837f4124ab93ac18a2e6287b641dd6209d3cef04eac99dd06a1bbff94b48",
+      "size_bytes": 13397
+    },
+    {
+      "path": "Docs/LICENSING_NOTES.md",
+      "sha256": "a19fe911efed9a919b3e63ef5bfa4ac28b221ca22196fd2e2c0e36e9d657aff8",
+      "size_bytes": 1377
+    },
+    {
+      "path": "Docs/PORT_PLAN.md",
+      "sha256": "50c30ee00a6adc41f9ff4b0c26d9d894c575fcd03376447651bd3e11309b6275",
+      "size_bytes": 3201
+    },
+    {
+      "path": "Packages/manifest.json",
+      "sha256": "832a5047dd081eaf8a6f1193fa33f932b078327bccb2967cf971d56e14d72fa1",
+      "size_bytes": 115
+    },
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "8e0abf0bc8972fded06adf2afeafea6885564ab777eadf422760187857bb0325",
+      "size_bytes": 28
+    },
+    {
+      "path": "README_FIRST.md",
+      "sha256": "83dd1fbeaab75bd4552b3e0371a44355f521d46c5c3aae7b7796bc5dd6eb35d8",
+      "size_bytes": 3042
+    },
+    {
+      "path": "Tools/validate_fixture.py",
+      "sha256": "3fac5f456e449a911952ea8e296f5eafc6bd9adaf417c554c65bc28db2c1e3d1",
+      "size_bytes": 1183
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "3ff67c3b4cd3ed77ee5dbe7f40db13211237da515ff9672f99adf3c622aa6aff",
+      "size_bytes": 845
+    }
+  ],
+  "unity_wrapper_removed": "Stale-Mate_Unity_Starter_v0.1/",
+  "historical_r2_documents": "docs/history/r2-prepublication-drafts",
+  "original_s1_evidence": "evidence/SM-C00/s1-handoff",
+  "reconstructed_files": [
+    "AGENTS.md",
+    "docs/STATUS.json",
+    "docs/PROVENANCE.json",
+    "tools/verify_baseline.py",
+    ".gitignore"
+  ],
+  "notes": [
+    "Included reference and starter files are byte-exact. Generated screenshots remain in the original source archive; the original manifest is preserved unchanged and is not a clean-subset verification command.",
+    "Use python tools/verify_baseline.py for the clean import. Browser tests write artifacts only to disposable copies.",
+    "Current guides are corrected from recovered drafts. Newly reconstructed files are not claimed recovered byte-exact.",
+    "Unity starter remains a v0.5.8 opening viewer, not v0.5.10 gameplay parity or a tested platform build."
+  ]
+}

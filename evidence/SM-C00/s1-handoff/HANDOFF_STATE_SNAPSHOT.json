@@ -1,0 +1,146 @@
+{
+  "source": "C00 handoff live connector reads and current tool writes; not recovered original campaign STATUS.json",
+  "as_of": "2026-10-31",
+  "campaign": "SM-UNITY-R2",
+  "state": "HOLD_SOURCE_PUBLICATION_INCOMPLETE",
+  "document_head": "7c0b113807b154902de284c6650c61d9e047a583",
+  "intake_sha": null,
+  "contract_sha": null,
+  "integration_candidate_sha": null,
+  "original_main": "aaea2f3b26f421923f98e967e027b0fcd5aff0ef",
+  "golden_v04": "8070772c89df6b0ea9550e2c438822d0aa9ff0da",
+  "r2_campaign_pr": null,
+  "historical_draft_prs": [
+    3,
+    4
+  ],
+  "latest_pre_handoff_comment": 6539591837,
+  "handoff_comment": 6542799011,
+  "agents": [
+    {
+      "id": "SM-C01",
+      "status": "NO_R2_ACTIVATION_OR_READY_OBSERVED",
+      "session": null,
+      "branch": null,
+      "head": null,
+      "contract_ack": null
+    },
+    {
+      "id": "SM-C02",
+      "status": "NO_R2_ACTIVATION_OR_READY_OBSERVED",
+      "session": null,
+      "branch": null,
+      "head": null,
+      "contract_ack": null
+    },
+    {
+      "id": "SM-C03",
+      "status": "NO_R2_ACTIVATION_OR_READY_OBSERVED",
+      "session": null,
+      "branch": null,
+      "head": null,
+      "contract_ack": null
+    },
+    {
+      "id": "SM-C04",
+      "status": "NO_R2_ACTIVATION_OR_READY_OBSERVED",
+      "session": null,
+      "branch": null,
+      "head": null,
+      "contract_ack": null
+    },
+    {
+      "id": "SM-C05",
+      "status": "NO_R2_ACTIVATION_OR_READY_OBSERVED",
+      "session": null,
+      "branch": null,
+      "head": null,
+      "contract_ack": null
+    },
+    {
+      "id": "SM-C06",
+      "status": "NO_R2_ACTIVATION_OR_READY_OBSERVED",
+      "session": null,
+      "branch": null,
+      "head": null,
+      "contract_ack": null
+    }
+  ],
+  "changes": {
+    "BUG-001": "OPEN_UNREPRODUCED",
+    "CR-001": "APPROVED_INTENT_DETAILS_PENDING_NOT_IN_BASELINE",
+    "CR-002": "APPROVED_CAPABILITY_DETAILS_PENDING_NOT_IN_BASELINE",
+    "UI-001": "REQUESTED_CLARIFICATION"
+  },
+  "remote_staging": {
+    "sha": "1b520a5808c4058eee96a8cbc40de3918ba3aa68",
+    "ready_present": false,
+    "parts": [
+      {
+        "part": "01",
+        "bytes": 20000
+      },
+      {
+        "part": "02",
+        "bytes": 20000
+      },
+      {
+        "part": "03",
+        "bytes": 20000
+      },
+      {
+        "part": "04",
+        "bytes": 20000
+      },
+      {
+        "part": "05",
+        "bytes": 20000
+      },
+      {
+        "part": "06",
+        "bytes": 20000
+      },
+      {
+        "part": "07",
+        "bytes": 20000
+      },
+      {
+        "part": "08",
+        "bytes": 20000
+      },
+      {
+        "part": "09",
+        "bytes": 20000
+      },
+      {
+        "part": "10",
+        "bytes": 17867
+      },
+      {
+        "part": "11",
+        "bytes": 51912
+      },
+      {
+        "part": "12",
+        "bytes": 41403
+      },
+      {
+        "part": "13",
+        "bytes": 54745
+      },
+      {
+        "part": "14",
+        "bytes": 30733
+      }
+    ],
+    "total_base64_bytes": 376660,
+    "payload_integrity": "UNVERIFIED"
+  },
+  "limitations": [
+    "Only 11 original R2 Markdown files recovered locally",
+    "No original generated R2 AGENTS, STATUS, PROVENANCE or verifier bytes recovered",
+    "Original JS and starter ZIPs available",
+    "No Unity build run",
+    "No autonomous monitoring"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "handoff_id": "STLM-C00-HO-2026-10-31-R2",
+  "checked_at_utc": "2026-10-31T11:28:50.472371+00:00",
+  "original_inputs": {
+    "Stale-Mate_v0.5.10_Source.zip": {
+      "bytes": 2248680,
+      "sha256": "fde6227f2524576381968c44fd7fa838e2a94986d5036f391154515f2ab40355",
+      "included_in_bundle": true,
+      "first_bad_crc_member": null
+    },
+    "Stale-Mate_v0.5.10_Play.html": {
+      "bytes": 150856,
+      "sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+      "included_in_bundle": true
+    },
+    "Stale-Mate_Unity_Starter_v0.1.zip": {
+      "bytes": 13139,
+      "sha256": "46148d5906a869ce5673cf7004a47d98ed5308f1f8e7b8dd0944ec3f7806e091",
+      "included_in_bundle": true,
+      "first_bad_crc_member": null
+    },
+    "Stale-Mate_Unity_Codex_Dispatch_R1_1_2026-10-31.zip": {
+      "bytes": 2282309,
+      "sha256": "b72a89784c502c98a8f95e04df3f42248c59a17a924d6c025cd59271655518d9",
+      "included_in_bundle": false,
+      "first_bad_crc_member": null
+    }
+  },
+  "source_manifest_entries": [
+    {
+      "path": "CURRENT_HANDOFF.md",
+      "sha256": "74ed19013e595e848fa3ffd8addb506c4d4678e0331e942ccfdca0f494626704",
+      "status": "PASS"
+    },
+    {
+      "path": "DECISIONS_AND_OPEN_QUESTIONS.md",
+      "sha256": "9f3bc6665de6d2130161c21040c63e48acdfa66b5ce1a70616307770c2bc3b74",
+      "status": "PASS"
+    },
+    {
+      "path": "NEXT_SESSION_PROMPT.txt",
+      "sha256": "aea799a7ec079f6bc32fbeba2d2f906a7231480336a08462cd8baa25bd237bfd",
+      "status": "PASS"
+    },
+    {
+      "path": "README_FIRST.md",
+      "sha256": "393fae1a44288def80c4bec17e427fb587418909a642b0606790779a1793c579",
+      "status": "PASS"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "sha256": "17c68393f811394dc42b06215397b7c6820868668aa71e6d06fffb53bb430a79",
+      "status": "PASS"
+    },
+    {
+      "path": "SKILL_CATALOGUE.md",
+      "sha256": "b6da4a93e2f1d9a72eba2a8d8a57088eb6b9db5f5f5a63005873fe1f948fbc04",
+      "status": "PASS"
+    },
+    {
+      "path": "STATE.json",
+      "sha256": "82948609ed4d5a6e36fe7497c27fa2141275d04da4f073381a5fa5448d6276ba",
+      "status": "PASS"
+    },
+    {
+      "path": "Stale-Mate_v0.5.10_Play.html",
+      "sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+      "status": "PASS"
+    },
+    {
+      "path": "TEST_RESULTS.txt",
+      "sha256": "87dc2adf72d4beccd1cde4e7ec4480a5c6836346c2ca367bc724f051a9e304b5",
+      "status": "PASS"
+    },
+    {
+      "path": "prototype/app.js",
+      "sha256": "e5743a2d72455f9ade7d3786ce99c2c7f3864ddfb91810a18747a26a44e3bf53",
+      "status": "PASS"
+    },
+    {
+      "path": "prototype/engine.js",
+      "sha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+      "status": "PASS"
+    },
+    {
+      "path": "prototype/index.html",
+      "sha256": "7e4e5d219dd756fdecc82f817eba71c37e247f1090b8f06ec2c1dacbb90223ce",
+      "status": "PASS"
+    },
+    {
+      "path": "prototype/style.css",
+      "sha256": "9fe579a4f2f73c68cc8b9b8aa134a2fd887f3d3dc7baaedf88e2c1bfead8cbe8",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_org_v0510_screenshot.png",
+      "sha256": "9c128761b4efaa9ea7d28882ee6efc59812445f72e5ba1063a2d4044d5b4fad8",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_organization_v0510.py",
+      "sha256": "505fc2080169a1307499dc07a83345c56c4fde321f0047aa469b33e424bc57ff",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_skills_v0510.py",
+      "sha256": "c4cd3a73f029c676c36407c40c4e84db8a1673ee0990a59fa84992aca911c594",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_skills_v0510_screenshot.png",
+      "sha256": "0830ea186f40cc90dc4bed77e142879577df57719e145560cd2b499c6f68da70",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_traditional_default_v0510.png",
+      "sha256": "fe9ac2345bbe3d868c238b121fbe1f5ac41fd564c49d033225b020ee0cf0a8e3",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_workers_v0510.py",
+      "sha256": "49fdef3ae6169a315a7ee569ebbac7b5ddafdf12ef9ca020827af1e9d598c305",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/browser_workers_v0510_screenshot.png",
+      "sha256": "654506d4d03a0f2d37d6c616de87671194c1d8ab8dfa5a3c343e44c8fc8a0f38",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/fixtures/engine_v056.cjs",
+      "sha256": "5248c4639599adf59672e2dd90fb09d0205b3c24ccc33576d9d0c71d5021421f",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/fixtures/engine_v058.cjs",
+      "sha256": "034267016e78bb14534f79225ded97d376190b089e5832e0b1584507b356dd2f",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/fixtures/engine_v059.cjs",
+      "sha256": "4330f3b8731ba7a6c5def5b5d891cd54228e75102a28dedd3478217bdbff878c",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/organization_v0510.cjs",
+      "sha256": "08af93f4e3088486df506c63eb8271a226115791ace24bc6d4a5b50f518a3a81",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/pawn_workers_v0510.cjs",
+      "sha256": "6d330955ed1f828573c4d1c0df71241daf6197d29f48a308e6e5e295c5d3a1d4",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/randomized_skills_v0510.cjs",
+      "sha256": "8ebf4ec40c7cef510e5778ed952ff3bd31a5f241648f08fe35656fdef9683c1e",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/randomized_smoke_v0510.cjs",
+      "sha256": "745e5e26f0bd78b4650753b8bcdb6c096d37db89a532a5bd7108b1bab552996e",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/regression_v0510.cjs",
+      "sha256": "227847d52be541c5b773c816475ab2960ef9f616c4ad34162e3768ffd3f3454e",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/skills_choice_panel.png",
+      "sha256": "dace256d1d20ae95ced126dfd2b5996508479f6d8bfaf2d2ff5affec5fd36569",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/skills_v0510.cjs",
+      "sha256": "212248db0c32ffdcf6c78a997bd3130a5b6f459bf2b69bcac60cd8d30459bd84",
+      "status": "PASS"
+    },
+    {
+      "path": "tools/build_standalone.py",
+      "sha256": "d9d11c46ccbf1801bc8aaf42ab0b10381ff714e9acc561fdc1143790186d21a0",
+      "status": "PASS"
+    },
+    {
+      "path": "tools/run_release_tests.py",
+      "sha256": "7777283634c2f6ba6f63b16fb718bbb104125681ee07e7ad1c2ea99381b133df",
+      "status": "PASS"
+    },
+    {
+      "path": "tools/verify_sha256.py",
+      "sha256": "b1c7be452b2f2f8f894acc215188c3a8a182b04c54192dc875e6c3a6e81e8a05",
+      "status": "PASS"
+    }
+  ],
+  "reference_tests": "All 12 commands exit 0; see full retained log",
+  "sacrifice_controls": "9/9; staged level-4 positive controls only; real UI bug remains OPEN/UNREPRODUCED",
+  "unity_tests": "NOT RUN",
+  "stage_payload_validation": "NOT RUN: direct container DNS download failed; GitHub connector tree read succeeded",
+  "git_handoff_blob_sha": "946e1ecb129dfd591e2a541028da4605411d06e4",
+  "source_manifest_count": 33
+}
