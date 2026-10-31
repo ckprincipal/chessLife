@@ -1,0 +1,47 @@
+{
+  "status": "C02 G0 proposal for C01/C03 review; CONTRACT SHA NOT FROZEN",
+  "schema": "SM-C02-replay-v1",
+  "ruleset": "baseline-v0510",
+  "commands": {
+    "check": "node tools/parity/replay.cjs check",
+    "tests": "node --test tests/parity/oracle.test.cjs",
+    "ordinary_trace": "node tools/parity/ordinary-path.cjs check",
+    "ordinary_ui": "uv run --with playwright==1.64.1 python tests/triage/ordinary_ui.py",
+    "browser_environment": "CHROMIUM_PATH selects an installed Chrome/Chromium; PYTHONUTF8=1 on Windows",
+    "generation": "Explicit frozen engine SHA is required; existing goldens cannot be overwritten by the runner"
+  },
+  "canonicalization": {
+    "name": "tagged-binary64-utf16-v1",
+    "hash": "SHA-256 of UTF-8 JSON.stringify(tagged tree), no trailing newline",
+    "object": "[object, [[key, tagged value], ...]]; keys sorted by JavaScript UTF-16 ordinal comparison",
+    "array": "[array, [tagged element, ...]]; original order retained; absent indices use [hole]",
+    "number": "[number, 16 lowercase hex digits of IEEE-754 binary64 big-endian bits]; finite values only; -0 differs from +0",
+    "other_tags": "[null], [undefined], [boolean, value], [string, value]",
+    "presence": "An absent object key, present undefined, and present null differ. JSON-save digest separately records what E.dump actually persists.",
+    "no_rounding": "No tolerances, decimal rounding, array sorting, ID renumbering, field dropping or RNG re-seeding",
+    "unsupported": ["NaN/infinities", "bigint/function/symbol", "cyclic graphs", "non-plain objects", "accessors", "non-enumerable object fields", "extra array properties"],
+    "domain": "Live reference state and explicit observer witness; JSON candidate parsing needs strict duplicate-key/nonfinite validation before a future C# comparison"
+  },
+  "per_operation": {
+    "before_after": "Full authoritative-state digest, parsed-save digest, both observer digests, side/round/serial/CP/RNG/living counts",
+    "result": "Exact returned reference result, including error text; C03 must propose any structured-error mapping rather than silently discarding it",
+    "event": "Exact lastEvent after the operation. Invalid actions can clear a prior lastEvent; no blanket rejection-is-no-op assumption.",
+    "operations": ["E.action", "E.aiChoice (separate RNG-mutating operation)", "E.load(E.dump(state))"],
+    "ordering": "All state arrays, legal-order arrays, units, ghosts, logs, choices and events retain reference iteration order"
+  },
+  "observer_witness": {
+    "basis": ["rememberedTerrain", "canObserveUnit", "liveGhosts", "withSide", "orders", "canAct", "activationCost"],
+    "visible_unit_fields": ["id", "side", "type", "pos"],
+    "limits": "Narrow source-backed witness, not an accepted production observation DTO. No unseen enemy fields or raw facility truth is included.",
+    "legality": "orders() supplies geometry/knowledge independently from CP/activation. canAct and cost are recorded separately.",
+    "truth": "Full hidden state remains a separate oracle digest; presentation must never receive it"
+  },
+  "review_requests": [
+    "C03: agree binary64/uint32 and seed-coercion semantics, exact absent/null policy, save refresh behavior, and replay envelope mapping",
+    "C04: agree legality/CP/activation separation, rejection mutations, AI RNG draw order and event/turn ordering",
+    "C05: extend world/queue/skill/legacy transient witnesses without leaking unseen changes",
+    "C06: consume only a reviewed filtered observation; assess ordinary sacrifice feedback evidence",
+    "C01: publish one combined candidate; C00 alone freezes exact SHA"
+  ],
+  "delta_policy": "CR-001/CR-002 have no golden outputs here; unresolved semantics remain explicit and baseline outputs are immutable"
+}

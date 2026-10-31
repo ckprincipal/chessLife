@@ -1,0 +1,12 @@
+{
+  "command": "python tools/build_standalone.py (unchanged original in disposable copy)",
+  "exit_code": 0,
+  "pinned_bytes": 150856,
+  "pinned_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+  "raw_windows_bytes": 152378,
+  "raw_windows_sha256": "f63998403057a8bd8ab4e70969d41fc26f0204de76ad381e0a0c37a93974bdf8",
+  "raw_byte_identity": false,
+  "lf_normalized_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+  "lf_normalized_identity": true,
+  "scope": "Diagnosis only: original verifier remains FAIL; normalization is not reported as original raw-artifact success."
+}

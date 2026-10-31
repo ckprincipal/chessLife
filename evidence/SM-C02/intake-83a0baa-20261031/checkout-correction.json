@@ -1,0 +1,11 @@
+{
+  "action": "Restore exact pinned Git-blob bytes only after verifying each existing file differs solely by checkout CRLF conversion",
+  "exit_code": 0,
+  "working_file_hashes_match_provenance": 39,
+  "repository_config_changed": false,
+  "committed_reference_or_viewer_diff": false,
+  "failed_prior_attempts": [
+    "newline-delimited checkout-index stdin was rejected on Windows",
+    "NUL-delimited checkout-index returned zero but left existing working bytes unchanged; postcheck caught this before a pass"
+  ]
+}

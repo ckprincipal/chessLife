@@ -1,0 +1,14 @@
+{
+  "bug": "BUG-001",
+  "status": "OPEN / UNREPRODUCED",
+  "ordinary_control": {
+    "trace": "tests/triage/ordinary-v0510.json", "seed": 1, "size": 50, "organization": "traditional",
+    "operator": 10, "level": 4, "round": 19,
+    "source_of_progression": "Only accepted reference actions and real black aiChoice calls; no level/XP/terrain/unit/queue grants",
+    "result": "Actual UI sacrifice succeeds; this does not refute the user's original symptom"
+  },
+  "executed_from_ordinary_save": ["legal progression in Node and Chrome", "enabled button", "cancelled real confirmation", "confirmed sacrifice", "CP and King XP", "two-pawn/two-friendly-tick queue", "queue visibility after operator disappears", "midqueue UI save/load", "two friendly ticks with real intervening AI", "two level-1 graduates", "page errors"],
+  "remaining": ["same-turn entry to a camp with activation already spent", "insufficient CP", "wrong owner/side", "busy operator/camp", "20-unit cap including reservations", "two blocked exits and ready queue waits", "rapid/double clicks", "confirmation suppressed by browser", "game ended during queue", "other organizations/seeds", "user's actual saved match and symptom"],
+  "staged_controls": "Original Node/browser suites and nine historical staged positive controls remain separately labeled; passing them cannot close this defect",
+  "repair_owners": {"training_runtime": "C05 under C00 authorization", "feedback": "C06", "independent_verification": "C02"}
+}

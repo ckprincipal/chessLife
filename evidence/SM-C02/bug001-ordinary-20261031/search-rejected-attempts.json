@@ -1,0 +1,56 @@
+{
+  "purpose": "Preserved unsuccessful ordinary progression searches; not defect reproductions",
+  "attempts": [
+    {
+      "failed": true,
+      "config": {
+        "size": 50,
+        "seed": 43971,
+        "armyW": "traditional",
+        "armyB": "traditional",
+        "startingCamp": "none"
+      },
+      "round": 7,
+      "operatorId": 10,
+      "level": 2,
+      "totalXp": 7.8,
+      "alive": false,
+      "winner": null,
+      "steps": 52
+    },
+    {
+      "failed": true,
+      "config": {
+        "size": 50,
+        "seed": 112233,
+        "armyW": "traditional",
+        "armyB": "traditional",
+        "startingCamp": "none"
+      },
+      "round": 76,
+      "operatorId": 10,
+      "level": 1,
+      "totalXp": 0.9,
+      "alive": true,
+      "winner": null,
+      "steps": 426
+    },
+    {
+      "failed": true,
+      "config": {
+        "size": 50,
+        "seed": 88001,
+        "armyW": "traditional",
+        "armyB": "traditional",
+        "startingCamp": "none"
+      },
+      "round": 10,
+      "operatorId": 10,
+      "level": 1,
+      "totalXp": 1.8,
+      "alive": false,
+      "winner": null,
+      "steps": 70
+    }
+  ]
+}

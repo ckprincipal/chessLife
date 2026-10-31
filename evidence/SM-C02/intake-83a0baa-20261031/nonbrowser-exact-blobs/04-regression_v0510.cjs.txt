@@ -1,0 +1,24 @@
+PASS 1: v0.5.10 Quick Start comparison: all three presets start with three worker pawns and no engineer, on 30/50/70 maps
+PASS 2: original CP option preserves two-command budget and original rook/queen costs
+PASS 3: roomier opening: rook 2 CP, bishop 1, queen 3 and king 1
+PASS 4: bishop+pawn+knight use three distinct one-CP military commands
+PASS 5: queen exhausts opening three-command budget, no additional normal activation
+PASS 6: bishop gets a REAL extra diagonal sight layer at level 2
+PASS 7: rook/queen initially see two directional tiles, pawn sees all three forward squares
+PASS 8: the King can immediately train one pawn at the ready camp for 1 CP and 3 XP
+PASS 9: starting camp keeps its vision and a pawn immediately adds the outer ring
+PASS 10: level-1 pawns cannot create camps and level-3 pawns can excavate mountains
+PASS 11: pawn-workers remain capturable military units, not invulnerable engineers
+PASS 12: king earns a fraction of nonroyal XP without needing to move
+PASS 13: XP shared to king is not recursive and passing turns awards no XP
+PASS 14: pawn confronted with water uses a forward-diagonal move, never a sideways detour
+PASS 15: pawn cannot detour sideways with no water or mountain in front
+PASS 16: knight taking a pawn exposes attacker long enough for the other pawn to recapture
+PASS 17: attacks against shield-pip defenders also reveal attack origin for retaliation
+PASS 18: battle contact does not permanently reveal enemy after it moves or the response turn expires
+PASS 19: the AI can recruit using its King without an engineer, spending real CP
+PASS 20: optional camp capture costs exactly 1 CP after surviving a turn, not an immediate win
+PASS 21: optional camp capture cannot happen on arrival turn or in off mode
+PASS 22: version12 roundtrip and original v7 migration
+PASS 23: no-stalemate remains king capture/turn pass even if no legal military action
+Stale-Mate v0.5.10 tests: 23/23 passed.

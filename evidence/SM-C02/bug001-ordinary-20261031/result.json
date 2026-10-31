@@ -1,0 +1,80 @@
+{
+  "result": "Ordinary-path positive control; original user symptom NOT REPRODUCED",
+  "bug001_status": "OPEN / UNREPRODUCED",
+  "seed": 1,
+  "organization": "traditional",
+  "map": 50,
+  "operatorId": 10,
+  "roundAtSacrifice": 19,
+  "legalProgressionOperations": 144,
+  "browser": "155.0.8059.85",
+  "checks": [
+    {
+      "name": "all ordinary progression actions and actual AI choices replay identically in Chrome",
+      "pass": true
+    },
+    {
+      "name": "operator reached Lv4 naturally and can operate its constructed camp",
+      "pass": true
+    },
+    {
+      "name": "actual sacrifice button is enabled in the ordinary progressed save",
+      "pass": true
+    },
+    {
+      "name": "canceling real confirmation leaves authoritative state unchanged",
+      "pass": true
+    },
+    {
+      "name": "confirmed UI action immediately sacrifices the ordinary operator",
+      "pass": true
+    },
+    {
+      "name": "confirmed UI action creates exactly two pawns for two friendly ticks",
+      "pass": true
+    },
+    {
+      "name": "confirmed UI action consumes one CP and preserves King unspent XP",
+      "pass": true
+    },
+    {
+      "name": "queue remains visible after the sacrificed piece disappears",
+      "pass": true
+    },
+    {
+      "name": "midqueue UI save/load preserves exact count and remaining ticks",
+      "pass": true
+    },
+    {
+      "name": "two actual friendly end turns complete the queue despite intervening reference AI play",
+      "pass": true
+    },
+    {
+      "name": "graduates are level one rather than copies of the veteran",
+      "pass": true
+    },
+    {
+      "name": "no browser JavaScript page errors",
+      "pass": true
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "confirm",
+      "message": "Permanently sacrifice level-4 Pawn #10 to produce 2 Pawns in 2 friendly work turns? Its XP and upgrades are lost.",
+      "accepted": false
+    },
+    {
+      "type": "confirm",
+      "message": "Permanently sacrifice level-4 Pawn #10 to produce 2 Pawns in 2 friendly work turns? Its XP and upgrades are lost.",
+      "accepted": true
+    }
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "One ordinary seed/Traditional path, not the user original save",
+    "Full UI interactions cover sacrifice and queue; earlier progression replays legal engine actions",
+    "Blocked exits/capacity/wrong-owner/rapid clicks need separate scenarios",
+    "No bug fix, C# parity or Unity claim"
+  ]
+}

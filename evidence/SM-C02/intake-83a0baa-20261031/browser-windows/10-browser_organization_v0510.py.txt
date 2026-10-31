@@ -1,0 +1,39 @@
+PASS org browser 1 standalone loads v0.5.10 without server
+PASS org browser 2 Traditional default selected
+PASS org browser 3 opponent mirrored by default
+PASS org browser 4 traditional explanation visible
+PASS org browser 5 actual default game shows 8 vs 8
+PASS org browser 6 Queen route enabled when there is a Queen
+PASS org browser 7 selector has exactly one organizational explanation
+PASS org browser 8 old separate engineer is absent from game rules
+PASS org browser 9 royal-plans theme embedded
+PASS org browser 10 saved default mode persists both sides
+PASS org browser 11 Traditional exact opening unit counts
+PASS org browser 12 default match starts WITHOUT camps
+PASS org browser 13 no engineer in actual saved state
+PASS org browser 14 no camp is the setup default
+PASS org browser 15 optional Quick Start creates exactly one camp per side
+PASS org browser 16 Quick Start preserves Traditional rooks
+PASS org browser 17 returning to default removes prebuilt camps on a NEW match
+PASS org browser 18 Middle explanations update without starting match
+PASS org browser 19 Queen route disabled for no-Queen starting lineup
+PASS org browser 20 Middle actually used by both sides with mirror
+PASS org browser 21 Middle exact K+2N+6P
+PASS org browser 22 Middle opponent exact roster
+PASS org browser 23 Flatten description updates
+PASS org browser 24 opponent override is reflected in preview
+PASS org browser 25 asymmetric Flat vs Traditional matchup saved
+PASS org browser 26 Flatten starts King and nine Pawn-workers
+PASS org browser 27 opponent independent Traditional roster
+PASS org browser 28 flat management does not grant free CP
+PASS org browser 29 actual scoreboard reflects asymmetric rosters
+PASS org browser 30 loading save restores player organizational selection
+PASS org browser 31 loading save restores opponent override
+PASS org browser 32 loaded no-Queen structure disables route control
+PASS org browser 33 loaded game remains playable
+PASS org browser 34 legacy Balanced army restored from v0.5.7 save
+PASS org browser 35 legacy Fortress enemy restored
+PASS org browser 36 preserves saved remaining CP instead of resetting
+PASS org browser 37 does not overwrite old pieces with new structures
+PASS org browser 38 no Chromium JavaScript errors: []
+ORG BROWSER v0.5.10: 38 checks passed

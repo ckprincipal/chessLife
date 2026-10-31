@@ -1,0 +1,55 @@
+PASS worker 1: w: three empty forward moves and matching three-square sight
+PASS worker 2: w: empty diagonal move costs one CP and one activation
+PASS worker 3: w: straight-ahead enemy cannot be captured
+PASS worker 4: w: both forward-diagonal captures work
+PASS worker 5: w: friendly blockers, backwards, sideways and double steps forbidden
+PASS worker 6: b: three empty forward moves and matching three-square sight
+PASS worker 7: b: empty diagonal move costs one CP and one activation
+PASS worker 8: b: straight-ahead enemy cannot be captured
+PASS worker 9: b: both forward-diagonal captures work
+PASS worker 10: b: friendly blockers, backwards, sideways and double steps forbidden
+PASS worker 11: old lateral detour removed even when forward square is water
+PASS worker 12: water and mountains still block diagonal pawn movement
+PASS worker 13: pawn orders do not expose a hidden diagonal blocker; execution cannot blind-capture
+PASS worker 14: pawn cannot be ordered onto an unexplored forward square
+PASS worker 15: rook 2 / bishop 1 costs are actually deducted in both budgets
+PASS worker 16: one camp alone reveals its center plus exactly eight neighbors
+PASS worker 17: friendly pawn garrison adds exactly one outer ring and loses it on leaving
+PASS worker 18: only pawns garrison camps in new games; enemy pawns never extend our vision
+PASS worker 19: forest/mountain block camp outer sight but not the adjacent obstacle tile
+PASS worker 20: camp sight at map edge remains inside board bounds
+PASS worker 21: terrain outside remaining camp sight stays remembered, not live
+PASS worker 22: L1 forest clearing: normal CP, work lock, two own ticks, meaningful XP
+PASS worker 23: L1 cannot bridge, build tower, excavate or build camps
+PASS worker 24: L2 bridge works from shore and does not grant free water travel
+PASS worker 25: shore worker cannot bridge remote or unseen water
+PASS worker 26: L2 builds permanent watchtower in two work ticks with eight-neighbor sight
+PASS worker 27: L2 mountain work locked; L3 clears mountain from adjacent safe square
+PASS worker 28: camp unlock is L4 (not L3 or old provisional L5); construction remains three ticks
+PASS worker 29: pawn workers cannot perform engineer-only fill/tunnel tasks
+PASS worker 30: insufficient CP rejects construction without mutating terrain, project or activation
+PASS worker 31: two friendly workers cannot reserve the same bridge site
+PASS worker 32: capture of working pawn cancels construction, without making it invulnerable/nonblocking
+PASS worker 33: changed worksite cancels project rather than overwriting unrelated terrain
+PASS worker 34: work XP is once per project/site/side, not repeatable by resetting a tile
+PASS worker 35: sacrifice: exact 2 level-1 Pawn batch in 2 own ticks
+PASS worker 36: sacrifice: exact 1 level-1 Knight batch in 2 own ticks
+PASS worker 37: sacrifice: exact 1 level-1 Bishop batch in 2 own ticks
+PASS worker 38: stay: exact 2 level-1 Pawn batch in 5 own ticks
+PASS worker 39: stay: exact 1 level-1 Knight batch in 5 own ticks
+PASS worker 40: stay: exact 1 level-1 Bishop batch in 5 own ticks
+PASS worker 41: enemy turns do not tick pawn production; 2 and 5 are friendly-turn counts
+PASS worker 42: level-3 pawn cannot operate an existing camp, and omitted mode is rejected
+PASS worker 43: camp output rejects queen/rook; the King cannot sacrifice himself
+PASS worker 44: capture of stationed pawn cancels its five-turn queue immediately
+PASS worker 45: completed batch waits atomically for enough exits, never loses/duplicates its second pawn
+PASS worker 46: army capacity reserves whole batches and accounts for sacrificed operator
+PASS worker 47: parallel queues cannot overbook the army cap; fresh replacements cannot immediately operate camps
+PASS worker 48: pawn-mode durations remain 2/5 even in a heavily used camp
+PASS worker 49: save/load preserves towers, shore projects, pawn queues, work XP ledger and exact remaining CP
+PASS worker 50: old v0.5.6 engineer training migrates to royal order without recharging XP
+PASS worker 51: no separate camp-count cap: a level-4 pawn can build a third camp
+PASS worker 52: older engineer terrain projects are canceled without deleting the starting camp
+PASS worker 53: captured camp changes vision ownership and cancels the old production queue
+PASS worker 54: king capture still ends the game; pending recruitment cannot continue after victory
+WORKERS v0.5.10: 54/54 passed
