@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:stale-mate:sm-c03:g0-save-candidate:1",
+  "title": "SM-C03 G0 save structure candidate, NOT FROZEN",
+  "$comment": "Describes well-formed legacy saves and a proposed future envelope. Not a replacement for the exact JS loader's admission, normalization, or error behavior. No writer/parser is implemented.",
+  "anyOf": [
+    { "$ref": "#/$defs/legacyState" },
+    { "$ref": "#/$defs/envelope" }
+  ],
+  "$defs": {
+    "player": {
+      "type": "object",
+      "required": ["seen"],
+      "properties": { "seen": { "type": "array" } },
+      "additionalProperties": true
+    },
+    "legacyState": {
+      "type": "object",
+      "required": ["version", "ruleset", "units", "n", "terrain", "players"],
+      "properties": {
+        "version": { "enum": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] },
+        "ruleset": { "const": "command-camp" },
+        "n": { "enum": [30, 50, 70] },
+        "terrain": { "type": "array" },
+        "units": { "type": "array", "items": { "type": "object" } },
+        "players": {
+          "type": "object",
+          "required": ["w", "b"],
+          "properties": { "w": { "$ref": "#/$defs/player" }, "b": { "$ref": "#/$defs/player" } },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "normalizedV15": {
+      "allOf": [
+        { "$ref": "#/$defs/legacyState" },
+        { "properties": { "version": { "const": 15 } } }
+      ]
+    },
+    "envelope": {
+      "type": "object",
+      "required": ["envelopeVersion", "baselineIntakeSha", "contractRevision", "rulesetId", "state"],
+      "properties": {
+        "envelopeVersion": { "const": 1 },
+        "baselineIntakeSha": { "const": "83a0baa8a4486562c5c67144324cede402f29cf7" },
+        "contractRevision": { "type": "string", "minLength": 1 },
+        "rulesetId": { "const": "js-v0.5.10/command-camp" },
+        "state": { "$ref": "#/$defs/normalizedV15" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

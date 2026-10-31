@@ -1,0 +1,26 @@
+{
+  "status": "G0 CANDIDATE; NOT FROZEN",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "source_probe_command": "node evidence/SM-C03/contract_probes.cjs",
+  "scope": "Executed JS requirements probes are C03 source evidence, not independent C02 acceptance or implemented C# migration/serialization tests.",
+  "cases": [
+    { "id": "C03-NUM-01", "requirement": "Number/ToUint32/zero-fallback seed coercion", "source_evidence": "source-probes.json: fixtures.seed_coercion", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-NUM-02", "requirement": "32-bit wrap/Math.imul/logical-shift RNG and draw cursor", "source_evidence": "source-probes.json: fixtures.rng", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-NUM-03", "requirement": "Negative midpoint rounding, binary64 values and negative zero", "source_evidence": "source-probes.json: fixtures.rounding and fixtures.json", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-WIRE-01", "requirement": "Missing/null/undefined/nonfinite/-0 JSON behavior and JS integer-key order", "source_evidence": "source-probes.json: fixtures.json", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-ACT-01", "requirement": "Rejected actions need not be no-ops; lastEvent guard order and maester mutation-on-error", "source_evidence": "source-probes.json: fixtures.rejection", "review_owner": "C04/C02", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-CLONE-01", "requirement": "Deep raw clone/fixed-action replay preserve all state and per-step counters", "source_evidence": "source-probes.json: fixtures.replay", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-CLONE-02", "requirement": "Deep clone undefined/nonfinite/in-memory aliasing and no refresh/migration", "source_evidence": "PARTIAL: JSON behavior only; in-memory aliasing adversarial tests pending", "review_owner": "C02", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-SAVE-15", "requirement": "v15 midturn AP/acted/bonus/cooldowns/queue remaining zero and unknown fields roundtrip", "source_evidence": "source-probes.json: version_matrix input_version=15", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-05-14", "requirement": "Every accepted v5-v14 gate normalizes to 15 without roster grants/camp removal/resetting AP or activations", "source_evidence": "source-probes.json: version_matrix; SYNTHETIC shapes, not authentic archives", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-056", "requirement": "Actual archived v0.5.6 engineer retirement and paid queue preservation/reassignment", "source_evidence": "source-probes.json: archived_migrations engine_v056.cjs", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-058", "requirement": "Actual archived 8/7/6 organizations, existing camps and started paid queues", "source_evidence": "source-probes.json: archived_migrations engine_v058.cjs", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-059", "requirement": "Actual archived v0.5.9 armies and no-camp Standard survive", "source_evidence": "source-probes.json: archived_migrations engine_v059.cjs", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-FOG", "requirement": "Missing old memory uses ordinary floor in mist and never unseen terrain truth", "source_evidence": "source-probes.json: fixtures.fog_migration", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-ALIAS", "requirement": "Separate raw clone from load normalization/object mutation/sight refresh", "source_evidence": "source-probes.json: fixtures.load_identity", "review_owner": "C01/C02", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-INVALID", "requirement": "Reject unsupported versions/ruleset/board/terrain or missing fog instead of silently upgrading", "source_evidence": "source-probes.json: fixtures.rejected_saves", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-MIG-OTHER", "requirement": "Authentic absent historical versions; dead engineer project exception; all optional combat/lineage/ward transients", "source_evidence": "PARTIAL: existing reference suites cover selected cases; targeted C03/C02 provenance matrix incomplete", "review_owner": "C02", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-OBS-01", "requirement": "No true hidden terrain/entity/structure/queue data in observer fields or previews", "source_evidence": "PARTIAL: source trace and reference suites; candidate whitelist/interface review pending", "review_owner": "C02/C05/C06", "csharp_status": "NOT IMPLEMENTED" },
+    { "id": "C03-ENV-01", "requirement": "Minimal carriers compile as C# 7.3 without a UnityEngine reference", "source_evidence": "compile-receipt.json", "csharp_status": "DATA-CARRIER COMPILE ONLY" }
+  ]
+}
