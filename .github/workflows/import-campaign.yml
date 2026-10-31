@@ -1,0 +1,51 @@
+name: Import canonical Stale-Mate campaign
+on:
+  push:
+    branches: [campaign/unity-r2]
+    paths: [.import/READY]
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: campaign/unity-r2
+          fetch-depth: 1
+      - name: Validate and extract approved payload
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, io, json, lzma, pathlib, tarfile
+          root = pathlib.Path('.').resolve()
+          manifest = json.loads((root / '.import/READY').read_text())
+          chunks = []
+          for part in manifest['parts']:
+              raw = (root / '.import' / part['file']).read_bytes()
+              assert hashlib.sha256(raw).hexdigest() == part['sha256'], part['file']
+              chunks.append(raw)
+          payload = base64.b64decode(b''.join(chunks), validate=True)
+          assert hashlib.sha256(payload).hexdigest() == manifest['payload_sha256']
+          with tarfile.open(fileobj=io.BytesIO(lzma.decompress(payload)), mode='r:') as archive:
+              members = archive.getmembers()
+              for item in members:
+                  path = pathlib.PurePosixPath(item.name)
+                  assert item.isfile() and not path.is_absolute() and '..' not in path.parts
+                  assert path.parts[0] in {'README.md', 'AGENTS.md', '.gitignore', 'docs', 'reference', 'unity', 'tools', 'tests', 'evidence'}, item.name
+                  destination = root / path
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  destination.write_bytes(archive.extractfile(item).read())
+          PY
+      - name: Verify source and run mechanical reference tests
+        run: python3 tools/verify_baseline.py --test
+      - name: Commit canonical working tree to the campaign branch only
+        run: |
+          git config user.name 'Stale-Mate import automation'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          rm -rf .import
+          git rm .github/workflows/import-campaign.yml
+          git add README.md AGENTS.md .gitignore docs reference unity tools tests evidence
+          git add -u
+          git commit -m 'Import verified v0.5.10 reference, Unity scaffold and centralized six-agent campaign R2'
+          git push origin HEAD:refs/heads/campaign/unity-r2
