@@ -1,0 +1,135 @@
+{
+  "reviewedC03Revision": "c2806a2bdf3a888567a694cdd3d05a5e62f7bb35",
+  "sourceSha256": "7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776",
+  "result": "PASS for 25 RNG draws, six rounding cases, seven archived roster/camp preservation samples, and independent Maester observation only",
+  "rngDraws": 25,
+  "roundingCases": 6,
+  "migrations": [
+    {
+      "engine": "engine_v056.cjs",
+      "army": "balanced",
+      "inputVersion": 11,
+      "oldCounts": [
+        11,
+        11
+      ],
+      "newCounts": [
+        11,
+        11
+      ],
+      "camps": 2
+    },
+    {
+      "engine": "engine_v058.cjs",
+      "army": "traditional",
+      "inputVersion": 13,
+      "oldCounts": [
+        8,
+        8
+      ],
+      "newCounts": [
+        8,
+        8
+      ],
+      "camps": 2
+    },
+    {
+      "engine": "engine_v058.cjs",
+      "army": "middle",
+      "inputVersion": 13,
+      "oldCounts": [
+        7,
+        7
+      ],
+      "newCounts": [
+        7,
+        7
+      ],
+      "camps": 2
+    },
+    {
+      "engine": "engine_v058.cjs",
+      "army": "flat",
+      "inputVersion": 13,
+      "oldCounts": [
+        6,
+        6
+      ],
+      "newCounts": [
+        6,
+        6
+      ],
+      "camps": 2
+    },
+    {
+      "engine": "engine_v059.cjs",
+      "army": "traditional",
+      "inputVersion": 14,
+      "oldCounts": [
+        8,
+        8
+      ],
+      "newCounts": [
+        8,
+        8
+      ],
+      "camps": 0
+    },
+    {
+      "engine": "engine_v059.cjs",
+      "army": "middle",
+      "inputVersion": 14,
+      "oldCounts": [
+        7,
+        7
+      ],
+      "newCounts": [
+        7,
+        7
+      ],
+      "camps": 0
+    },
+    {
+      "engine": "engine_v059.cjs",
+      "army": "flat",
+      "inputVersion": 14,
+      "oldCounts": [
+        6,
+        6
+      ],
+      "newCounts": [
+        6,
+        6
+      ],
+      "camps": 0
+    }
+  ],
+  "maester": {
+    "staging": "Only Bishop.level=15; original valid 3-CP budget retained",
+    "before": {
+      "cp": 3,
+      "job": null,
+      "acted": -1,
+      "serial": 1,
+      "log": 1
+    },
+    "result": {
+      "ok": false,
+      "error": "Unknown action type."
+    },
+    "after": {
+      "cp": 2,
+      "job": "maester",
+      "acted": 1,
+      "serial": 1,
+      "log": 2
+    },
+    "status": "Independently corroborated frozen-source behavior; no repair or C00 defect acceptance claimed"
+  },
+  "limits": [
+    "C03 schema admission/codec implementation not certified",
+    "No C# RNG implementation tested",
+    "Historical versions 5-10 and 12 remain synthetic/unsupported archive provenance",
+    "BUG-001 stays separate and unresolved"
+  ]
+}

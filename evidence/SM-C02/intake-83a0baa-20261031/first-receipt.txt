@@ -1,0 +1,41 @@
+FROM: SM-C02 / 01a191e1-337c-7ff0-a7e7-b4a960d78cf9
+TO: ChatGPT SM-C00 / 000-S2
+CC: SM-C01; codex-maya (first deputy)
+KIND: BLOCKED
+CAMPAIGN: SM-UNITY-R2
+WORKSTREAM: Independent JavaScript oracle / G0 intake
+TASK / GATE: First current-intake receipt; exact intake incorporated, Windows working-byte verification blocked
+ACK OF: https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543631079
+DECISION ACKNOWLEDGED: STLM-C00-S2-G0-INTAKE-2026-10-31-01
+SESSION ID: 01a191e1-337c-7ff0-a7e7-b4a960d78cf9 (existing persisted session retained)
+INTAKE SHA / BASE SHA: 83a0baa8a4486562c5c67144324cede402f29cf7
+CONTRACT SHA: NOT FROZEN
+BRANCH / ACTUAL HEAD / PR: sm/c02-r2-oracle / 83a0baa8a4486562c5c67144324cede402f29cf7 / none
+WORKTREE: D:/projects/Stale-Mate/worktrees/SM-C02 (existing worktree retained)
+LOCAL CHANGES: Clean before intake; clean tracked files after fast-forward. Only new untracked C02 evidence under evidence/SM-C02/intake-83a0baa-20261031/ at this receipt; no prior work lost and no reset.
+
+INPUT / AUTHORITY CHECKS:
+Read the activation directly through the live GitHub API and checked the current mailbox. Read AGENTS.md, README.md, docs/COMMAND_CENTER.md, docs/RULES_AND_CHANGES.md, docs/ACCEPTANCE.md, and docs/agents/SM-C02.md at the exact intake. Actual reference/js-v0.5.10/, unity/, and tools/verify_baseline.py are present. The old source-publication HOLD is superseded for G0 only. Production remains on HOLD.
+
+EXECUTED COMMANDS / RESULTS:
+- git fetch origin campaign/unity-r2: exit 0.
+- git merge-base --is-ancestor HEAD 83a0baa8a4486562c5c67144324cede402f29cf7: exit 0 before incorporation.
+- git merge --ff-only --no-edit 83a0baa8a4486562c5c67144324cede402f29cf7: exit 0; clean launch branch fast-forwarded from 7c0b113807b154902de284c6650c61d9e047a583 without substituting the latest tip.
+- python tools/verify_baseline.py --test --starter --log-dir evidence/SM-C02/intake-83a0baa-20261031/nonbrowser: exit 1, Baseline mismatch: reference/js-v0.5.10/CURRENT_HANDOFF.md. No child JS, rebuild or starter checks executed.
+- Read-only Python Git-blob/provenance probe: exit 0. All 39 retained reference/viewer Git blobs match their provenance SHA-256 pins. 38 working files differ from those blobs, all explained exactly by CRLF conversion; Git core.autocrlf is true. This is a checkout representation blocker, not evidence of changed committed game source.
+- Node --version: exit 0, v24.20.0. Python environment probe: exit 0, 3.14.8; Playwright module absent, installed Chrome present, CHROMIUM_PATH unset.
+
+EVIDENCE (new local, not yet committed):
+evidence/SM-C02/intake-83a0baa-20261031/nonbrowser/receipt.json
+evidence/SM-C02/intake-83a0baa-20261031/checkout-probe.json
+evidence/SM-C02/intake-83a0baa-20261031/first-receipt.txt
+The wrapper's verifier label names its C00 author; this execution and first receipt are independently performed by C02.
+
+LIMITATIONS / NOT RUN:
+Reference suites, standalone rebuild, original viewer fixture check: NOT RUN due to working-byte verification failure. Browser checks: NOT RUN, Python Playwright unavailable. Unity compilation/platform builds/C# parity: NOT RUN. BUG-001 remains OPEN / UNREPRODUCED. No contract freeze, runtime implementation, reference hotfix, importer, main/golden change, push or merge performed.
+
+OWNED NEXT G0 DELIVERABLE:
+Preserve this failure; restore exact pinned working bytes through a guarded local checkout correction and rerun the verifier. Then publish versioned replay fixtures/canonicalization with explicit numeric/RNG/order/observer semantics, supported/unsupported inventory, and an ordinary-legal-play BUG-001 trace/reproducer with UI/confirm/CP/activation/queue/exit evidence. Keep baseline and future CR outputs separate and never author the runtime being independently verified.
+
+NEXT / DECISION REQUESTED:
+C01: please include a reviewed immutable-input line-ending policy in your owned build/intake configuration so Windows checkouts preserve original hashes. C02 will continue its authorized local G0 investigation after this first receipt. No production gate advancement is requested or inferred; CONTRACT SHA remains NOT FROZEN.

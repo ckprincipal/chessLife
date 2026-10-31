@@ -1,0 +1,49 @@
+PASS skill browser 1: correct release loaded
+PASS skill browser 2: new slot contract visible in setup
+PASS skill browser 3: fresh level-1 army has no unearned choices
+PASS skill browser 4: browser engine has exact six base capacities
+PASS skill browser 5: level-1 pawn has zero skill slots
+PASS skill browser 6: first skill milestone announced
+PASS skill browser 7: no fake level-1 skills
+PASS skill browser 8: old separate profession menu removed for new pawns
+PASS skill browser 9: skill-ready navigation activates at the correct milestone
+PASS skill browser 10: exactly three choices shown at level 3
+PASS skill browser 11: first draft uses the actual three candidate skills
+PASS skill browser 12: exact construction and protection effects are disclosed before selection
+PASS skill browser 13: effects-only default hides route labels and scores
+PASS skill browser 14: actual click records permanent level-3 skill selection
+PASS skill browser 15: chosen skill is equipped into its free slot
+PASS skill browser 16: learning spends no CP or activation
+PASS skill browser 17: single choice consumes the milestone rather than allowing all three
+PASS skill browser 18: next milestone is level 6
+PASS skill browser 19: catch-up second milestone has three choices
+PASS skill browser 20: selected family advances to its next skill, not a repeated offer
+PASS skill browser 21: two crossed milestones become two distinct choices and slots
+PASS skill browser 22: third milestone is level 9
+PASS skill browser 23: choice may be made after the pawn already acted at zero CP
+PASS skill browser 24: learning cannot reset an exhausted activation
+PASS skill browser 25: newly learned active skill cannot bypass exhaustion
+PASS skill browser 26: hints preview exposes only its specified route information
+PASS skill browser 27: hints changes presentation, not offered mechanics
+PASS skill browser 28: hints presentation setting survives export
+PASS skill browser 29: full preview exposes only its specified route information
+PASS skill browser 30: full changes presentation, not offered mechanics
+PASS skill browser 31: full presentation setting survives export
+PASS skill browser 32: skill-adjusted work duration is visible on the real action button
+PASS skill browser 33: real work action uses one-turn project and costs one CP
+PASS skill browser 34: actual turn cycle completes the improved forest project
+PASS skill browser 35: equipped Cover can target an adjacent military ally
+PASS skill browser 36: Cover enters map-targeting mode
+PASS skill browser 37: actual board click grants one-response protection to the chosen ally
+PASS skill browser 38: Cover consumes CP and activation
+PASS skill browser 39: Cover shared cooldown is saved
+PASS skill browser 40: skill-specific side move is executed through the real board UI
+PASS skill browser 41: maneuver cooldown is saved and shared
+PASS skill browser 42: legacy full slot does not silently delete or replace a skill
+PASS skill browser 43: explicit legacy skill replacement uses normal equip cost
+PASS skill browser 44: older save migrates to the new schema with conservative disclosure
+PASS skill browser 45: King panel explicitly distinguishes idle time from achievement XP
+PASS skill browser 46: King panel displays the actual leadership multiplier
+PASS skill browser 47: Skills ready button locates, centers and selects the pending pawn
+PASS skill browser 48: no JavaScript page errors: []
+SKILL BROWSER v0.5.10: 48/48 checks passed.

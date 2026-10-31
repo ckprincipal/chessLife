@@ -1,0 +1,12 @@
+{
+  "reviewer": "SM-C02",
+  "reviewed_c01_revision": "8ec67237d3132869c5fb6602e88fd9b990cd2785",
+  "authorized_intake": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "c02_head_at_execution": "56eecba62f86cd7198c84942575fc739c0b26d43",
+  "scope": "Disposable C01 proposal only; no live verifier patch, integration or contract acceptance",
+  "commands": [],
+  "guards": [],
+  "native_export_input_hashes_verified": 39,
+  "result": "FAIL",
+  "error": ""
+}

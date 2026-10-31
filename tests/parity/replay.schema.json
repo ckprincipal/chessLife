@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "C02 JS baseline replay witness proposal v1",
+  "type": "object",
+  "required": ["schema", "ruleset", "contract", "sources", "canonicalization", "cases"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "SM-C02-replay-v1"},
+    "ruleset": {"const": "baseline-v0510"},
+    "contract": {"const": "NOT FROZEN"},
+    "canonicalization": {"const": "tagged-binary64-utf16-v1"},
+    "sources": {"type": "object", "required": ["intake", "engineSha256", "appSha256", "archived"]},
+    "cases": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["name", "setup", "initial", "steps"], "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string"},
+        "setup": {"type": "object", "required": ["config"], "properties": {
+          "config": {"type": "object"}, "archive": {"enum": ["056", "058", "059"]}
+        }, "additionalProperties": false},
+        "initial": {"$ref": "#/$defs/witness"},
+        "steps": {"type": "array", "items": {"type": "object",
+          "required": ["input", "before", "result", "event", "after"], "additionalProperties": false,
+          "properties": {
+            "input": {"oneOf": [
+              {"type": "object", "required": ["op", "action"], "additionalProperties": false,
+                "properties": {"op": {"const": "action"}, "action": {"type": ["object", "null"]}}},
+              {"type": "object", "required": ["op"], "additionalProperties": false,
+                "properties": {"op": {"enum": ["aiChoice", "saveRoundtrip"]}}}
+            ]},
+            "before": {"$ref": "#/$defs/witness"}, "after": {"$ref": "#/$defs/witness"},
+            "result": {}, "event": {}
+          }
+        }}
+      }
+    }}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "witness": {"type": "object", "required": ["state", "save", "observers", "side", "round", "serial", "cp", "rng", "living"],
+      "additionalProperties": false, "properties": {
+        "state": {"$ref": "#/$defs/hash"}, "save": {"$ref": "#/$defs/hash"},
+        "observers": {"type": "object", "required": ["w", "b"], "additionalProperties": false,
+          "properties": {"w": {"$ref": "#/$defs/hash"}, "b": {"$ref": "#/$defs/hash"}}},
+        "side": {"enum": ["w", "b"]}, "round": {"type": "integer"}, "serial": {"type": "integer"},
+        "cp": {"type": "number"}, "rng": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+        "living": {"type": "object", "required": ["w", "b"], "additionalProperties": false,
+          "properties": {"w": {"type": "integer"}, "b": {"type": "integer"}}}
+      }
+    }
+  }
+}

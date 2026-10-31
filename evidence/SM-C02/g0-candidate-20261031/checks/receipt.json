@@ -1,0 +1,44 @@
+{
+  "head_before_evidence_commit": "1f359fab6736be10a000db8496a8204e198e286c",
+  "results": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/parity/oracle.test.cjs"
+      ],
+      "exit_code": 0,
+      "log": "01-check.txt"
+    },
+    {
+      "command": [
+        "node",
+        "tools/parity/replay.cjs",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": "02-check.txt"
+    },
+    {
+      "command": [
+        "node",
+        "tools/parity/ordinary-path.cjs",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": "03-check.txt"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--with",
+        "jsonschema==4.26.0",
+        "python",
+        "tests/parity/validate_schema.py"
+      ],
+      "exit_code": 0,
+      "log": "04-check.txt"
+    }
+  ]
+}

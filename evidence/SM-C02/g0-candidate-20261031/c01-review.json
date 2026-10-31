@@ -1,0 +1,33 @@
+{
+  "reviewer": "SM-C02 / 01a191e1-337c-7ff0-a7e7-b4a960d78cf9",
+  "reviewed_c01_revision": "8ec67237d3132869c5fb6602e88fd9b990cd2785",
+  "reviewed_scope": [".gitattributes", "normalize_generated_html.py", "windows-verifier-proposal.patch", "check_portability_proposal.py source", "shared-contract-candidate.md"],
+  "portability_result": "PASS for the exact disposable proposal under Windows/PYTHONUTF8=1 with actual Chrome; C00 application/ownership decision still pending",
+  "independent_execution": {
+    "command": "PYTHONUTF8=1 CHROMIUM_PATH=<installed Chrome> uv run --with playwright==1.64.1 python tools/parity/review_portability.py --log-dir evidence/SM-C02/c01-portability-8ec6723-20261031-r2",
+    "exit_code": 0,
+    "native_git_export": "Proposed .gitattributes preserves all 29 reference and 10 viewer pins under native Git settings",
+    "patch": "Exact single hunk applied only in disposable export; independently derived patched script hash equals the C01-declared hash",
+    "checks": "All 14 proposed-wrapper children exit 0, including 173 focused checks, 8412 randomized actions, 132 real Chrome checks, declared HTML conversion, strict final hash and viewer fixture validation",
+    "final_html_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+    "guards": "Changed-content and protected-reference rejection preserve bytes; already-LF output remains unchanged",
+    "context": "Disposable export has no Git context; exact C01 source SHA, C02 source HEAD and original/patch/proposed/normalizer script hashes are recorded independently",
+    "original_wrapper": "The actual role root verifier and C02 HEAD remain unchanged; original native Windows FAIL receipts remain valid and preserved"
+  },
+  "failed_harness_attempt_preserved": "evidence/SM-C02/c01-portability-8ec6723-20261031/receipt.json: C02 initially required raw LF for the non-oracle root wrapper. Native archive conversion caused the guard to stop before any command. The revised harness proves only CRLF conversion and applies the exact declared LF patch; it does not weaken any immutable input or output pin.",
+  "combined_contract_review": {
+    "result": "Alignment with source-backed G0 requirements; INCOMPLETE / NOT FREEZE-READY as C01 explicitly states",
+    "supported": ["One composed facade and detached observations", "Separate stateful AI-choice RNG operation", "Raw clone versus normalizing load", "Source mutation/rejection/refresh order", "Camp-cell-first placement and queue feedback", "No new King/facility semantics"],
+    "required_next_revision": [
+      "Bind C02 contract-v1.json, replay.schema.json and immutable fixtures by exact revision; C03 diagnostic hashes are not accepted C02 canonical hashes",
+      "Retain both live binary64/presence witness and parsed-save witness; keep runtime Object.keys enumeration distinct from canonical serialization-key sorting",
+      "String-only legacy import is a reasonable public-boundary proposal if object-alias compatibility remains explicitly unsupported there; C00 must freeze the scope rather than implying all E.load(object) behavior is certified",
+      "Represent null/malformed action requests and preserve source outcomes; keep transport/presentation stale-request cancellation separate from an executed baseline action",
+      "Reading a new observer projection must not call effectful refreshBoth or consume RNG/XP; pending UI confirmation must not introduce a second game loop",
+      "Include exact C05 ordered effect hooks and the final observer/queue/unit whitelist with C03/C04/C06 review before freeze",
+      "C00 separately decides any Maester exception/repair; C02 corroboration does not authorize changing baseline outcomes"
+    ]
+  },
+  "evidence": "evidence/SM-C02/c01-portability-8ec6723-20261031-r2/receipt.json",
+  "not_claimed": ["live root hook applied", "C01 combined contract frozen", "C# gameplay parity", "Unity compilation/build", "BUG-001 fixed", "C00 acceptance"]
+}

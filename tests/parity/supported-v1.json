@@ -1,0 +1,24 @@
+{
+  "status": "G0 JS-only witness, not C# parity or C00 acceptance",
+  "covered": [
+    "20 reproducible traces / 220 operations with before/after state, saved state, two observer witnesses, results and events",
+    "Traditional/Middle/Flatten on 30/50/70 Standard boards; three 50x50 Quick Start traces",
+    "Fixed seeds 43971,112233,88001 and coercion of 0,-1,4294967296,43971.75",
+    "Both active sides, accepted moves, missing action/type, nonexistent ID, wrong side, repeated activation",
+    "Separate black AI choice RNG witness and selected action",
+    "v15 save/load and actual archived v056/v058/v059 engine-generated migrations",
+    "One 144-operation ordinary Standard/Traditional progression with actual black AI, naturally Lv4 pawn, constructed camp",
+    "Real Chrome confirmation cancel/accept, CP/King-XP, exact sacrifice queue, midqueue save/load, two friendly ticks and two Lv1 graduates"
+  ],
+  "not_covered_or_not_implemented": [
+    "C# runner, integration composition comparison, Unity tests and all platform builds",
+    "Full v5-v14 save migration coverage; only the three provided real archived engines are sampled",
+    "Full 36-skill/cooldown/bonus action replay coverage; original suites execute separately",
+    "High-level opt-in pips/HP/Fission/camp-capture replay coverage",
+    "Adversarial hidden terrain mutation traces beyond one observer invariance unit test",
+    "Ordinary-path capacity/blocked-exit/wrong-owner/rapid-click matrix; original staged controls are distinct",
+    "User's original failing save/trace; BUG-001 remains OPEN / UNREPRODUCED",
+    "CR-001/CR-002 output semantics or goldens; no frozen shared contract"
+  ],
+  "portability": "The original Windows verification wrapper still fails raw rebuilt HTML identity after all child commands pass; LF normalization diagnoses the exact difference without changing the FAIL"
+}

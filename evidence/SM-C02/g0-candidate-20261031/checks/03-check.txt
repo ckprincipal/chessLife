@@ -1,0 +1,1 @@
+{"result":"PASS ordinary legal trace","seed":1,"steps":144}

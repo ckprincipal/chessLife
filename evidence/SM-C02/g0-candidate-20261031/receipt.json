@@ -1,0 +1,76 @@
+{
+  "role": "SM-C02",
+  "session": "01a191e1-337c-7ff0-a7e7-b4a960d78cf9",
+  "activation": "https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543631079",
+  "first_intake_receipt": "https://github.com/ckprincipal/chessLife/issues/1#issuecomment-6543767565",
+  "intake_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "tested_source_sha": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "contract_sha": "NOT FROZEN",
+  "branch": "sm/c02-r2-oracle",
+  "status": "G0 JS witness/reproduction candidate; pending C00/C01 review, no self-acceptance",
+  "independent_reference_verification": {
+    "reference_hashes": "29/29 clean-import entries match original provenance",
+    "viewer_hashes": "10/10 clean-import entries match original provenance",
+    "node": "173 focused checks; 8412 randomized actions on 60 maps including staged-level cases; child exits 0",
+    "browser": "132 actual Chrome checks (38 organization + 46 worker + 48 skill); all three original browser child exits 0",
+    "viewer": "Original fixture/schema child exit 0; Unity Editor NOT RUN",
+    "wrapper_result": "FAIL, exit 1: rebuilt HTML differs from frozen original on Windows",
+    "failure_diagnosis": "Original Path.write_text builder produces 152378 CRLF bytes instead of 150856 LF bytes. Read-only LF normalization exactly recovers the original HTML SHA-256; this diagnosis does not relabel the raw wrapper failure.",
+    "evidence": "evidence/SM-C02/intake-83a0baa-20261031/browser-windows/receipt.json",
+    "browser_status_note": "The original wrapper leaves its browser_status as REQUESTED/PENDING when final HTML identity fails; individual browser command exits/logs independently establish execution.",
+    "original_failures_preserved": ["nonbrowser", "nonbrowser-lf", "nonbrowser-pinned-bytes", "nonbrowser-exact-blobs", "browser-windows"]
+  },
+  "new_replay_candidate": {
+    "fixtures": "tests/parity/baseline-v0510.json",
+    "schema": "tests/parity/replay.schema.json",
+    "semantics": "tools/parity/contract-v1.json",
+    "inventory": "tests/parity/supported-v1.json",
+    "result": "PASS JS-only: 20 cases / 220 recorded operations, before/after full state/save and both observer witnesses",
+    "canonicalization_tests": "4/4 meaningful Node tests pass: numeric/null/order, hidden terrain observer invariance, staged rejected-action event clearing, deliberately corrupted expected outcome rejection",
+    "json_schema": "PASS Draft 2020-12 schema and golden validation using jsonschema 4.26.0",
+    "csharp_parity": "NOT IMPLEMENTED / NOT RUN"
+  },
+  "c03_review": {
+    "revision": "c2806a2bdf3a888567a694cdd3d05a5e62f7bb35",
+    "command": "node tests/triage/review_c03_vectors.cjs",
+    "exit": 0,
+    "scope": "25 RNG draws, six rounding cases, seven real archived roster/camp preservation samples and independently corroborated Maester mutation-on-error",
+    "notes": "evidence/SM-C02/g0-candidate-20261031/c03-review.json",
+    "acceptance": "No shared contract freeze or runtime acceptance"
+  },
+  "c01_review": {
+    "revision": "8ec67237d3132869c5fb6602e88fd9b990cd2785",
+    "scope": "Disposable Windows portability proposal and bounded combined-contract review",
+    "proposal_result": "PASS: 14 children including actual browser checks; exact final HTML pin; three negative/idempotence guards",
+    "notes": "evidence/SM-C02/g0-candidate-20261031/c01-review.json",
+    "limitations": "Original live root remains unchanged/FAIL; C00 application/ownership decision and shared-contract completion remain pending"
+  },
+  "bug001": {
+    "status": "OPEN / UNREPRODUCED",
+    "trace": "tests/triage/ordinary-v0510.json",
+    "matrix": "tests/triage/matrix-v1.json",
+    "config": "Standard / Traditional mirrored / 50x50 / seed 1; no free camp or level/XP grants",
+    "progression": "144 legal reference operations including actual black AI choices; naturally Lv4 Pawn #10 operates its constructed camp in round 19",
+    "browser": "12/12 ordinary-save UI/queue checks pass, no JS page errors. Full preceding legal progression also replays identically in Chrome.",
+    "coverage": "Real confirmation cancel/accept, one CP/no King XP charge, exactly two queued Pawns/two friendly ticks, visible queue, midqueue save/load and two Lv1 graduates after real intervening AI turns",
+    "evidence": "evidence/SM-C02/bug001-ordinary-20261031/",
+    "rejected_searches": "Seeds 43971,112233,88001 failed to reach an available camp; reproduced failures preserved separately",
+    "limits": "One naturally progressed positive path, not the user's original failure or a bug fix. Remaining activation/capacity/exits/ownership/rapid-click/ended-game cases are explicit in matrix."
+  },
+  "commands": [
+    {"command": "python tools/verify_baseline.py --test --starter --log-dir evidence/SM-C02/intake-83a0baa-20261031/nonbrowser", "exit": 1},
+    {"command": "PYTHONUTF8=1 python tools/verify_baseline.py --test --starter --log-dir evidence/SM-C02/intake-83a0baa-20261031/nonbrowser-exact-blobs", "exit": 1},
+    {"command": "PYTHONUTF8=1 CHROMIUM_PATH=<installed Chrome> uv run --with playwright==1.64.1 python tools/verify_baseline.py --test --starter --browser --log-dir evidence/SM-C02/intake-83a0baa-20261031/browser-windows", "exit": 1},
+    {"command": "node tools/parity/replay.cjs generate --source=7e0253b99b339611c5e149ccf3a7e527f62d31df008bb3e7fe0145d541b89776", "exit": 0},
+    {"command": "node tools/parity/replay.cjs check", "exit": 0},
+    {"command": "node --test tests/parity/oracle.test.cjs", "exit": 0},
+    {"command": "node tools/parity/ordinary-path.cjs", "exit": 0},
+    {"command": "node tools/parity/ordinary-path.cjs check", "exit": 0},
+    {"command": "PYTHONUTF8=1 CHROMIUM_PATH=<installed Chrome> uv run --with playwright==1.64.1 python tests/triage/ordinary_ui.py", "exit": 0},
+    {"command": "uv run --with jsonschema==4.26.0 python tests/parity/validate_schema.py", "exit": 0}
+  ],
+  "environment": {"node": "24.20.0", "python": "3.14.8", "playwright_ephemeral": "1.64.1", "chrome": "155.0.8059.85", "jsonschema_ephemeral": "4.26.0"},
+  "checkout_correction": "Restored only verified provenance-pinned Git-blob bytes after proving original differences were solely CRLF. No reference/viewer Git delta and no shared Git config change; exact source pins remain immutable.",
+  "next": "C01 publishes a combined contract candidate with C03 semantics and interface reviews, including the Windows checkout/build remedy. C00 alone reviews/freezes an exact revision and names the next scope. C02 awaits a specific runtime candidate before C# verification.",
+  "not_claimed": ["original user defect fixed", "shared contract frozen", "production port", "C# parity", "Unity Editor compilation", "platform builds", "balance or human enjoyment", "C00 acceptance"]
+}

@@ -1,0 +1,47 @@
+PASS worker browser 1: fixture loads without error
+PASS worker browser 2: movement versus capture distinction is visible
+PASS worker browser 3: correct level 1–4 ladder shown
+PASS worker browser 4: L1 forest button available
+PASS worker browser 5: L1 tower button locked
+PASS worker browser 6: L1 camp button locked
+PASS worker browser 7: UI forest action spends one CP and records work
+PASS worker browser 8: busy pawn has visible lock status
+PASS worker browser 9: fixture loads without error
+PASS worker browser 10: actual board click moves pawn to an empty forward diagonal
+PASS worker browser 11: fixture loads without error
+PASS worker browser 12: board cannot capture an enemy directly forward
+PASS worker browser 13: fixture loads without error
+PASS worker browser 14: bridge uses visible worksite targeting
+PASS worker browser 15: bridge order leaves pawn safely on shore
+PASS worker browser 16: fixture loads without error
+PASS worker browser 17: watchtower is a real two-turn construction order
+PASS worker browser 18: fixture loads without error
+PASS worker browser 19: L3 mountain clearing available from adjacent land
+PASS worker browser 20: L3 camp remains locked
+PASS worker browser 21: fixture loads without error
+PASS worker browser 22: L4 builds a camp, not before that level
+PASS worker browser 23: fixture loads without error
+PASS worker browser 24: new pawn production price is explicit
+PASS worker browser 25: Keep pawn → 2 Pawns · 5 turns available
+PASS worker browser 26: Sacrifice pawn → 2 Pawns · 2 turns available
+PASS worker browser 27: Keep pawn → 1 Knight · 5 turns available
+PASS worker browser 28: Sacrifice pawn → 1 Knight · 2 turns available
+PASS worker browser 29: Keep pawn → 1 Bishop · 5 turns available
+PASS worker browser 30: Sacrifice pawn → 1 Bishop · 2 turns available
+PASS worker browser 31: declining sacrifice confirmation leaves state unchanged
+PASS worker browser 32: confirmed sacrifice consumes pawn and creates the exact fast batch
+PASS worker browser 33: pawn batch costs one activation but no King XP
+PASS worker browser 34: fast queue stays visible after its pawn disappears
+PASS worker browser 35: sacrifice removes camp outer-ring sight
+PASS worker browser 36: fixture loads without error
+PASS worker browser 37: keep mode locks the living pawn for the five-turn knight queue
+PASS worker browser 38: stationed pawn retains outer camp sight
+PASS worker browser 39: busy pawn cannot move for a free activation
+PASS worker browser 40: fixture loads without error
+PASS worker browser 41: bishop production is one bishop, not a pawn pair
+PASS worker browser 42: fixture loads without error
+PASS worker browser 43: R actual UI move deducts 2 CP
+PASS worker browser 44: fixture loads without error
+PASS worker browser 45: B actual UI move deducts 1 CP
+PASS worker browser 46: no JavaScript page errors: []
+WORKER BROWSER v0.5.10: 46/46 passed

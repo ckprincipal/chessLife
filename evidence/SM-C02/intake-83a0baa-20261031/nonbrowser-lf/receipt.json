@@ -1,0 +1,20 @@
+{
+  "generated_utc": "2026-10-31T13:09:16.056404+00:00",
+  "verifier": "SM-C00 / 000-S2 publication verification wrapper",
+  "source_version": "v0.5.10",
+  "git_context": {
+    "head_at_execution": "83a0baa8a4486562c5c67144324cede402f29cf7",
+    "worktree_clean_at_start": false
+  },
+  "environment": {
+    "python": "3.14.8",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "commands": [],
+  "browser_status": "NOT RUN (not requested)",
+  "unity_editor_status": "NOT RUN",
+  "unity_build_status": "NOT RUN",
+  "scope": "Source integrity and executed mechanical checks; not balance, human validation, BUG-001 closure, or Unity gameplay parity.",
+  "result": "FAIL",
+  "error": "Baseline mismatch: reference\\js-v0.5.10\\CURRENT_HANDOFF.md"
+}
