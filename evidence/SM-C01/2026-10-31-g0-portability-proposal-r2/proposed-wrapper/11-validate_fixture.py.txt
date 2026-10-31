@@ -1,0 +1,4 @@
+PASS Unity fixture traditional 16 units 42 visible tiles
+PASS Unity fixture middle 14 units 32 visible tiles
+PASS Unity fixture flat 12 units 27 visible tiles
+Unity fixture/schema and source inventory validated; UNITY EDITOR NOT RUN

@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-10-31T13:23:53.649331+00:00",
+  "intake": "83a0baa8a4486562c5c67144324cede402f29cf7",
+  "scope": "Disposable proposal validation; the live original verifier is not changed or relabeled PASS.",
+  "original_verifier_sha256": "a5a6f71d180341f6400580859949ad0610ae47ae3dfdc6fd1791fb2ff3c48454",
+  "checks": [
+    {
+      "check": "Git export preserves all pinned input bytes with native Git settings",
+      "files": 39,
+      "result": "PASS"
+    },
+    {
+      "check": "Reject semantic differences without modifying output",
+      "result": "PASS"
+    },
+    {
+      "check": "Reject immutable-reference path without modifying it",
+      "result": "PASS"
+    },
+    {
+      "check": "Already canonical output is unchanged",
+      "result": "PASS"
+    }
+  ],
+  "head_at_export": "0fcacf9bae0e9b53764f7c3377cf718016e7fe72",
+  "normalizer_sha256": "ee15a60d55695c849e09e11bd8e93fe7622a0ee2b7212d265bf0751a21b2da2c",
+  "proposal_patch_sha256": "9c67bffeef3c8f8ed66c423be742c86981ba3e889aed56d297bb3079d4367d3b",
+  "proposed_verifier_sha256": "8349fdc83f7684a702b54ce9a1617610c535e78d63ee14461b0d71744e21beed",
+  "process_environment": {
+    "PYTHONUTF8": "1"
+  },
+  "proposal_command": [
+    "C:\\Users\\mino\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe",
+    "tools/verify_baseline.py",
+    "--test",
+    "--starter",
+    "--log-dir",
+    "D:\\Projects\\Stale-Mate\\worktrees\\SM-C01\\evidence\\SM-C01\\2026-10-31-g0-portability-proposal-r3\\proposed-wrapper"
+  ],
+  "proposal_exit_code": 0,
+  "proposal_result": "PASS FOR EXECUTED SCOPE",
+  "child_commands": 11,
+  "rebuilt_html_sha256": "f0124c3798def328136093afa471a5eff4e2a5c68578809f21c5b0ab7e079297",
+  "original_verifier_unchanged": true,
+  "result": "PASS FOR DISPOSABLE PROPOSAL AND BUILD GUARDS"
+}

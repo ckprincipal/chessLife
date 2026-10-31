@@ -1,0 +1,1 @@
+RANDOMIZED v0.5.10: 36 seeded maps (12 with staged pawn levels), 5495 actions, 326 projects, 31 queues, 8260 state invariant checks PASSED.
