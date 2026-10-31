@@ -1,0 +1,5 @@
+# The reference manifest identifies original bytes, including original line endings.
+/reference/js-v0.5.10/** -text
+
+# Keep Unity text portable on Windows while leaving binary assets untouched.
+/unity/** text=auto eol=lf
